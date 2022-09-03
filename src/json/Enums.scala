@@ -1,35 +1,4 @@
 package com.alvrod.paxren.model
-
-enum CityName {
-  case                                                                 // ENGLAND
-    LONDON, BORDEAUX,
-    // FRANCE
-    BRUGES, PARIS, LYON,
-    // HRE
-    LUBECK, NOVGOROD, NURNBERG, VIENNA,
-    // HUNGARY
-    BUDA, VARNA,
-    // BYZANTIUM
-    TANA, CAFFA, TREBIZOND,
-    // PORTUGAL
-    TOLEDO, GRANADA, SPICE_ISLANDS,
-    // ARAGON
-    VALENCIA, ALGIERS, TIMBUKTU,
-    // PAPAL_STATES
-    VENICE, VENICE_2,                                                  // some cards allow to have 2 knights in Venice
-    // OTTOMAN
-    CONSTANTINOPLE, CONSTANTINOPLE_2, CONSTANTINOPLE_3, MODON, RHODES, // Constantinople has 3 locations
-    // MAMLUK
-    CYPRUS, CAIRO, RED_SEA
-}
-
-
-
-enum KingdomName {
-  case ENGLAND, FRANCE, HRE, HUNGARY, BYZANTIUM,
-    PORTUGAL, ARAGON, PAPAL_STATES, OTTOMAN, MAMLUK
-}
-
 enum LocationType {
   case KINGDOM, REGION, NONE // NONE is for Queens (look at suitors instead)
 }

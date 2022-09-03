@@ -16,6 +16,39 @@ export const COUNTRY_CODES = {
     MAMLUK: "ML",
 };
 
+export const CITY_NAMES = {
+    LONDON: "LONDON",
+    BORDEAUX: "BORDEAUX",
+    BRUGES: "BRUGES",
+    PARIS: "PARIS",
+    LYON: "LYON",
+    LUBECK: "LUBECK",
+    NOVGOROD: "NOVGOROD",
+    NURNBERG: "NURNBERG",
+    VIENNA: "VIENNA",
+    BUDA: "BUDA",
+    VARNA: "VARNA",
+    TANA: "TANA",
+    CAFFA: "CAFFA",
+    TREBIZOND: "TREBIZOND",
+    TOLEDO: "TOLEDO",
+    GRANADA: "GRANADA",
+    SPICE_ISLANDS: "SPICE_ISLANDS",
+    VALENCIA: "VALENCIA",
+    ALGIERS: "ALGIERS",
+    TIMBUKTU: "TIMBUKTU",
+    VENICE: "VENICE",
+    VENICE_2: "VENICE_2",                                                  // some cards allow to have 2 knights in Venice
+    CONSTANTINOPLE: "CONSTANTINOPLE",
+    CONSTANTINOPLE_2: "CONSTANTINOPLE_2",
+    CONSTANTINOPLE_3: "CONSTANTINOPLE_3",
+    MODON: "MODON",
+    RHODES: "RHODES",
+    CYPRUS: "CYPRUS",
+    CAIRO: "CAIRO",
+    RED_SEA: "RED_SEA",
+};
+
 export const REGION = {
     EAST: "EAST",
     WEST: "WEST",
