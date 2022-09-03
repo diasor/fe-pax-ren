@@ -1,0 +1,285 @@
+{
+    "Right": {
+        "value": {
+            "uuid": "5717cd60-159b-4595-aac8-c62299614c26",
+            "bankers": [
+                {
+                    "entityId": "BANKER#9c86d7c4-070a-4c81-9b8a-523d8125eb1a",
+                    "playerUuid": "c844b133-2fb0-4003-83ed-6c5ec0985344",
+                    "playerHandle": "alvrod",
+                    "name": "Coeur",
+                    "freeConcessions": 9,
+                    "florins": 3
+                },
+                {
+                    "entityId": "BANKER#24662e98-db9a-4bdd-a38c-4d6aa8820e4e",
+                    "playerUuid": "ff8b5a63-6a4f-4ab2-ae2a-c44c138fdcbd",
+                    "playerHandle": "diana",
+                    "name": "Fugger",
+                    "freeConcessions": 9,
+                    "florins": 4
+                },
+                {
+                    "entityId": "BANKER#2ecc30ed-9f90-469b-b11f-8617bb364304",
+                    "playerUuid": "8f9eb391-6f7e-40c9-b5e6-4ebf070d7bf9",
+                    "playerHandle": "luigi",
+                    "name": "Medici",
+                    "freeConcessions": 9,
+                    "florins": 5
+                }
+            ],
+            "kingdoms": [
+                {
+                    "entityId": "KINGDOM#e0c512db-cf77-4a3d-afe1-3fe9c26ea793",
+                    "name": "ENGLAND",
+                    "government": "FEUDAL",
+                    "religion": "SECULAR",
+                    "cities": {
+                        "LONDON": "CATHOLIC_ROOK",
+                        "BORDEAUX": "CATHOLIC_KNIGHT_FREE"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#991fab98-d513-4aed-89df-3ae9998884cc",
+                    "name": "FRANCE",
+                    "government": "FEUDAL",
+                    "religion": "SECULAR",
+                    "cities": {
+                        "BRUGES": "CATHOLIC_ROOK_FREE",
+                        "PARIS": "CATHOLIC_KNIGHT",
+                        "LYON": "CATHOLIC_KNIGHT_FREE"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#e865c446-fc02-4dea-a814-94c26777179c",
+                    "name": "HRE",
+                    "government": "FEUDAL",
+                    "religion": "SECULAR",
+                    "cities": {
+                        "LUBECK": "CATHOLIC_ROOK_FREE",
+                        "NOVGOROD": "BUSTED_TOKEN_EAST",
+                        "NURNBERG": "REFORMIST_KNIGHT_FREE",
+                        "VIENNA": "CATHOLIC_ROOK"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#e923fb35-bd08-4406-80dd-f820e178e22a",
+                    "name": "HUNGARY",
+                    "government": "FEUDAL",
+                    "religion": "SECULAR",
+                    "cities": {
+                        "BUDA": "CATHOLIC_KNIGHT",
+                        "VARNA": "REFORMIST_KNIGHT_FREE"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#a4c89681-d7b7-4d0d-888f-e7685853574d",
+                    "name": "BYZANTIUM",
+                    "government": "FEUDAL",
+                    "religion": "SECULAR",
+                    "cities": {
+                        "TANA": "MUSLIM_KNIGHT",
+                        "CAFFA": "CATHOLIC_KNIGHT_FREE",
+                        "TREBIZOND": "REFORMIST_ROOK_FREE"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#2de5347a-946a-4e81-bea2-60c081e4f905",
+                    "name": "PORTUGAL",
+                    "government": "FEUDAL",
+                    "religion": "SECULAR",
+                    "cities": {
+                        "TOLEDO": "CATHOLIC_KNIGHT",
+                        "GRANADA": "MUSLIM_ROOK_FREE",
+                        "SPICE_ISLANDS": "BUSTED_TOKEN_WEST"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#23c8c2c3-bad4-4307-8f03-10171c8182de",
+                    "name": "ARAGON",
+                    "government": "FEUDAL",
+                    "religion": "SECULAR",
+                    "cities": {
+                        "VALENCIA": "CATHOLIC_KNIGHT",
+                        "ALGIERS": "MUSLIM_ROOK_FREE",
+                        "TIMBUKTU": "BUSTED_TOKEN_EAST"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#df0bd8d6-5912-43fd-aa6e-4ef5b078223a",
+                    "name": "PAPAL_STATES",
+                    "government": "FEUDAL",
+                    "religion": "CATHOLIC",
+                    "cities": {
+                        "VENICE": "CATHOLIC_KNIGHT",
+                        "VENICE_2": "INACTIVE"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#59b2d362-fa97-4744-9317-904c3abaad9f",
+                    "name": "OTTOMAN",
+                    "government": "FEUDAL",
+                    "religion": "SECULAR",
+                    "cities": {
+                        "CONSTANTINOPLE_2": "MUSLIM_KNIGHT",
+                        "RHODES": "CATHOLIC_ROOK_FREE",
+                        "MODON": "REFORMIST_ROOK_FREE",
+                        "CONSTANTINOPLE": "MUSLIM_ROOK",
+                        "CONSTANTINOPLE_3": "MUSLIM_KNIGHT"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                },
+                {
+                    "entityId": "KINGDOM#66140232-d579-4ec1-a8fd-14a9c75ea42a",
+                    "name": "MAMLUK",
+                    "government": "FEUDAL",
+                    "religion": "MUSLIM",
+                    "cities": {
+                        "CYPRUS": "CATHOLIC_ROOK_FREE",
+                        "CAIRO": "MUSLIM_ROOK",
+                        "RED_SEA": "BUSTED_TOKEN_WEST"
+                    },
+                    "repressedPieces": [],
+                    "location": "THRONE",
+                    "marriedTo": null,
+                    "vassalOf": null
+                }
+            ],
+            "borders": [
+                {
+                    "entityId": "BORDER#4091c272-3a66-4746-ac32-0129449cf612",
+                    "firstKingdom": "ENGLAND",
+                    "secondKingdom": "FRANCE",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#a998d9ce-a6d6-46e9-ab4c-c2eec9b9e7e4",
+                    "firstKingdom": "ENGLAND",
+                    "secondKingdom": "PORTUGAL",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#b5a11271-8e59-45f7-be83-701715e4e30f",
+                    "firstKingdom": "FRANCE",
+                    "secondKingdom": "HRE",
+                    "occupiedBy": "FUGGER_CONCESSION"
+                },
+                {
+                    "entityId": "BORDER#ceca944e-9715-42a1-bbb9-de508581d513",
+                    "firstKingdom": "FRANCE",
+                    "secondKingdom": "ARAGON",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#01564d81-c054-4582-8b33-b98c641926f0",
+                    "firstKingdom": "HRE",
+                    "secondKingdom": "HUNGARY",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#8830bfe1-95ef-4257-be1a-90d3151f3665",
+                    "firstKingdom": "HRE",
+                    "secondKingdom": "PAPAL_STATES",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#cb430361-f1fa-4a59-8c1f-996f850d92af",
+                    "firstKingdom": "HUNGARY",
+                    "secondKingdom": "BYZANTIUM",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#84f8cfe2-5e8a-438f-ad6b-98a0e974aba7",
+                    "firstKingdom": "HUNGARY",
+                    "secondKingdom": "OTTOMAN",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#87e264d7-481a-4e25-9494-6f5075b58d64",
+                    "firstKingdom": "BYZANTIUM",
+                    "secondKingdom": "MAMLUK",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#3c78ef81-ae02-423b-b2fd-2c8081498dcd",
+                    "firstKingdom": "PORTUGAL",
+                    "secondKingdom": "ARAGON",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#f07fd264-d649-4879-b65e-67a8fff07caf",
+                    "firstKingdom": "ARAGON",
+                    "secondKingdom": "PAPAL_STATES",
+                    "occupiedBy": "MEDICI_CONCESSION"
+                },
+                {
+                    "entityId": "BORDER#6a1a7679-87c3-48fd-9541-56b190594c2d",
+                    "firstKingdom": "PAPAL_STATES",
+                    "secondKingdom": "OTTOMAN",
+                    "occupiedBy": "FREE"
+                },
+                {
+                    "entityId": "BORDER#c7922eed-ac6d-439a-a4ad-50f1e6a08ccb",
+                    "firstKingdom": "OTTOMAN",
+                    "secondKingdom": "MAMLUK",
+                    "occupiedBy": "COEUR_CONCESSION"
+                }
+            ],
+            "playerTurnUuid": "8f9eb391-6f7e-40c9-b5e6-4ebf070d7bf9",
+            "freeMuslimKnights": 4,
+            "freeCatholicKnights": 5,
+            "freeReformistKnights": 7,
+            "freeMuslimRooks": 5,
+            "freeCatholicRooks": 8,
+            "freeReformistRooks": 7,
+            "freeMuslimBishops": 5,
+            "freeCatholicBishops": 5,
+            "freeReformistBishops": 5,
+            "freeMuslimPirates": 3,
+            "freeCatholicPirates": 6,
+            "freeReformistPirates": 3,
+            "eastFairStart": "TANA",
+            "westFairStart": "TREBIZOND",
+            "isRenaissanceVictoryActive": false,
+            "isGlobalizationVictoryActive": false,
+            "isImperialVictoryActive": false,
+            "isHolyVictoryActive": false,
+            "actionLog": []
+        }
+    }
+}
