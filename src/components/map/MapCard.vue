@@ -1,5 +1,6 @@
 <template>
-    <img v-if="showCard" :src="cardSource" class="card" :style="cardStyle"/>
+    <img v-if="showPiece" :src="cardSource" class="piece" :style="cardStyle"/>
+    <img v-else-if="showCard" :src="cardSource" class="card" :style="cardStyle"/>
 </template>
 
 <script>
@@ -15,25 +16,22 @@ export default {
             type: Boolean,
             default: false,
         },
-        cardId: {
-            type: String,
-            default: '',
-        },
-        cardType: {
-            type: String,
-            default: CARD_TYPE.KINGDOM,
-        },
-        cardReligion: {
-            type: String,
-            default: '',
-        },
+        card: {
+            cardId: '',
+            cardType: '',
+            cardReligion: '',
+            pieceId: '',
+        }
     },
 
-    setup(props){
+    setup(props) {
         const { cardFile, cardDynamicStyle } = useCard();
-        const cardSource = computed(() =>  cardFile(props.cardId, props.cardReligion, props.cardType));
-        const cardStyle = computed(() => cardDynamicStyle(props.cardId));
-        return { cardSource, cardStyle, CARD_TYPE }
+        const showPiece = computed(() =>
+            props.card.cardType === CARD_TYPE.PIECE && props.showCard);
+        const cardSource = computed(() =>
+            cardFile(props.card.cardId, props.card.cardReligion, props.card.cardType, props.card.pieceId));
+        const cardStyle = computed(() => cardDynamicStyle(props.card.cardId));
+        return { cardSource, cardStyle, showPiece, CARD_TYPE }
     },
 };
 </script>
@@ -43,5 +41,12 @@ export default {
     height: auto;
     border: 1px #2b2d2f solid;
     border-radius: 5px;
+}
+
+.piece {
+    position: absolute;
+    height: auto;
+    border: 1px #2b2d2f solid;
+    border-radius: 50%;
 }
 </style>

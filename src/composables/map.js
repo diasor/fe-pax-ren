@@ -1,7 +1,5 @@
 export function useMap() {
     function fullMap(franceCoordX, franceCoordY) {
-        console.log('*** fullMap() => franceCoordX', franceCoordX);
-        console.log('*** fullMap() => franceCoordY', franceCoordY);
         // const initialEnglandX = windowWidth === 1140 ? 334 : 448;
         // const initialEnglandX = 334;
 

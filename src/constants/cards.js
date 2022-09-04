@@ -170,7 +170,7 @@ export const WEST_CARDS = [
     { id: 'PREN162X', file: 'PR2_West Card92.png', name: 'Catherine de Medici', description: '' },
 ];
 
-export const VICTORY_CARDS = [
+export const VICTORY_CARD = [
     { id: VICTORY_TYPE.RENAISSANCE, file: 'PR2_Victorycards_active-01.png', name: 'Reinassance Victory' },
     { id: VICTORY_TYPE.GLOBALIZATION, file: 'PR2_Victorycards_active-01.png', name: 'Globalization Victory' },
     { id: VICTORY_TYPE.IMPERIAL, file: 'PR2_Victorycards_active-01.png', name: 'Imperial Victory' },
@@ -181,7 +181,7 @@ export const MAIN_LAYOUT = [
     { id: 'BOARD', file: 'PR2_board_plain.jpg', name: 'Globalization Victory' },
 ];
 
-export const KINGDOMS_FILES = [
+export const KINGDOMS_FILE = [
     // England
     { id: 'EN-ISLAMIC', file: 'Map Card Islamic01.png', name: 'Islamic England' },
     { id: 'EN-REFORMIST', file: 'Map Card Reformation01.png', name: 'Reformist England' },
@@ -231,4 +231,21 @@ export const KINGDOMS_FILES = [
     { id: 'ML-ISLAMIC', file: 'Map Card Islamic10.png', name: 'Islamic Mamluk' },
     { id: 'ML-REFORMIST', file: 'Map Card Reformation10.png', name: 'Reformist Mamluk' },
     { id: 'ML-CATHOLIC', file: 'Map Card Medieval10.png', name: 'Catholic Mamluk' },    
+];
+
+export const PIECE_FILE = [
+    // Knight Red
+    { id: 'CATHOLIC_KNIGHT', file: 'PRen_knight_gold_top.png', name: 'Knight Red' },
+    { id: 'CATHOLIC_KNIGHT_SIDE', file: 'PPRen_knight_red.png', name: 'Knight Red - side' },
+    { id: 'CATHOLIC_KNIGHT_FREE', file: 'PRen_knight_gold_empty.png', name: 'Knight Red - free' },
+
+    // Knight Red
+    { id: 'REFORMIST_KNIGHT', file: 'PRen_knight_red_top.png', name: 'Knight Red' },
+    { id: 'REFORMIST_KNIGHT_SIDE', file: 'PRen_knight_gold_empty.png', name: 'Knight Gold - side' },
+    { id: 'REFORMIST_KNIGHT_FREE', file: 'PRen_knight_red_empty.png', name: 'Knight Red - free' },
+
+    // Knight Blue
+    { id: 'MUSLIM_KNIGHT', file: 'PRen_knight_green_top.png', name: 'Knight Blue' },
+    { id: 'MUSLIM_KNIGHT_SIDE', file: 'PPRen_knight_green.png', name: 'Knight Blue - side' },
+    { id: 'MUSLIM_KNIGHT_FREE', file: 'PRen_knight_green_empty.png', name: 'Knight Blue - free' },
 ];

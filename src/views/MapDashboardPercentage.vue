@@ -14,7 +14,7 @@
                 >
             </map>
             <!-- <img v-if="showIslamico" src="/images/Map Card Islamic01.png" class="england" /> -->
-            <img v-if="showIslamico" :src="`/images/${KINGDOMS_FILES[0].file}`" class="france" :style="franceDynamicClass" />
+            <img v-if="showIslamico" :src="`/images/${KINGDOMS_FILE[0].file}`" class="france" :style="franceDynamicClass" />
             <img v-if="showReformista" src="/images/Map Card Reformation01.png" class="england" />
             <img v-if="activateRenaissanceVictory" src="/images/PR2_Victorycards_active-01.png" class="renaissance-victory" />
         </div>
@@ -24,7 +24,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useMap } from "@/composables/map";
 import BaseNavBar from "@/components/generic/BaseNavBar.vue";
-import { KINGDOMS_FILES } from "@/constants/cards"; 
+import { KINGDOMS_FILE } from "@/constants/cards"; 
 
 export default {
     name: "MapDashboard",
@@ -70,7 +70,6 @@ export default {
             const coords = area.coords;
             const msg = `TITLE: ${area.title} => coords: ${coords} // Win Width: ${window.innerWidth}`;
             alert(msg);
-            console.log(msg);
             if (showIslamico.value) {
                 showIslamico.value = false;
                 showReformista.value = true;
@@ -128,7 +127,7 @@ export default {
             }
         };
 
-        return { franceDynamicClass, KINGDOMS_FILES, renderCard, showIslamico, showReformista, activateRenaissanceVictory, doSomething, imageClick, kingdomMap }
+        return { franceDynamicClass, KINGDOMS_FILE, renderCard, showIslamico, showReformista, activateRenaissanceVictory, doSomething, imageClick, kingdomMap }
     },
 
 };

@@ -11,7 +11,7 @@
 import MapMarkersPieces from './MapMarkersPieces.vue';
 import MapMarkersKingdoms from './MapMarkersKingdoms.vue';
 export default {
-    name: "MapMarkers",
+    name: "MapMarker",
     components: {
         MapMarkersPieces,
         MapMarkersKingdoms,
