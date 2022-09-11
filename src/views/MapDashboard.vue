@@ -1,185 +1,64 @@
 <template>
     <div>
-        <base-nav-bar @showCard="renderCard"/>
+        <base-nav-bar />
         <div id="pr-map" class="map-container">
             <!-- all markers -->
             <map-markers />
 
             <!-- kingdom cards -->
-            <map-card :showCard="englandCard.showCard" :card="englandCard" />
-            <map-card :showCard="franceCard.showCard" :card="franceCard" />
-            <map-card :showCard="hollyRomanEmpireCard.showCard" :card="hollyRomanEmpireCard" />
-            <map-card :showCard="hungaryCard.showCard" :card="hungaryCard" />
-            <map-card :showCard="byzantiumCard.showCard" :card="byzantiumCard" />
-            <map-card :showCard="portugalCard.showCard" :card="portugalCard" />
-            <map-card :showCard="aragonCard.showCard" :card="aragonCard" />
-            <map-card :showCard="papalStatesCard.showCard" :card="papalStatesCard" />
-            <map-card :showCard="ottomanCard.showCard" :card="ottomanCard" />
-            <map-card :showCard="mamlukCard.showCard" :card="ottomanCard" />
-            <!-- victory cards -->
-            <map-card :showCard="renaissanceVictoryCard.showCard" :card="renaissanceVictoryCard" />
-            <map-card :showCard="globalizationVictoryCard.showCard" :card="globalizationVictoryCard" />
-            <map-card :showCard="imperialVictoryCard.showCard" :card="imperialVictoryCard" />
-            <map-card :showCard="holyVictoryCard.showCard" :card="holyVictoryCard" />
+            <map-card-england />
+            <map-card-france />
+            <map-card-holly-roman-empire />
+            <map-card-hungary />
+            <map-card-byzantium />
+            <map-card-portugal />
+            <map-card-aragon />
+            <map-card-papal-states />
+            <map-card-ottoman />
+            <map-card-mamluk />
 
-            <map-card-pieces v-if="showPiece" :showCard="showPiece" :card="displayCard" />
+            <!-- victories -->
+            <map-card-victories />
+
+            <!-- markets -->
+            <map-card-markets />
         </div>
     </div>
 </template>
 <script>
-import { ref } from 'vue';
 import BaseNavBar from "@/components/generic/BaseNavBar.vue";
-import MapMarkers from "@/components/map/MapMarkers.vue";
-import MapCard from "@/components/map/MapCard.vue";
-import MapCardPieces from "@/components/map/MapCardPieces.vue";
-import { COUNTRY_CODES, VICTORY_TYPE, CARD_TYPE } from "@/constants/enums";
+import MapMarkers from "@/components/map/markers/MapMarkers.vue";
+import MapCardEngland from "@/components/map/kingdoms/MapCardEngland.vue";
+import MapCardFrance from "@/components/map/kingdoms/MapCardFrance.vue";
+import MapCardHollyRomanEmpire from "@/components/map/kingdoms/MapCardHollyRomanEmpire.vue";
+import MapCardHungary from "@/components/map/kingdoms/MapCardHungary.vue";
+import MapCardPortugal from '@/components/map/kingdoms/MapCardPortugal.vue';
+import MapCardByzantium from "@/components/map/kingdoms/MapCardByzantium.vue";
+import MapCardAragon from "@/components/map/kingdoms/MapCardAragon.vue";
+import MapCardPapalStates from "@/components/map/kingdoms/MapCardPapalStates.vue";
+import MapCardOttoman from "@/components/map/kingdoms/MapCardOttoman.vue";
+import MapCardMamluk from "@/components/map/kingdoms/MapCardMamluk.vue";
+import MapCardVictories from "@/components/map/MapCardVictories.vue";
+import MapCardMarkets from '@/components/markets/MapCardMarkets.vue';
 
 export default {
     name: "MapDashboard",
     components: {
         BaseNavBar,
         MapMarkers,
-        MapCard,
-        MapCardPieces,
+        MapCardEngland,
+        MapCardFrance,
+        MapCardHollyRomanEmpire,
+        MapCardHungary,
+        MapCardByzantium,
+        MapCardPortugal,
+        MapCardAragon,
+        MapCardPapalStates,
+        MapCardOttoman,
+        MapCardMamluk,
+        MapCardVictories,
+        MapCardMarkets,
     },
-    setup(){
-        let englandCard = ref({});
-        let franceCard = ref({});
-        let hollyRomanEmpireCard = ref({});
-        let hungaryCard = ref({});
-        let byzantiumCard = ref({});
-        let portugalCard = ref({});
-        let aragonCard = ref({});
-        let papalStatesCard = ref({});
-        let ottomanCard = ref({});
-        let mamlukCard = ref({});
-        // victories
-        let renaissanceVictoryCard = ref({});
-        let globalizationVictoryCard = ref({});
-        let imperialVictoryCard = ref({});
-        let holyVictoryCard = ref({});
-        let displayCard = ref({});
-        let showPiece = ref(false);
-
-        const renderCard = (card) => {
-            displayCard.value = { ...card };
-            if (card.cardType === CARD_TYPE.PIECE) {
-                showPiece.value = true;
-            } else {
-                const { cardId } = card;
-                switch(cardId) {
-                case COUNTRY_CODES.ENGLAND:
-                    englandCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case COUNTRY_CODES.FRANCE:
-                    franceCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case COUNTRY_CODES.HOLY_ROMAN_EMPIRE:
-                    hollyRomanEmpireCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case COUNTRY_CODES.HUNGARY:
-                    hungaryCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case COUNTRY_CODES.BYZANTIUM:
-                   byzantiumCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case COUNTRY_CODES.PORTUGAL:
-                    portugalCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case COUNTRY_CODES.ARAGON:
-                    aragonCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case COUNTRY_CODES.PAPAL_STATES:
-                    papalStatesCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;            
-                case COUNTRY_CODES.OTTOMAN:
-                    ottomanCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case COUNTRY_CODES.MAMLUK:
-                    mamlukCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;           
-                // victory cards
-                case VICTORY_TYPE.RENAISSANCE:
-                    renaissanceVictoryCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case VICTORY_TYPE.GLOBALIZATION:
-                    globalizationVictoryCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case VICTORY_TYPE.IMPERIAL:
-                    imperialVictoryCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                case VICTORY_TYPE.HOLY:
-                    holyVictoryCard.value = {
-                        ...card,
-                        showCard: true,
-                    };
-                    break;
-                default:
-                    // code block
-                }
-            }
-        };
-        
-        return {
-            englandCard,
-            franceCard,
-            hollyRomanEmpireCard,
-            hungaryCard,
-            byzantiumCard,
-            portugalCard,
-            aragonCard,
-            papalStatesCard,
-            ottomanCard,
-            mamlukCard,
-            displayCard,
-            renaissanceVictoryCard,
-            globalizationVictoryCard,
-            imperialVictoryCard,
-            holyVictoryCard,
-            renderCard,
-            showPiece,
-        }
-    },
-
 };
 </script>
 

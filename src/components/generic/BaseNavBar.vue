@@ -1,7 +1,7 @@
 <template>
   <b-nav id="pr-mainMenu" tabs fill >
     <b-nav-text class="mx-5 pt-3"><h3>Pax Renaissance</h3></b-nav-text>
-    <!-- <b-nav-item class="mt-4">New game</b-nav-item> -->
+    <b-nav-item class="mt-4" @click="newGame">New game</b-nav-item>
     <!-- <b-nav-item class="mt-4">Other users</b-nav-item> -->
     <b-nav-item-dropdown
       id="actions-dropdown"
@@ -161,9 +161,12 @@
     </b-nav-item-dropdown> -->
   </b-nav>
 </template>
+
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
+import { useStore } from "vuex";
 import { COUNTRY_CODES, VICTORY_TYPE, CITY_NAMES, PIECE_TYPE, CARD_TYPE } from "@/constants/enums";
+
 export default {
     name: "BaseNavBar",
     props: {
@@ -181,6 +184,10 @@ export default {
                 context.emit("selectedMenu", selectedValue);
             }
         };
+        const store = useStore();
+        const newGame = async () => {
+            await store.dispatch("board/newGameBoard");
+        };
 
         const showCard = (card) => context.emit("showCard", card);
         return {
@@ -191,7 +198,8 @@ export default {
             VICTORY_TYPE,
             CITY_NAMES,
             PIECE_TYPE,
-            CARD_TYPE
+            CARD_TYPE,
+            newGame,
         };
     },
 };

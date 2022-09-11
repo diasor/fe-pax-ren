@@ -1,12 +1,12 @@
 <template>
     <img v-if="showPiece" :src="cardSource" class="piece" :style="cardStyle"/>
-    <img v-else-if="showCard" :src="cardSource" class="card" :style="cardStyle"/>
+    <img v-else-if="loadCard" :src="cardSource" class="card" :style="cardStyle"/>
 </template>
 
 <script>
 import { computed } from 'vue';
 import { useCard } from "@/composables/card";
-import { CARD_TYPE } from "@/constants/enums";
+import { CARD_TYPE, RELIGION } from "@/constants/enums";
 
 export default {
     name: "MapCard",
@@ -17,10 +17,12 @@ export default {
             default: false,
         },
         card: {
-            cardId: '',
-            cardType: '',
-            cardReligion: '',
-            pieceId: '',
+            cardId: "",
+            cardType: "",
+            cardReligion: "",
+            pieceId: "",
+            cardRegion: "",
+            cardMarkerId: "",
         }
     },
 
@@ -28,10 +30,11 @@ export default {
         const { cardFile, cardDynamicStyle } = useCard();
         const showPiece = computed(() =>
             props.card.cardType === CARD_TYPE.PIECE && props.showCard);
-        const cardSource = computed(() =>
-            cardFile(props.card.cardId, props.card.cardReligion, props.card.cardType, props.card.pieceId));
-        const cardStyle = computed(() => cardDynamicStyle(props.card.cardId));
-        return { cardSource, cardStyle, showPiece, CARD_TYPE }
+        const cardSource = computed(() => cardFile(props.card));
+        const cardStyle = computed(() => cardDynamicStyle(props.card));
+        const loadCard = computed(() => (props.showCard && (props.card.cardReligion !== RELIGION.SECULAR)));
+        
+        return { cardSource, cardStyle, showPiece, CARD_TYPE, loadCard }
     },
 };
 </script>

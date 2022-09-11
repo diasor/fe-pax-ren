@@ -39,40 +39,40 @@ export const EAST_CARDS = [
     { id: 'PREN095X', file: 'PR2_East Card36.png', name: 'Elizabeth Bathory', description: '' },
     { id: 'PREN098X', file: 'PR2_East Card37.png', name: 'Unity of the Brethren', description: '' },
     { id: 'PREN099X', file: 'PR2_East Card38.png', name: 'Papal Legate to Persia', description: '' },
-    { id: 'PREN0100X', file: 'PR2_East Card39.png', name: 'Unified Christendom', description: '' },
-    { id: 'PREN0101X', file: 'PR2_East Card40.png', name: 'Civil Engineer', description: '' },
-    { id: 'PREN0102X', file: 'PR2_East Card41.png', name: 'Sahn-i Seman Medrese', description: '' },
-    { id: 'PREN0103X', file: 'PR2_East Card42.png', name: 'Academia', description: '' },
-    { id: 'PREN0104X', file: 'PR2_East Card43.png', name: 'Theft of the Holy Crown', description: '' },
-    { id: 'PREN0105X', file: 'PR2_East Card44.png', name: 'Franco-Ottoman Navy', description: '' },
-    { id: 'PREN0106X', file: 'PR2_East Card45.png', name: 'Prussian League Navy', description: '' },
-    { id: 'PREN0107X', file: 'PR2_East Card46.png', name: 'Tersane-i Amire', description: '' },
-    { id: 'PREN0108X', file: 'PR2_East Card47.png', name: 'Isfendiyarid dynasty', description: '' },
-    { id: 'PREN0109X', file: 'PR2_East Card48.png', name: 'Brotherhood of St. Mark', description: '' },
-    { id: 'PREN0110X', file: 'PR2_East Card49.png', name: 'Transilvanian Plot', description: '' },
-    { id: 'PREN0111X', file: 'PR2_East Card50.png', name: 'Glinskis Rebellion', description: '' },
-    { id: 'PREN0112X', file: 'PR2_East Card51.png', name: 'Phocoean Alum', description: '' },
-    { id: 'PREN0113X', file: 'PR2_East Card52.png', name: 'Dalmatian Merchant Marine', description: '' },
-    { id: 'PREN0114X', file: 'PR2_East Card53.png', name: 'Counts of Celjii', description: '' },
-    { id: 'PREN0115X', file: 'PR2_East Card54.png', name: 'Sahkulu Shi-ite Revolt', description: '' },
-    { id: 'PREN0116X', file: 'PR2_East Card55.png', name: 'Celebi Tax Revolt', description: '' },
-    { id: 'PREN0117X', file: 'PR2_East Card56.png', name: 'Despina Khatun', description: '' },
-    { id: 'PREN0118X', file: 'PR2_East Card57.png', name: 'Grand Mufti', description: '' },
-    { id: 'PREN0119X', file: 'PR2_East Card58.png', name: 'Grand Hetman', description: '' },
-    { id: 'PREN0120X', file: 'PR2_East Card59.png', name: 'Agents of Dukagjini', description: '' },
-    { id: 'PREN0121X', file: 'PR2_East Card60.png', name: 'Nomads of Tlemcen', description: '' },
-    { id: 'PREN0122X', file: 'PR2_East Card61.png', name: 'The Last Sigh', description: '' },
-    { id: 'PREN0123X', file: 'PR2_East Card62.png', name: 'Nothing New', description: '' },
-    { id: 'PREN0124X', file: 'PR2_East Card63.png', name: 'The Last Byzantine', description: '' },
-    { id: 'PREN0125X', file: 'PR2_East Card64.png', name: 'Beylerbey of Egipt', description: '' },
-    { id: 'PREN0126X', file: 'PR2_East Card65.png', name: 'Lizard Union', description: '' },
-    { id: 'PREN0127X', file: 'PR2_East Card66.png', name: 'Red Sea Fleet', description: '' },
-    { id: 'PREN0163X', file: 'PR2_East Card67.png', name: 'Jizya Tax Revolt', description: '' },
-    { id: 'PREN0164X', file: 'PR2_East Card68.png', name: 'Circassian Mamluks', description: '' },
-    { id: 'PREN0165X', file: 'PR2_East Card69.png', name: 'Transylvanian Saxons', description: '' },
-    { id: 'PREN0166X', file: 'PR2_East Card70.png', name: 'Bank of St. George', description: '' },
-    { id: 'PREN0167X', file: 'PR2_East Card71.png', name: 'Twelver Ghulat', description: '' },
-    { id: 'PREN0168X', file: 'PR2_East Card72.png', name: 'Zionist State', description: '' },
+    { id: 'PREN100X', file: 'PR2_East Card39.png', name: 'Unified Christendom', description: '' },
+    { id: 'PREN101X', file: 'PR2_East Card40.png', name: 'Civil Engineer', description: '' },
+    { id: 'PREN102X', file: 'PR2_East Card41.png', name: 'Sahn-i Seman Medrese', description: '' },
+    { id: 'PREN103X', file: 'PR2_East Card42.png', name: 'Academia', description: '' },
+    { id: 'PREN104X', file: 'PR2_East Card43.png', name: 'Theft of the Holy Crown', description: '' },
+    { id: 'PREN105X', file: 'PR2_East Card44.png', name: 'Franco-Ottoman Navy', description: '' },
+    { id: 'PREN106X', file: 'PR2_East Card45.png', name: 'Prussian League Navy', description: '' },
+    { id: 'PREN107X', file: 'PR2_East Card46.png', name: 'Tersane-i Amire', description: '' },
+    { id: 'PREN108X', file: 'PR2_East Card47.png', name: 'Isfendiyarid dynasty', description: '' },
+    { id: 'PREN109X', file: 'PR2_East Card48.png', name: 'Brotherhood of St. Mark', description: '' },
+    { id: 'PREN110X', file: 'PR2_East Card49.png', name: 'Transilvanian Plot', description: '' },
+    { id: 'PREN111X', file: 'PR2_East Card50.png', name: 'Glinskis Rebellion', description: '' },
+    { id: 'PREN112X', file: 'PR2_East Card51.png', name: 'Phocoean Alum', description: '' },
+    { id: 'PREN113X', file: 'PR2_East Card52.png', name: 'Dalmatian Merchant Marine', description: '' },
+    { id: 'PREN114X', file: 'PR2_East Card53.png', name: 'Counts of Celjii', description: '' },
+    { id: 'PREN115X', file: 'PR2_East Card54.png', name: 'Sahkulu Shi-ite Revolt', description: '' },
+    { id: 'PREN116X', file: 'PR2_East Card55.png', name: 'Celebi Tax Revolt', description: '' },
+    { id: 'PREN117X', file: 'PR2_East Card56.png', name: 'Despina Khatun', description: '' },
+    { id: 'PREN118X', file: 'PR2_East Card57.png', name: 'Grand Mufti', description: '' },
+    { id: 'PREN119X', file: 'PR2_East Card58.png', name: 'Grand Hetman', description: '' },
+    { id: 'PREN120X', file: 'PR2_East Card59.png', name: 'Agents of Dukagjini', description: '' },
+    { id: 'PREN121X', file: 'PR2_East Card60.png', name: 'Nomads of Tlemcen', description: '' },
+    { id: 'PREN122X', file: 'PR2_East Card61.png', name: 'The Last Sigh', description: '' },
+    { id: 'PREN123X', file: 'PR2_East Card62.png', name: 'Nothing New', description: '' },
+    { id: 'PREN124X', file: 'PR2_East Card63.png', name: 'The Last Byzantine', description: '' },
+    { id: 'PREN125X', file: 'PR2_East Card64.png', name: 'Beylerbey of Egipt', description: '' },
+    { id: 'PREN126X', file: 'PR2_East Card65.png', name: 'Lizard Union', description: '' },
+    { id: 'PREN127X', file: 'PR2_East Card66.png', name: 'Red Sea Fleet', description: '' },
+    { id: 'PREN163X', file: 'PR2_East Card67.png', name: 'Jizya Tax Revolt', description: '' },
+    { id: 'PREN164X', file: 'PR2_East Card68.png', name: 'Circassian Mamluks', description: '' },
+    { id: 'PREN165X', file: 'PR2_East Card69.png', name: 'Transylvanian Saxons', description: '' },
+    { id: 'PREN166X', file: 'PR2_East Card70.png', name: 'Bank of St. George', description: '' },
+    { id: 'PREN167X', file: 'PR2_East Card71.png', name: 'Twelver Ghulat', description: '' },
+    { id: 'PREN168X', file: 'PR2_East Card72.png', name: 'Zionist State', description: '' },
 ];
 
 export const WEST_CARDS = [
@@ -215,7 +215,7 @@ export const KINGDOMS_FILE = [
     // Aragon
     { id: 'AR-ISLAMIC', file: 'Map Card Islamic07.png', name: 'Islamic Aragon' },
     { id: 'AR-REFORMIST', file: 'Map Card Reformation07.png', name: 'Reformist Aragon' },
-    { id: 'AR   -CATHOLIC', file: 'Map Card Medieval07.png', name: 'Catholic Aragon' },
+    { id: 'AR-CATHOLIC', file: 'Map Card Medieval07.png', name: 'Catholic Aragon' },
 
     // Papal States
     { id: 'PS-ISLAMIC', file: 'Map Card Islamic08.png', name: 'Islamic Papal States' },
@@ -234,7 +234,7 @@ export const KINGDOMS_FILE = [
 ];
 
 export const PIECE_FILE = [
-    // Knight Red
+    // Knight Gold
     { id: 'CATHOLIC_KNIGHT', file: 'PRen_knight_gold_top.png', name: 'Knight Red' },
     { id: 'CATHOLIC_KNIGHT_SIDE', file: 'PPRen_knight_red.png', name: 'Knight Red - side' },
     { id: 'CATHOLIC_KNIGHT_FREE', file: 'PRen_knight_gold_empty.png', name: 'Knight Red - free' },
@@ -248,4 +248,19 @@ export const PIECE_FILE = [
     { id: 'MUSLIM_KNIGHT', file: 'PRen_knight_green_top.png', name: 'Knight Blue' },
     { id: 'MUSLIM_KNIGHT_SIDE', file: 'PPRen_knight_green.png', name: 'Knight Blue - side' },
     { id: 'MUSLIM_KNIGHT_FREE', file: 'PRen_knight_green_empty.png', name: 'Knight Blue - free' },
+
+    // Rook Gold
+    { id: 'CATHOLIC_ROOK', file: 'PRen_rook_gold_top.png', name: 'Rook Gold' },
+    { id: 'CATHOLIC_ROOK_SIDE', file: 'PRen_rook_gold.png', name: 'KnRook Gold - side' },
+    { id: 'CATHOLIC_ROOK_FREE', file: 'PRen_rook_gold_empty.png', name: 'Rook Gold - free' },
+
+    // Rook Red
+    { id: 'REFORMIST_ROOK', file: 'PRen_rook_red_top.png', name: 'Rook Red' },
+    { id: 'REFORMIST_ROOK_SIDE', file: 'PRen_rook_red.png', name: 'KnRook Red - side' },
+    { id: 'REFORMIST_ROOK_FREE', file: 'PRen_rook_red_empty.png', name: 'Rook Red - free' },
+    
+    // Rook Blue
+    { id: 'MUSLIM_ROOK', file: 'PRen_rook_green_top.png', name: 'Rook Blue' },
+    { id: 'MUSLIM_ROOK_SIDE', file: 'PRen_rook_green.png', name: 'Rook Blue - side' },
+    { id: 'MUSLIM_ROOK_FREE', file: 'PRen_rook_green_empty.png', name: 'Rook Blue - free' },
 ];

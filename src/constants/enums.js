@@ -6,7 +6,7 @@ export const GOVERNMENT = {
 export const COUNTRY_CODES = {
     ENGLAND: "EN",
     FRANCE: "FR",
-    HOLY_ROMAN_EMPIRE: "HRE",
+    HRE: "HRE",
     PORTUGAL: "PT",
     ARAGON: "AR",
     PAPAL_STATES: "PS",
@@ -74,7 +74,7 @@ export const CARD_TYPE = {
     VICTORY: "VICTORY",
     KINGDOM: "KINGDOM",
     PIECE: "PIECE",
-    TRADE: "TRADE",
+    MARKET_CARD: "MARKET_CARD",
 };
 
 export const PIECE_TYPE = {

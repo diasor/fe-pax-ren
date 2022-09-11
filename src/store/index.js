@@ -1,9 +1,14 @@
 import { createStore } from "vuex";
+import { board } from "./modules/board";
+import { kingdoms } from "./modules/kingdoms";
+import { markets } from "./modules/markets";
 
-export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+const store = createStore({
+    modules: {
+        board,
+        kingdoms,
+        markets,
+    }
+  })
+
+export default store;
