@@ -44,6 +44,7 @@ export default ({
                 showAlgiers.value = showPiece(aragon.value.cities.ALGIERS);
                 timbuktuCard.value.pieceId = aragon.value.cities.TIMBUKTU;
                 showTimbuktu.value = showPiece(aragon.value.cities.TIMBUKTU);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "aragon", refreshValue: false });
             }
         });
 

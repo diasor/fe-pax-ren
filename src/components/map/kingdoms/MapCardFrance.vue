@@ -44,6 +44,7 @@ export default ({
                 showParis.value = showPiece(france.value.cities.PARIS);
                 lyonCard.value.pieceId = france.value.cities.LYON;
                 showLyon.value = showPiece(france.value.cities.LYON);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "france", refreshValue: false });
             }
         });
 

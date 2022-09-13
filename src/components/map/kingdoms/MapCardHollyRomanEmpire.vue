@@ -49,6 +49,7 @@ export default ({
                 showNurnberg.value = showPiece(hre.value.cities.NURNBERG);
                 viennaCard.value.pieceId = hre.value.cities.VIENNA;
                 showVienna.value = showPiece(hre.value.cities.VIENNA);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "hre", refreshValue: false });
             }
         });
 

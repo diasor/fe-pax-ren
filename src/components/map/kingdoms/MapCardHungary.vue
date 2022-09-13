@@ -39,6 +39,7 @@ export default ({
                 showBuda.value = showPiece(hungary.value.cities.BUDA);
                 varnaCard.value.pieceId = hungary.value.cities.VARNA;
                 showVarna.value = showPiece(hungary.value.cities.VARNA);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "hungary", refreshValue: false });
             }
         });
 

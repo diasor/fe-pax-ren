@@ -54,6 +54,7 @@ export default ({
                 showModon.value = showPiece(ottoman.value.cities.MODON);
                 rhodesCard.value.pieceId = ottoman.value.cities.RHODES;
                 showRhodes.value = showPiece(ottoman.value.cities.RHODES);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "ottoman", refreshValue: false });
             }
         });
 

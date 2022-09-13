@@ -80,6 +80,11 @@ export const kingdoms = {
                 }
             }
         },
+        SET_REFRESH_KINGDOM(state, { kingdomName, refreshValue }) {
+            const name = camelCase(lowerCase(kingdomName));
+            const refresh = `refresh${upperFirst(name)}`;
+            state[refresh] = refreshValue;
+        }
     },
 
     actions: {
@@ -91,6 +96,10 @@ export const kingdoms = {
             forEach(kingdoms, (kingdom) => {
                 commit("SET_KINGDOM", kingdom);
             });
+        },
+
+        setRefreshKingdom({ commit }, refreshKingdom) {
+            commit("SET_REFRESH_KINGDOM", refreshKingdom);
         }
     },
 }

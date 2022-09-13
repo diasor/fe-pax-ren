@@ -44,6 +44,7 @@ export default ({
                 showCairo.value = showPiece(mamluk.value.cities.CAIRO);
                 redSeaCard.value.pieceId = mamluk.value.cities.RED_SEA;
                 showRedSea.value = showPiece(mamluk.value.cities.RED_SEA);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "mamluk", refreshValue: false });
             }
         });
 

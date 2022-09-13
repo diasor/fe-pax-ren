@@ -35,6 +35,7 @@ export default ({
                 showGlobalizationVictory.value = victories.value.isGlobalizationVictoryActive;
                 showImperialVictory.value = victories.value.isImperialVictoryActive;
                 showHolyVictory.value = victories.value.isHolyVictoryActive ;
+                store.dispatch("board/setRefreshVictories", false);
             }
         });
 

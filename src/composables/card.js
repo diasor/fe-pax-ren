@@ -16,8 +16,6 @@ export function useCard() {
         }
         if (cardType === CARD_TYPE.KINGDOM) {
             if (cardReligion === RELIGION.SECULAR) {
-                console.log("id", cardId);
-                console.log("religion", cardReligion);
                 return "";
             } else {
                 id = `${cardId}-${upperCase(cardReligion)}`;

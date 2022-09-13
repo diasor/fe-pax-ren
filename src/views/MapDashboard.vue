@@ -3,63 +3,73 @@
         <base-nav-bar />
         <div id="pr-map" class="map-container">
             <!-- all markers -->
-            <map-markers />
-
-            <!-- kingdom cards -->
-            <map-card-england />
-            <map-card-france />
-            <map-card-holly-roman-empire />
-            <map-card-hungary />
-            <map-card-byzantium />
-            <map-card-portugal />
-            <map-card-aragon />
-            <map-card-papal-states />
-            <map-card-ottoman />
-            <map-card-mamluk />
-
-            <!-- victories -->
-            <map-card-victories />
-
-            <!-- markets -->
-            <map-card-markets />
+            <map-markers :key="markersId" :showMarkers="!hideDashboard"  />
+            
+            <!-- all kingdoms -->
+            <map-kingdoms  :showKingdoms="!hideDashboard" v-if="!hideDashboard"/>
         </div>
     </div>
+    <side-bar title="Resizing in place" text="Resume game after resizing the screen." button="Resume" @closeBar="newGame"/>
 </template>
+
 <script>
+import { defineComponent, ref, onMounted, onUnmounted, watch, computed } from 'vue';
 import BaseNavBar from "@/components/generic/BaseNavBar.vue";
 import MapMarkers from "@/components/map/markers/MapMarkers.vue";
-import MapCardEngland from "@/components/map/kingdoms/MapCardEngland.vue";
-import MapCardFrance from "@/components/map/kingdoms/MapCardFrance.vue";
-import MapCardHollyRomanEmpire from "@/components/map/kingdoms/MapCardHollyRomanEmpire.vue";
-import MapCardHungary from "@/components/map/kingdoms/MapCardHungary.vue";
-import MapCardPortugal from '@/components/map/kingdoms/MapCardPortugal.vue';
-import MapCardByzantium from "@/components/map/kingdoms/MapCardByzantium.vue";
-import MapCardAragon from "@/components/map/kingdoms/MapCardAragon.vue";
-import MapCardPapalStates from "@/components/map/kingdoms/MapCardPapalStates.vue";
-import MapCardOttoman from "@/components/map/kingdoms/MapCardOttoman.vue";
-import MapCardMamluk from "@/components/map/kingdoms/MapCardMamluk.vue";
-import MapCardVictories from "@/components/map/MapCardVictories.vue";
-import MapCardMarkets from '@/components/markets/MapCardMarkets.vue';
+import MapKingdoms from '@/components/map/MapKingdoms.vue';
+import SideBar from "@/components/generic/SideBar.vue";
+import { useStore } from "vuex";
 
-export default {
+export default defineComponent({
     name: "MapDashboard",
     components: {
         BaseNavBar,
         MapMarkers,
-        MapCardEngland,
-        MapCardFrance,
-        MapCardHollyRomanEmpire,
-        MapCardHungary,
-        MapCardByzantium,
-        MapCardPortugal,
-        MapCardAragon,
-        MapCardPapalStates,
-        MapCardOttoman,
-        MapCardMamluk,
-        MapCardVictories,
-        MapCardMarkets,
+        MapKingdoms,
+        SideBar,
     },
-};
+
+    setup() {
+        let hideDashboard = ref(false);
+        let markersId = ref(0);
+        let kingdomsId = ref(100);
+        const store = useStore();
+        const resumeGame = computed(() => store.getters["board/getResumeGame"]);
+        const isNavOpen = computed(() => store.getters["board/isNavOpen"]);
+
+        const resizeScreen = (async () => {
+            await store.dispatch("board/setNavOpen", true, { root: true });
+            hideDashboard.value = true;
+        });
+        
+        const newGame = async () => {
+            hideDashboard.value = true;
+            store.dispatch("board/setResumeGame", true, { root: true });
+        };
+
+        onMounted(async () => {
+            window.addEventListener("resize", resizeScreen);
+        });
+
+        watch(resumeGame, (resumeGame) => {
+            if (resumeGame & !isNavOpen.value) {
+                // if the user stopped resizing (isNavOpen is false) and requested to resume game
+                // the game should be reloaded and both markers and kingdoms re mounted
+                store.dispatch("board/newGameBoard");
+                markersId.value = markersId.value + 1;
+                kingdomsId.value = kingdomsId.value + 1;
+                hideDashboard.value = false;
+            }
+        });
+
+        onUnmounted(() => {
+            window.removeEventListener("resize", resizeScreen);
+        });
+
+        return { hideDashboard, newGame, markersId, kingdomsId };
+    }
+
+});
 </script>
 
 <style lang="scss" scoped>

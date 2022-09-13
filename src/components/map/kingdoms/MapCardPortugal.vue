@@ -40,6 +40,7 @@ export default ({
                 showToledo.value = showPiece(portugal.value.cities.TOLEDO);
                 granadaCard.value.pieceId = portugal.value.cities.GRANADA;
                 showGranada.value = showPiece(portugal.value.cities.GRANADA);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "portugal", refreshValue: false });
             }
         });
 

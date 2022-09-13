@@ -31,8 +31,6 @@ export const markets = {
                 }
                 state.refreshEastMarket = true;
                 state.refreshWestMarket = true;
-                console.log("EAST M ", state.eastMarket);
-                console.log("WEST M ", state.westMarket);
             }
         },
     },

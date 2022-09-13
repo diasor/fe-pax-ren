@@ -34,6 +34,7 @@ export default ({
                 // cities & pieces
                 veniceCard.value.pieceId = papalStates.value.cities.VENICE;
                 showVenice.value = showPiece(papalStates.value.cities.VENICE);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "papal_states", refreshValue: false });
             }
         });
 

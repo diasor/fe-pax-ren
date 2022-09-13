@@ -39,6 +39,7 @@ export default ({
                 showLondon.value = showPiece(england.value.cities.LONDON);
                 bordeauxCard.value.pieceId = england.value.cities.BORDEAUX;
                 showBordeaux.value = showPiece(england.value.cities.BORDEAUX);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "england", refreshValue: false });
             }
         });
 

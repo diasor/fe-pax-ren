@@ -3,6 +3,19 @@ export const GOVERNMENT = {
     FEUDAL: "FEUDAL"
 };
 
+export const KINGDOM_NAMES = {
+    ENGLAND: "ENGLAND",
+    FRANCE: "FRANCE",
+    HRE: "HRE",
+    HUNGARY: "HUNGARY",
+    BYZANTIUM: "BYZANTIUM",
+    PORTUGAL: "PORTUGAL",
+    ARAGON: "ARAGON",
+    PAPAL_STATES: "PAPAL_STATES",
+    OTTOMAN: "OTTOMAN",
+    MAMLUK: "MAMLUK"
+};
+
 export const COUNTRY_CODES = {
     ENGLAND: "EN",
     FRANCE: "FR",

@@ -44,6 +44,7 @@ export default ({
                 showCaffa.value = showPiece(byzantium.value.cities.CAFFA);
                 trebizondCard.value.pieceId = byzantium.value.cities.TREBIZOND;
                 showTrebizond.value = showPiece(byzantium.value.cities.TREBIZOND);
+                store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "byzantium", refreshValue: false });
             }
         });
 

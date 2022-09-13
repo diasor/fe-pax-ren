@@ -12,6 +12,8 @@ export const board = {
         concessions: [],
         bankers: [],
         refreshVictories: false,
+        navOpen: false,
+        resumeGame: false,
     }),
 
     getters: {
@@ -19,6 +21,8 @@ export const board = {
         allConcessions: (state) => state.concessions,
         getKingdomByName: (state) => (name) => find(state.kingdoms, (kingdom) => kingdom.name === name),
         getRefreshVictories: (state) => state.refreshVictories,
+        isNavOpen: (state) => state.navOpen,
+        getResumeGame: (state) => state.resumeGame,
     },
 
     mutations: {
@@ -35,11 +39,21 @@ export const board = {
         SET_BANKER_LIST(state, bankers) {
             state.bankers = [...bankers];
         },
+        SET_NAV_OPEN(state, isOpen) {
+            state.navOpen = isOpen;
+        },
+        SET_REFRESH_VICTORIES(state, refresh) {
+            state.refreshVictories = refresh;
+        },
+        SET_RESUME_GAME(state, resume) {
+            state.resumeGame = resume;
+        }
     },
 
     actions: {
         async newGameBoard({ commit, dispatch }) {
             // get mocked data
+            console.log("NEW GAME");
             const game = await import("./../../json/fullGame.json");
 
             // kingdoms & pieces (cities)
@@ -57,6 +71,21 @@ export const board = {
 
             // markets
             await dispatch("markets/setMarket", data.market, { root: true });    
+
+            // borders
+            await dispatch("borders/setBorders", data.borders, { root: true });
         },
+
+        setNavOpen({ commit }, isOpen) {
+            commit("SET_NAV_OPEN", isOpen);
+        },
+
+        setRefreshVictories({ commit }, refresh) {
+            commit("SET_REFRESH_VICTORIES", refresh);
+        },
+
+        setResumeGame({ commit }, resume) {
+            commit("SET_RESUME_GAME", resume);
+        }
     },
 }
