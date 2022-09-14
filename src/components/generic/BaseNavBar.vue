@@ -48,7 +48,8 @@ export default {
 </script>
 
 <style lang="scss">
-$navFontColor: #D7C69D;
+@import "./../../assets/colors.scss";
+
 ul > li > h3 {
     font-family: "Mrs_Sheppards" !important;
     font-size: 3.3rem;
