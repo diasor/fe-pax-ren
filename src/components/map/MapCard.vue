@@ -1,5 +1,6 @@
 <template>
     <img v-if="showPiece" :src="cardSource" class="piece" :style="cardStyle"/>
+    <img v-if="showBorder" :src="cardSource" class="piece" :style="cardStyle"/>
     <img
         v-else-if="loadCard"
         :src="cardSource"
@@ -10,6 +11,7 @@
     <map-card-modal
         v-if="showModalCard"
         :imageName="cardSource"
+        :imageType="imageType"
         :showModal="showModalCard"
         @closeModal="closeModal"
     />
@@ -38,6 +40,7 @@ export default {
             pieceId: "",
             cardRegion: "",
             cardMarkerId: "",
+            cardPosition: "",
         }
     },
 
@@ -45,16 +48,28 @@ export default {
         const { cardFile, cardDynamicStyle } = useCard();
         let showModalCard = ref(false);
 
+        const showBrugges = computed(() =>
+            props.card.cardType === CARD_TYPE.PIECE && props.showCard && props.card.cardId === "BRUGES");
         const showPiece = computed(() =>
             props.card.cardType === CARD_TYPE.PIECE && props.showCard);
+        const showBorder = computed(() =>
+            (props.card.cardType === CARD_TYPE.BORDER || props.card.cardType === CARD_TYPE.PIRATE) && props.showCard);
         const cardSource = computed(() => cardFile(props.card));
         const cardStyle = computed(() => cardDynamicStyle(props.card));
-        const loadCard = computed(() => (props.showCard && (props.card.cardReligion !== RELIGION.SECULAR)));
+        const loadCard = computed(() => 
+            props.showCard
+            && (props.card.cardType === CARD_TYPE.KINGDOM || props.card.cardType === CARD_TYPE.VICTORY || props.card.cardType === CARD_TYPE.MARKET_CARD)
+            && (props.card.cardReligion !== RELIGION.SECULAR)
+        );
+        const imageType = computed(() => 
+            (props.showCard && (props.card.cardType === CARD_TYPE.VICTORY)) 
+            ? "square"
+            : "rectangular"
+        );
         
         const displayModal = () => {
             if (props.card) {
                 showModalCard.value = true;
-                console.log("opening card", cardSource.value);  
             }
         };
 
@@ -62,7 +77,7 @@ export default {
             showModalCard.value = false;
         };
 
-        return { cardSource, cardStyle, showPiece, loadCard, showModalCard, displayModal, closeModal }
+        return { cardSource, cardStyle, showPiece, showBorder, loadCard, showModalCard, displayModal, closeModal, imageType, showBrugges }
     },
 };
 </script>
@@ -78,7 +93,6 @@ export default {
 .piece {
     position: absolute;
     height: auto;
-    border: 1px #2b2d2f solid;
     border-radius: 50%;
 }
 </style>

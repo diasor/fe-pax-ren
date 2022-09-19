@@ -44,7 +44,7 @@ export default ({
                 lubekCard.value.pieceId = hre.value.cities.LUBECK;
                 showLubek.value = showPiece(hre.value.cities.LUBECK);
                 novgorodCard.value.pieceId = hre.value.cities.NOVGOROD;
-                showNurnberg.value = showPiece(hre.value.cities.NOVGOROD);
+                showNovgorod.value = showPiece(hre.value.cities.NOVGOROD);
                 nurnbergCard.value.pieceId = hre.value.cities.NURNBERG;
                 showNurnberg.value = showPiece(hre.value.cities.NURNBERG);
                 viennaCard.value.pieceId = hre.value.cities.VIENNA;

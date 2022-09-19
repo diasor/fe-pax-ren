@@ -1,99 +1,146 @@
 <template>
     <!-- England -->
-    <circle :id="CITY_NAMES.LONDON" cx="1012" cy="830" :r="RADIO" opacity="0" fill="red" />
-    <rect :id="endBlockName(CITY_NAMES.LONDON)" :x="endBlockX(1012)" :y="endBlockY(830)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.BORDEAUX" cx="1080" cy="1070" :r="RADIO" opacity="0" fill="red" />
-    <rect :id="endBlockName(CITY_NAMES.BORDEAUX)" :x="endBlockX(1080)" :y="endBlockY(1070)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.LONDON" x="982" y=780 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.LONDON)" :x="endBlock(982)" y=780 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.LONDON)" x="982" :y="endBlock(780)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+    
+    <rect :id="CITY_NAMES.BORDEAUX" x="1046" y=1020 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.BORDEAUX)" :x="endBlock(1046)" y=1020 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.BORDEAUX)" x="1046" :y="endBlock(1020)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
-    <!-- France -->
-    <circle :id="CITY_NAMES.BRUGES" cx="1348" cy="800" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.BRUGES)" :x="endBlockX(1348)" :y="endBlockY(800)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.PARIS" cx="1255" cy="945" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.PARIS)" :x="endBlockX(1255)" :y="endBlockY(945)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.LYON" cx="1438" cy="1025" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.LYON)" :x="endBlockX(1438)" :y="endBlockY(1025)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.BRUGES" x="1320" y=754 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.BRUGES)" :x="endBlock(1320)" y=754 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.BRUGES)" x="1320" :y="endBlock(754)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.PARIS" x="1227" y=893 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.PARIS)" :x="endBlock(1227)" y=893 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.PARIS)" x="1227" :y="endBlock(893)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.LYON" x="1410" y=970 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.LYON)" :x="endBlock(1410)" y=970 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.LYON)" x="1410" :y="endBlock(970)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+    
 
     <!-- Holy Roman Empire -->
-    <circle :id="CITY_NAMES.LUBECK" cx="1688" cy="750" :r="RADIO" opacity="0" fill="yellow" />
-    <rect :id="endBlockName(CITY_NAMES.LUBECK)" :x="endBlockX(1688)" :y="endBlockY(750)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.NOVGOROD" cx="1830" cy="730" :r="RADIO" opacity="0" fill="yellow" />
-    <rect :id="endBlockName(CITY_NAMES.NOVGOROD)" :x="endBlockX(1830)" :y="endBlockY(730)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.NURNBERG" cx="1662" cy="948" :r="RADIO" opacity="0" fill="yellow" />
-    <rect :id="endBlockName(CITY_NAMES.NURNBERG)" :x="endBlockX(1662)" :y="endBlockY(948)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.VIENNA" cx="1830" cy="995" :r="RADIO" opacity="0" fill="yellow" />
-    <rect :id="endBlockName(CITY_NAMES.VIENNA)" :x="endBlockX(1830)" :y="endBlockY(995)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.LUBECK" x="1663" y=695 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.LUBECK)" :x="endBlock(1663)" y=695 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.LUBECK)" x="1663" :y="endBlock(695)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.NOVGOROD" x="1805" y=685 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.NOVGOROD)" :x="endBlock(1805)" y=685 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.NOVGOROD)" x="1805" :y="endBlock(685)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.NURNBERG" x="1630" y=892 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.NURNBERG)" :x="endBlock(1630)" y=892 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.NURNBERG)" x="1630" :y="endBlock(892)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.VIENNA" x="1800" y=945 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.VIENNA)" :x="endBlock(1800)" y=945 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.VIENNA)" x="1800" :y="endBlock(945)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
     <!-- Hungary -->
-    <circle :id="CITY_NAMES.BUDA" cx="2060" cy="1010" :r="RADIO" opacity="0" fill="green" />
-    <rect :id="endBlockName(CITY_NAMES.BUDA)" :x="endBlockX(2060)" :y="endBlockY(1010)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.VARNA" cx="2200" cy="1040" :r="RADIO" opacity="0" fill="green" />
-    <rect :id="endBlockName(CITY_NAMES.VARNA)" :x="endBlockX(2200)" :y="endBlockY(1040)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.BUDA" x="2037" y=963 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.BUDA)" :x="endBlock(2037)" y=963 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.BUDA)" x="2037" :y="endBlock(963)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
+    <rect :id="CITY_NAMES.VARNA" x="2173" y=990 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.VARNA)" :x="endBlock(2173)" y=990 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.VARNA)" x="2173" :y="endBlock(990)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
     <!-- Byzantium -->
-    <circle :id="CITY_NAMES.TANA" cx="2520" cy="745" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.TANA)" :x="endBlockX(2520)" :y="endBlockY(745)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.CAFFA" cx="2440" cy="950" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.CAFFA)" :x="endBlockX(2440)" :y="endBlockY(950)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.TREBIZOND" cx="2675" cy="1080" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.TREBIZOND)" :x="endBlockX(2675)" :y="endBlockY(1080)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.TANA" x="2492 " y=698 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.TANA)" :x="endBlock(2492)" y=698 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.TANA)" x="2492" :y="endBlock(698)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
+    <rect :id="CITY_NAMES.CAFFA" x="2414" y=900 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.CAFFA)" :x="endBlock(2414)" y=900 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.CAFFA)" x="2414" :y="endBlock(900)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.TREBIZOND" x="2654" y=1030 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.TREBIZOND)" :x="endBlock(2654)" y=1030 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.TREBIZOND)" x="2654" :y="endBlock(1030)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
     <!-- Portugal -->
-    <circle :id="CITY_NAMES.TOLEDO" cx="1050" cy="1370" :r="RADIO" opacity="0" fill="red" />
-    <rect :id="endBlockName(CITY_NAMES.TOLEDO)" :x="endBlockX(1050)" :y="endBlockY(1370)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.GRANADA" cx="1050" cy="1500" :r="RADIO" opacity="0" fill="red" />
-    <rect :id="endBlockName(CITY_NAMES.GRANADA)" :x="endBlockX(1050)" :y="endBlockY(1500)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.TOLEDO" x="1018" y=1322 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.TOLEDO)" :x="endBlock(1018)" y=1322 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.TOLEDO)" x="1018" :y="endBlock(1322)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
+    <rect :id="CITY_NAMES.GRANADA" x="1035" y=1454 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.GRANADA)" :x="endBlock(1035)" y=1454 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.GRANADA)" x="1035" :y="endBlock(1454)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.SPICE_ISLANDS" x="887" y=1593 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.SPICE_ISLANDS)" :x="endBlock(887)" y=1593 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.SPICE_ISLANDS)" x="887" :y="endBlock(1593)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
     <!-- Aragon -->
-    <circle :id="CITY_NAMES.VALENCIA" cx="1265" cy="1354" :r="RADIO" opacity="0" fill="purple" />
-    <rect :id="endBlockName(CITY_NAMES.VALENCIA)" :x="endBlockX(1265)" :y="endBlockY(1354)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.TIMBUKTU" cx="1305" cy="1605" :r="RADIO" opacity="0" fill="purple" />
-    <rect :id="endBlockName(CITY_NAMES.TIMBUKTU)" :x="endBlockX(1305)" :y="endBlockY(1605)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.ALGIERS" cx="1460" cy="1560" :r="RADIO" opacity="0" fill="purple" />
-    <rect :id="endBlockName(CITY_NAMES.ALGIERS)" :x="endBlockX(1460)" :y="endBlockY(1560)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.VALENCIA" x="1242" y=1310 fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.VALENCIA)" :x="endBlock(1242)" y=1310 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.VALENCIA)" x="1242" :y="endBlock(1310)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.TIMBUKTU" x="1278" y="1560" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.TIMBUKTU)" :x="endBlock(1278)" y=1560 fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.TIMBUKTU)" x="1278" :y="endBlock(1560)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.ALGIERS" x="1430" y="1504" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.ALGIERS)" :x="endBlock(1430)" y="1504" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.ALGIERS)" x="1430" :y="endBlock(1504)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
     <!-- Papal States -->
-    <circle :id="CITY_NAMES.VENICE" cx="1710" cy="1280" :r="RADIO" opacity="0" fill="red" />
-    <rect :id="endBlockName(CITY_NAMES.VENICE)" :x="endBlockX(1710)" :y="endBlockY(1280)" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.VENICE" x="1690" y="1230" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.VENICE)" :x="endBlock(1690)" y="1230" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.VENICE)" x="1690" :y="endBlock(1230)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
     <!-- Ottoman -->
-    <circle :id="CITY_NAMES.CONSTANTINOPLE" cx="2050" cy="1286" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.CONSTANTINOPLE)" :x="endBlockX(2050)" :y="endBlockY(1286)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.CONSTANTINOPLE_2" cx="2130" cy="1286" :r="RADIO" opacity="0" fill="green" />
-    <rect :id="endBlockName(CITY_NAMES.CONSTANTINOPLE_2)" :x="endBlockX(2130)" :y="endBlockY(1286)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.CONSTANTINOPLE_3" cx="2205" cy="1286" :r="RADIO" opacity="0" fill="red" />
-    <rect :id="endBlockName(CITY_NAMES.CONSTANTINOPLE_3)" :x="endBlockX(2205)" :y="endBlockY(1286)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.MODON" cx="2068" cy="1450" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.MODON)" :x="endBlockX(2068)" :y="endBlockY(1450)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.RHODES" cx="2270" cy="1430" :r="RADIO" opacity="0" fill="blue" />
-    <rect :id="endBlockName(CITY_NAMES.RHODES)" :x="endBlockX(2270)" :y="endBlockY(1430)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.CONSTANTINOPLE" x="2028" y="1235" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.CONSTANTINOPLE)" :x="endBlock(2028)" y="1235" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.CONSTANTINOPLE)" x="2028" :y="endBlock(1235)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
+    <rect :id="CITY_NAMES.CONSTANTINOPLE_2" x="2100" y="1238" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.CONSTANTINOPLE_2)" :x="endBlock(2100)" y="1238" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.CONSTANTINOPLE_2)" x="2100" :y="endBlock(1238)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.CONSTANTINOPLE_3" x="2178" y="1238" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.CONSTANTINOPLE_3)" :x="endBlock(2178)" y="1238" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.CONSTANTINOPLE_3)" x="2178" :y="endBlock(1238)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.MODON" x="2043" y="1400" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.MODON)" :x="endBlock(2043)" y="1400" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.MODON)" x="2043" :y="endBlock(1400)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.RHODES" x="2242" y="1380" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.RHODES)" :x="endBlock(2242)" y="1380" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.RHODES)" x="2242" :y="endBlock(1380)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
     <!-- Mamluk -->
-    <circle :id="CITY_NAMES.CYPRUS" cx="2550" cy="1402" :r="RADIO" opacity="0" fill="green" />
-    <rect :id="endBlockName(CITY_NAMES.CYPRUS)" :x="endBlockX(2550)" :y="endBlockY(1402)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.CAIRO" cx="2525" cy="1602" :r="RADIO" opacity="0" fill="green" />
-    <rect :id="endBlockName(CITY_NAMES.CAIRO)" :x="endBlockX(2525)" :y="endBlockY(1602)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
-    <circle :id="CITY_NAMES.RED_SEA" cx="2660" cy="1602" :r="RADIO" opacity="0" fill="green" />
-    <rect :id="endBlockName(CITY_NAMES.RED_SEA)" :x="endBlockX(2660)" :y="endBlockY(1602)" fill="yellow" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="CITY_NAMES.CYPRUS" x="2525" y="1358" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.CYPRUS)" :x="endBlock(2525)" y="1358" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.CYPRUS)" x="2525" :y="endBlock(1358)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.CAIRO" x="2500" y="1550" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.CAIRO)" :x="endBlock(2500)" y="1550" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.CAIRO)" x="2500" :y="endBlock(1550)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
+    <rect :id="CITY_NAMES.RED_SEA" x="2640" y="1554" fill="red" opacity="0" :width="WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockWidth(CITY_NAMES.RED_SEA)" :x="endBlock(2640)" y="1554" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight(CITY_NAMES.RED_SEA)" x="2640" :y="endBlock(1554)" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 </template>
 <script>
 import { CITY_NAMES } from "@/constants/enums";
 export default {
     name: "MapMarkersPieces",
     setup(){
-        const RADIO = 37;
-        const WIDTH = 37;
-        const HEIGHT = RADIO * 2;
+        const WIDTH = 67;
+        const END_WIDTH = 30;
+        const HEIGHT = WIDTH;
         
-        const endBlockName = (id) => `${id}-endX`;
-        const endBlockX = (x) => x + WIDTH;
-        const endBlockY = (y) => y - RADIO;
+        const endBlock = (x) => x + WIDTH;
+        const endBlockWidth = (id) => `${id}-endX`;
+        const endBlockHeight = (id) => `${id}-endY`;
+
 
         return {
-            RADIO, WIDTH, HEIGHT, CITY_NAMES, endBlockName, endBlockX, endBlockY
+            WIDTH, HEIGHT, END_WIDTH, CITY_NAMES, endBlockWidth, endBlockHeight, endBlock
         }
     },
 };

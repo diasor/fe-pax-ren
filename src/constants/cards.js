@@ -170,7 +170,7 @@ export const WEST_CARDS = [
     { id: 'PREN162X', file: 'PR2_West Card92.png', name: 'Catherine de Medici', description: '' },
 ];
 
-export const VICTORY_CARD = [
+export const VICTORY_FILES = [
     { id: VICTORY_TYPE.RENAISSANCE, file: 'PR2_Victorycards_active-01.png', name: 'Reinassance Victory' },
     { id: VICTORY_TYPE.GLOBALIZATION, file: 'PR2_Victorycards_active-01.png', name: 'Globalization Victory' },
     { id: VICTORY_TYPE.IMPERIAL, file: 'PR2_Victorycards_active-01.png', name: 'Imperial Victory' },
@@ -181,7 +181,7 @@ export const MAIN_LAYOUT = [
     { id: 'BOARD', file: 'PR2_board_plain.jpg', name: 'Globalization Victory' },
 ];
 
-export const KINGDOMS_FILE = [
+export const KINGDOM_FILES = [
     // England
     { id: 'EN-ISLAMIC', file: 'Map Card Islamic01.png', name: 'Islamic England' },
     { id: 'EN-REFORMIST', file: 'Map Card Reformation01.png', name: 'Reformist England' },
@@ -233,7 +233,7 @@ export const KINGDOMS_FILE = [
     { id: 'ML-CATHOLIC', file: 'Map Card Medieval10.png', name: 'Catholic Mamluk' },    
 ];
 
-export const PIECE_FILE = [
+export const PIECE_FILES = [
     // Knight Gold
     { id: 'CATHOLIC_KNIGHT', file: 'PRen_knight_gold_top.png', name: 'Knight Red' },
     { id: 'CATHOLIC_KNIGHT_SIDE', file: 'PPRen_knight_red.png', name: 'Knight Red - side' },
@@ -263,4 +263,50 @@ export const PIECE_FILE = [
     { id: 'MUSLIM_ROOK', file: 'PRen_rook_green_top.png', name: 'Rook Blue' },
     { id: 'MUSLIM_ROOK_SIDE', file: 'PRen_rook_green.png', name: 'Rook Blue - side' },
     { id: 'MUSLIM_ROOK_FREE', file: 'PRen_rook_green_empty.png', name: 'Rook Blue - free' },
+];
+
+export const CONCESSION_FILES = [
+    // Coeur concession
+    { id: 'COEUR_CONCESSION', file: 'PRen_pawn_Coeur_top.png', name: 'Coeur concession' },
+    { id: 'COEUR_CONCESSION_LEFT', file: 'PRen_pawn_Coeur_left.png', name: 'Coeur concession - left' },
+    { id: 'COEUR_CONCESSION_RIGHT', file: 'PRen_pawn_Coeur_right.png', name: 'Coeur concession - right' },
+    { id: 'COEUR_CONCESSION_FULL', file: 'PRen_pawn_Coeur_top.png', name: 'Coeur concession - top' },
+    
+    // Fugger concession
+    { id: 'FUGGER_CONCESSION', file: 'PRen_pawn_Fugger_top.png', name: 'Fugger concession' },
+    { id: 'FUGGER_CONCESSION_LEFT', file: 'PRen_pawn_Fugger_left.png', name: 'Fugger concession - left' },
+    { id: 'FUGGER_CONCESSION_RIGHT', file: 'PRen_pawn_Fugger_right.png', name: 'Fugger concession - right' },
+    { id: 'FUGGER_CONCESSION_FULL', file: 'PRen_pawn_Fugger.png', name: 'Fugger concession - top' },
+
+    // Medici concession
+    { id: 'MEDICI_CONCESSION', file: 'PRen_pawn_Medici_top.png', name: 'Medici concession' },
+    { id: 'MEDICI_CONCESSION_LEFT', file: 'PRen_pawn_Medici_left.png', name: 'Medici concession - left' },
+    { id: 'MEDICI_CONCESSION_RIGHT', file: 'PRen_pawn_Medici_right.png', name: 'Medici concession - right' },
+    { id: 'MEDICI_CONCESSION_FULL', file: 'PRen_pawn_Medici.png', name: 'Medici concession - top' },
+    
+    // Marchionni concession
+    { id: 'MARCHIONNI_CONCESSION', file: 'PRen_pawn_Marchionni_top.png', name: 'Marchionni concession' },
+    { id: 'MARCHIONNI_CONCESSION_LEFT', file: 'PRen_pawn_Marchionni_left.png', name: 'Marchionni concession - left' },
+    { id: 'MARCHIONNI_CONCESSION_RIGHT', file: 'PRen_pawn_Marchionni_right.png', name: 'Marchionni concession - right' },
+    { id: 'MARCHIONNI_CONCESSION_FULL', file: 'PRen_pawn_Marchionni.png', name: 'Marchionni concession - top' },   
+];
+
+export const PIRATE_FILES = [
+    // Catholic Pirate
+    { id: 'CATHOLIC_PIRATE_HORIZONTAL', file: 'PRen_pirate_gold.png', name: 'Catholic Pirate - horizontal' },
+    { id: 'CATHOLIC_PIRATE_VERTICAL', file: 'PRen_pirate_gold_topV.png', name: 'Catholic pirate - vertical' },
+    { id: 'CATHOLIC_PIRATE_SIDE', file: 'PRen_pirate_gold.png', name: 'Catholic pirate - side' },
+    { id: 'CATHOLIC_PIRATE_EMPTY', file: 'PRen_pirate_gold_empty.png', name: 'Catholic pirate - empty' },
+
+    // Muslim Pirate
+    { id: 'MUSLIM_PIRATE_HORIZONTAL', file: 'PRen_pirate_green.png', name: 'Muslim pirate - horizontal' },
+    { id: 'MUSLIM_PIRATE_VERTICAL', file: 'PRen_pirate_green_topV.png', name: 'Muslim pirate - vertical' },
+    { id: 'MUSLIM_PIRATE_SIDE', file: 'PRen_pirate_green.png', name: 'Muslim pirate - side' },
+    { id: 'MUSLIM_PIRATE_EMPTY', file: 'PRen_pirate_green_empty.png', name: 'Muslim pirate - empty' },
+
+    // Reformist Pirate
+    { id: 'REFORMIST_PIRATE_HORIZONTAL', file: 'PRen_pirate_red.png', name: 'Reformist pirate - horizontal' },
+    { id: 'REFORMIST_PIRATE_VERTICAL', file: 'PRen_pirate_red_topV.png', name: 'Reformist pirate - vertical' },
+    { id: 'REFORMIST_PIRATE_SIDE', file: 'PPRen_pirate_red.png', name: 'Reformist pirate - side' },
+    { id: 'REFORMIST_PIRATE_EMPTY', file: 'PRen_pirate_red_empty.png', name: 'Reformist pirate - empty' },
 ];

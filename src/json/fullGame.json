@@ -50,7 +50,7 @@
                     "government": "FEUDAL",
                     "religion": "ISLAMIC",
                     "cities": {
-                        "LONDON": "REFORMIST_KNIGHT",
+                        "LONDON": "MUSLIM_ROOK",
                         "BORDEAUX": "MUSLIM_KNIGHT"
                     },
                     "repressedPieces": [],
@@ -64,9 +64,9 @@
                     "government": "FEUDAL",
                     "religion": "REFORMIST",
                     "cities": {
-                        "BRUGES": "CATHOLIC_ROOK_FREE",
-                        "PARIS": "CATHOLIC_ROOK",
-                        "LYON": "CATHOLIC_KNIGHT_FREE"
+                        "BRUGES": "CATHOLIC_ROOK",
+                        "PARIS": "MUSLIM_KNIGHT",
+                        "LYON": "CATHOLIC_ROOK"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -79,9 +79,9 @@
                     "government": "FEUDAL",
                     "religion": "SECULAR",
                     "cities": {
-                        "LUBECK": "CATHOLIC_ROOK",
-                        "NOVGOROD": "ISLAMIC_ROOK_FREE",
-                        "NURNBERG": "REFORMIST_KNIGHT_FREE",
+                        "LUBECK": "REFORMIST_ROOK",
+                        "NOVGOROD": "CATHOLIC_ROOK",
+                        "NURNBERG": "MUSLIM_KNIGHT",
                         "VIENNA": "CATHOLIC_ROOK"
                     },
                     "repressedPieces": [],
@@ -95,8 +95,8 @@
                     "government": "FEUDAL",
                     "religion": "CATHOLIC",
                     "cities": {
-                        "BUDA": "CATHOLIC_KNIGHT",
-                        "VARNA": "REFORMIST_KNIGHT_FREE"
+                        "BUDA": "REFORMIST_KNIGHT",
+                        "VARNA": "CATHOLIC_ROOK"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -110,8 +110,8 @@
                     "religion": "ISLAMIC",
                     "cities": {
                         "TANA": "MUSLIM_KNIGHT",
-                        "CAFFA": "CATHOLIC_KNIGHT_FREE",
-                        "TREBIZOND": "REFORMIST_ROOK_FREE"
+                        "CAFFA": "CATHOLIC_ROOK",
+                        "TREBIZOND": "REFORMIST_ROOK"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -124,9 +124,9 @@
                     "government": "FEUDAL",
                     "religion": "REFORMIST",
                     "cities": {
-                        "TOLEDO": "CATHOLIC_KNIGHT",
-                        "GRANADA": "MUSLIM_ROOK_FREE",
-                        "SPICE_ISLANDS": "BUSTED_TOKEN_WEST"
+                        "TOLEDO": "REFORMIST_KNIGHT",
+                        "GRANADA": "MUSLIM_KNIGHT",
+                        "SPICE_ISLANDS": "REFORMIST_KNIGHT"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -139,9 +139,9 @@
                     "government": "FEUDAL",
                     "religion": "REFORMIST",
                     "cities": {
-                        "VALENCIA": "CATHOLIC_KNIGHT",
-                        "ALGIERS": "MUSLIM_ROOK_FREE",
-                        "TIMBUKTU": "REFORMIST_ROOK"
+                        "VALENCIA": "MUSLIM_ROOK",
+                        "ALGIERS": "MUSLIM_KNIGHT",
+                        "TIMBUKTU": "REFORMIST_KNIGHT"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -154,7 +154,7 @@
                     "government": "FEUDAL",
                     "religion": "CATHOLIC",
                     "cities": {
-                        "VENICE": "CATHOLIC_KNIGHT",
+                        "VENICE": "CATHOLIC_ROOK",
                         "VENICE_2": "INACTIVE"
                     },
                     "repressedPieces": [],
@@ -169,10 +169,10 @@
                     "religion": "ISLAMIC",
                     "cities": {
                         "CONSTANTINOPLE": "CATHOLIC_ROOK",
-                        "CONSTANTINOPLE_2": "MUSLIM_ROOK",
-                        "CONSTANTINOPLE_3": "REFORMIST_KNIGHT",
-                        "RHODES": "CATHOLIC_ROOK_FREE",
-                        "MODON": "REFORMIST_ROOK_FREE"
+                        "CONSTANTINOPLE_2": "MUSLIM_KNIGHT",
+                        "CONSTANTINOPLE_3": "REFORMIST_ROOK",
+                        "RHODES": "CATHOLIC_ROOK",
+                        "MODON": "REFORMIST_KNIGHT"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -185,9 +185,9 @@
                     "government": "FEUDAL",
                     "religion": "ISLAMIC",
                     "cities": {
-                        "CYPRUS": "CATHOLIC_ROOK",
-                        "CAIRO": "CATHOLIC_KNIGHT",
-                        "RED_SEA": "MUSLIM_ROOK"
+                        "CYPRUS": "CATHOLIC_KNIGHT",
+                        "CAIRO": "CATHOLIC_ROOK",
+                        "RED_SEA": "MUSLIM_KNIGHT"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -200,79 +200,79 @@
                     "entityId": "BORDER#01bd6ea0-0e6e-4ec5-8794-5547fde33d5e",
                     "firstKingdom": "ENGLAND",
                     "secondKingdom": "FRANCE",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "REFORMIST_PIRATE"
                 },
                 {
                     "entityId": "BORDER#9e08d8fc-6f8f-439d-af16-de0a0ebc955d",
                     "firstKingdom": "ENGLAND",
                     "secondKingdom": "PORTUGAL",
-                    "occupiedBy": "MARCHIONNI_CONCESSION"
+                    "occupiedBy": "REFORMIST_PIRATE"
                 },
                 {
                     "entityId": "BORDER#cc32799e-50b8-4abf-a42e-7955b9ce6eb8",
                     "firstKingdom": "FRANCE",
                     "secondKingdom": "HRE",
-                    "occupiedBy": "FUGGER_CONCESSION"
+                    "occupiedBy": "CATHOLIC_PIRATE"
                 },
                 {
                     "entityId": "BORDER#1cec141a-3d11-48ba-97d3-b25ceb8fee95",
                     "firstKingdom": "FRANCE",
                     "secondKingdom": "ARAGON",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "MEDICI_CONCESSION"
                 },
                 {
                     "entityId": "BORDER#76e61b37-ccb3-450a-a902-682bc4341e5f",
                     "firstKingdom": "HRE",
                     "secondKingdom": "HUNGARY",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "COEUR_CONCESSION"
                 },
                 {
                     "entityId": "BORDER#7ce26120-4464-4ee4-97ca-39a833ed4cd8",
                     "firstKingdom": "HRE",
                     "secondKingdom": "PAPAL_STATES",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "FUGGER_CONCESSION"
                 },
                 {
                     "entityId": "BORDER#048d522b-21d8-4a8a-8cb0-e6d4fe8eeb2e",
                     "firstKingdom": "HUNGARY",
                     "secondKingdom": "BYZANTIUM",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "CATHOLIC_PIRATE"
                 },
                 {
                     "entityId": "BORDER#b4f2eec0-15d0-434f-bec5-d53e111c07c5",
                     "firstKingdom": "HUNGARY",
                     "secondKingdom": "OTTOMAN",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "MUSLIM_PIRATE"
                 },
                 {
                     "entityId": "BORDER#6fd2efd7-7e09-4c23-b858-8925709827fc",
                     "firstKingdom": "BYZANTIUM",
                     "secondKingdom": "MAMLUK",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "FUGGER_CONCESSION"
                 },
                 {
                     "entityId": "BORDER#301e357d-af77-42b0-9d9f-0aa746cbeb71",
                     "firstKingdom": "PORTUGAL",
                     "secondKingdom": "ARAGON",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "CATHOLIC_PIRATE"
                 },
                 {
                     "entityId": "BORDER#12483d83-b147-4104-b31f-8be525986f8e",
                     "firstKingdom": "ARAGON",
                     "secondKingdom": "PAPAL_STATES",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "REFORMIST_PIRATE"
                 },
                 {
                     "entityId": "BORDER#e078f5fe-f0ec-4242-8417-397f6b0b51b2",
                     "firstKingdom": "PAPAL_STATES",
                     "secondKingdom": "OTTOMAN",
-                    "occupiedBy": "FREE"
+                    "occupiedBy": "CATHOLIC_PIRATE"
                 },
                 {
                     "entityId": "BORDER#e5fb3c54-2233-49dd-bdd1-ad1eb88642bd",
                     "firstKingdom": "OTTOMAN",
                     "secondKingdom": "MAMLUK",
-                    "occupiedBy": "COEUR_CONCESSION"
+                    "occupiedBy": "REFORMIST_PIRATE"
                 }
             ],
             "market": {

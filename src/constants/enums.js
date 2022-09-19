@@ -88,6 +88,8 @@ export const CARD_TYPE = {
     KINGDOM: "KINGDOM",
     PIECE: "PIECE",
     MARKET_CARD: "MARKET_CARD",
+    BORDER: "BORDER",
+    PIRATE: "PIRATE",
 };
 
 export const PIECE_TYPE = {
@@ -108,5 +110,10 @@ export const PIECE_TYPE = {
     REFORMIST_BISHOP: "REFORMIST_BISHOP",
 };
 
-
-
+export const CARD_POSITION = {
+    VERTICAL: "VERTICAL",
+    HORIZONTAL: "HORIZONTAL",
+    SIDE: "SIDE",
+    TOP: "TOP",
+    EMPTY: "EMPTY",
+};

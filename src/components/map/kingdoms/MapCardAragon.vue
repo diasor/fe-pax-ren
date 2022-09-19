@@ -27,13 +27,16 @@ export default ({
         let showAlgiers = ref(false);
         let algiersCard = ref({ cardId: CITY_NAMES.ALGIERS, cardType: CARD_TYPE.PIECE, pieceId: "" });
 
+
         const { showPiece } = useCard();
         const store = useStore();
         const aragon = computed(() => store.getters["kingdoms/getAragon"]);
         const refreshAragon = computed(() => store.getters["kingdoms/getRefreshAragon"]);
 
+
         watch(refreshAragon, (refreshAragon) => {
             if (refreshAragon) {
+                // aragon card
                 aragonCard.value.cardReligion = aragon.value.religion;
                 showCard.value = true;
 
@@ -44,6 +47,7 @@ export default ({
                 showAlgiers.value = showPiece(aragon.value.cities.ALGIERS);
                 timbuktuCard.value.pieceId = aragon.value.cities.TIMBUKTU;
                 showTimbuktu.value = showPiece(aragon.value.cities.TIMBUKTU);
+
                 store.dispatch("kingdoms/setRefreshKingdom", { kingdomName: "aragon", refreshValue: false });
             }
         });

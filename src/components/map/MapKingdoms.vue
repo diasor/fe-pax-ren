@@ -17,6 +17,9 @@
 
         <!-- markets -->
         <map-card-markets />
+
+        <!-- borders -->
+        <map-card-borders />
     </div>
  
 </template>
@@ -35,6 +38,7 @@ import MapCardOttoman from "@/components/map/kingdoms/MapCardOttoman.vue";
 import MapCardMamluk from "@/components/map/kingdoms/MapCardMamluk.vue";
 import MapCardVictories from "@/components/map/MapCardVictories.vue";
 import MapCardMarkets from '@/components/markets/MapCardMarkets.vue';
+import MapCardBorders from '@/components/map/MapCardBorders.vue';
 
 export default defineComponent({
     name: "MapKingdoms",
@@ -51,6 +55,7 @@ export default defineComponent({
         MapCardMamluk,
         MapCardVictories,
         MapCardMarkets,
+        MapCardBorders
     },
 
     props: {

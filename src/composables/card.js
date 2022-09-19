@@ -1,6 +1,14 @@
 import { find, upperCase, endsWith } from "lodash";
-import { KINGDOMS_FILE, VICTORY_CARD, PIECE_FILE, WEST_CARDS, EAST_CARDS } from "@/constants/cards"; 
-import { CARD_TYPE, RELIGION, REGION} from "@/constants/enums"; 
+import {
+    KINGDOM_FILES,
+    VICTORY_FILES,
+    PIECE_FILES,
+    WEST_CARDS,
+    EAST_CARDS,
+    CONCESSION_FILES,
+    PIRATE_FILES
+} from "@/constants/cards"; 
+import { CARD_TYPE, RELIGION, REGION, PIECE_TYPE } from "@/constants/enums"; 
 
 export function useCard() {
     function showPiece(pieceId) {
@@ -8,47 +16,75 @@ export function useCard() {
     }
 
     function cardFile(propsCard) {
-        const { cardId, cardReligion, cardType, pieceId, cardRegion } = propsCard;
+        const { cardId, cardReligion, cardType, pieceId, cardRegion, cardPosition } = propsCard;
         let id = "";
         let card = {};
         if (cardType === CARD_TYPE.VICTORY) {
-            card = find(VICTORY_CARD, (iter) => iter.id === cardId);
+            card = find(VICTORY_FILES, (iter) => iter.id === cardId);
         }
         if (cardType === CARD_TYPE.KINGDOM) {
             if (cardReligion === RELIGION.SECULAR) {
                 return "";
             } else {
                 id = `${cardId}-${upperCase(cardReligion)}`;
-                card = find(KINGDOMS_FILE, (iter) => iter.id === id);
+                card = find(KINGDOM_FILES, (iter) => iter.id === id);
             }
         }
+        // Rook, Knight => placed over the kingdom card
         if ((cardType === CARD_TYPE.PIECE) && (showPiece(pieceId))) {
-            card = find(PIECE_FILE, (iter) => iter.id === pieceId);
+            card = find(PIECE_FILES, (iter) => iter.id === pieceId);
         }
+        // Concessions => placed over the kingdom borders
+        if ((cardType === CARD_TYPE.BORDER) && (showPiece(pieceId))) {
+            card = find(CONCESSION_FILES, (iter) => iter.id === pieceId);
+        }
+        // Pirates => placed over the kingdom borders
+        if ((cardType === CARD_TYPE.PIRATE) && (showPiece(pieceId))) {
+            id = `${pieceId}_${cardPosition}`;
+            card = find(PIRATE_FILES, (iter) => iter.id === id);
+        }
+        // West market card
         if ((cardType === CARD_TYPE.MARKET_CARD) && (cardRegion === REGION.WEST)) {
             card = find(WEST_CARDS, (iter) => iter.id === cardId);
         }
+        // East market card
         if ((cardType === CARD_TYPE.MARKET_CARD) && (cardRegion === REGION.EAST)) {
             card = find(EAST_CARDS, (iter) => iter.id === cardId);
         }
         return `/images/${card.file}`;
     }
 
+    function isRook(pieceId) {
+        return (
+            pieceId === PIECE_TYPE.CATHOLIC_ROOK
+            || pieceId === PIECE_TYPE.MUSLIM_ROOK
+            || pieceId === PIECE_TYPE.REFORMIST_ROOK
+        );
+    }
+
     function cardDynamicStyle(card) {
-        const { cardId, cardType, cardMarkerId } = card;
-        let makerId = (cardType === CARD_TYPE.MARKET_CARD) ? cardMarkerId : cardId;
-        const cardSvgRec = document.getElementById(makerId);
+        const { cardId, cardType, cardMarkerId,pieceId } = card;
+        let markerId = (cardType === CARD_TYPE.MARKET_CARD) ? cardMarkerId : cardId;
+        const cardSvgRec = document.getElementById(markerId);
         const dimensions = cardSvgRec.getBoundingClientRect();
         const navBarOffset = 80;
-        const coordX = parseInt(dimensions.left, 10);
-        const coordY = parseInt(dimensions.top, 10) - navBarOffset;
-        const endId = `${makerId}-endX`;
+        let coordX = parseInt(dimensions.left, 10);
+        let coordY = parseInt(dimensions.top, 10) - navBarOffset;
+        const endId = `${markerId}-endX`;
         const cardSvgRecEnd = document.getElementById(endId).getBoundingClientRect();
         let coordEndY = 0;
-        if (cardType !== CARD_TYPE.PIECE) {
-            const endIdY = `${makerId}-endY`;
+        if (cardType !== CARD_TYPE.BORDER) {
+            const endIdY = `${markerId}-endY`;
             const cardSvgRecEndY = document.getElementById(endIdY).getBoundingClientRect();
-            coordEndY = parseInt(cardSvgRecEndY.top, 10) - navBarOffset + 3;
+            if (cardType === CARD_TYPE.PIECE && isRook(pieceId)) {
+                coordX = coordX - 2;
+                coordY = coordY - 8;
+                coordEndY = parseInt(cardSvgRecEndY.top, 10) - navBarOffset - 5;
+            } else if (cardType === CARD_TYPE.PIECE && !isRook(pieceId)){
+                coordX = coordX - 2;
+            } else {
+                coordEndY = parseInt(cardSvgRecEndY.top, 10) - navBarOffset + 3;
+            }
         }
         const coordEndX = parseInt(cardSvgRecEnd.left, 10);
         const width = coordEndX - coordX;

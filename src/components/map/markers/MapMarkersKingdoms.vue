@@ -4,9 +4,9 @@
     <rect :id="endBlockWidth(COUNTRY_CODES.ENGLAND)" x="1135" :y="FIRST_LINE" fill="red" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
     <rect :id="endBlockHeight(COUNTRY_CODES.ENGLAND)" x="795" :y="FIRST_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
     
-    <rect :id="COUNTRY_CODES.FRANCE" x="1190" :y="FIRST_LINE" fill="green" opacity="0" :width="WIDTH" :height="HEIGHT" />
-    <rect :id="endBlockWidth(COUNTRY_CODES.FRANCE)" x="1530" :y="FIRST_LINE" fill="blue" opacity="0" :width="END_WIDTH" :height="HEIGHT" />
-    <rect :id="endBlockHeight(COUNTRY_CODES.FRANCE)" x="1190" :y="FIRST_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+    <rect :id="COUNTRY_CODES.FRANCE" x="1194" :y="FIRST_LINE" fill="green" opacity="0" :width="WIDTH" :height="HEIGHT" />
+    <rect :id="endBlockWidth(COUNTRY_CODES.FRANCE)" x="1534" :y="FIRST_LINE" fill="blue" opacity="0" :width="END_WIDTH" :height="HEIGHT" />
+    <rect :id="endBlockHeight(COUNTRY_CODES.FRANCE)" x="1194" :y="FIRST_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
     
     <rect :id="COUNTRY_CODES.HRE" x="1590" :y="FIRST_LINE" fill="brown" opacity="0" :width="WIDTH" :height="HEIGHT" />
     <rect :id="endBlockWidth(COUNTRY_CODES.HRE)" x="1930" :y="FIRST_LINE" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT" />
@@ -26,9 +26,9 @@
     <rect :id="endBlockWidth(COUNTRY_CODES.PORTUGAL)" :x="endBlockX(795)" :y="SECOND_LINE" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
     <rect :id="endBlockHeight(COUNTRY_CODES.PORTUGAL)" x="795" :y="SECOND_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
     
-    <rect :id="COUNTRY_CODES.ARAGON" x="1190" :y="SECOND_LINE" fill="green" opacity="0" :width="WIDTH" :height="HEIGHT" />
-    <rect :id="endBlockWidth(COUNTRY_CODES.ARAGON)" x="1530" :y="SECOND_LINE" fill="blue" opacity="0" :width="END_WIDTH" :height="HEIGHT" />
-    <rect :id="endBlockHeight(COUNTRY_CODES.ARAGON)" x="1190" :y="SECOND_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+    <rect :id="COUNTRY_CODES.ARAGON" x="1194" :y="SECOND_LINE" fill="green" opacity="0" :width="WIDTH" :height="HEIGHT" />
+    <rect :id="endBlockWidth(COUNTRY_CODES.ARAGON)" x="1534" :y="SECOND_LINE" fill="blue" opacity="0" :width="END_WIDTH" :height="HEIGHT" />
+    <rect :id="endBlockHeight(COUNTRY_CODES.ARAGON)" x="1194" :y="SECOND_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
     
     <rect :id="COUNTRY_CODES.PAPAL_STATES" x="1590" :y="SECOND_LINE" fill="brown" opacity="0" :width="WIDTH" :height="HEIGHT" />
     <rect :id="endBlockWidth(COUNTRY_CODES.PAPAL_STATES)" x="1930" :y="SECOND_LINE" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT" />
@@ -65,9 +65,9 @@ export default {
     name: "MapMarkers",
     setup(){
         const CARD_HEIGHT = 510;
-        const FIRST_LINE = 625;
+        const FIRST_LINE = 624;
         const FIRST_LINE_END = FIRST_LINE + CARD_HEIGHT;
-        const SECOND_LINE = 1204;
+        const SECOND_LINE = 1201;
         const SECOND_LINE_END = SECOND_LINE + CARD_HEIGHT;
         const WIDTH = 340;
         const HEIGHT = 100;

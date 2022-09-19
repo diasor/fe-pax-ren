@@ -6,6 +6,7 @@
             <map-markers-kingdoms v-if="showMarkers" />
             <map-markers-pieces v-if="showMarkers" />
             <map-markers-market v-if="showMarkers" />
+            <map-markers-borders v-if="showMarkers" />
         </svg>
     </figure> 
 </template>
@@ -15,6 +16,8 @@ import MapMarkersPieces from './MapMarkersPieces.vue';
 import MapMarkersKingdoms from './MapMarkersKingdoms.vue';
 import MapMarkersMarket from "./MapMarkersMarket.vue";
 import MapMarkersVictories from "./MapMarkersVictories.vue";
+import MapMarkersBorders from "./MapMarkersBorders.vue";
+
 export default {
     name: "MapMarkers",
     components: {
@@ -22,6 +25,7 @@ export default {
         MapMarkersKingdoms,
         MapMarkersMarket,
         MapMarkersVictories,
+        MapMarkersBorders,
     },
 
     props: {
