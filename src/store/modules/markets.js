@@ -33,11 +33,25 @@ export const markets = {
                 state.refreshWestMarket = true;
             }
         },
+
+        SET_REFRESH_WEST(state, refreshValue) {
+            state.refreshWestMarket = refreshValue;
+        },
+
+        SET_REFRESH_EAST(state, refreshValue) {
+            state.refreshEastMarket = refreshValue;
+        },
     },
 
     actions: {
         setMarket( { commit }, market ) {
             commit("SET_MARKET", market);
         },
+        setRefreshWest({ commit }, refresh) {
+            commit("SET_REFRESH_WEST", refresh);
+        },
+        setRefreshEast({ commit }, refresh) {
+            commit("SET_REFRESH_EAST", refresh);
+        }
     },
 }
