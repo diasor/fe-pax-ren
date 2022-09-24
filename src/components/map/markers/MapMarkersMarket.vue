@@ -1,5 +1,9 @@
 <template>
     <!-- West Market (first line) -->
+    <rect id="WEST_MARKET_0" x="215" :y="FIRST_LINE" fill="orange" opacity="0" :width="WIDTH" :height="HEIGHT" />
+    <rect :id="endBlockWidth('WEST_MARKET_0')" x="555" :y="FIRST_LINE" fill="red" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight('WEST_MARKET_0')" x="215" :y="FIRST_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
     <rect id="WEST_MARKET_1" x="582" :y="FIRST_LINE" fill="orange" opacity="0" :width="WIDTH" :height="HEIGHT" />
     <rect :id="endBlockWidth('WEST_MARKET_1')" x="922" :y="FIRST_LINE" fill="red" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
     <rect :id="endBlockHeight('WEST_MARKET_1')" x="582" :y="FIRST_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
@@ -21,6 +25,10 @@
     <rect :id="endBlockHeight('WEST_MARKET_5')" x="2115" :y="FIRST_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
 
     <!-- East Market (second line) -->
+    <rect id="EAST_MARKET_0" x="215" :y="SECOND_LINE" fill="orange" opacity="0" :width="WIDTH" :height="HEIGHT" />
+    <rect :id="endBlockWidth('EAST_MARKET_0')" x="555" :y="SECOND_LINE" fill="red" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
+    <rect :id="endBlockHeight('EAST_MARKET_0')" x="215" :y="SECOND_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>
+
     <rect id="EAST_MARKET_1" x="582" :y="SECOND_LINE" fill="brown" opacity="0" :width="WIDTH" :height="HEIGHT" />
     <rect :id="endBlockWidth('EAST_MARKET_1')" x="922" :y="SECOND_LINE" fill="yellow" opacity="0" :width="END_WIDTH" :height="HEIGHT"/>
     <rect :id="endBlockHeight('EAST_MARKET_1')" x="582" :y="SECOND_LINE_END" fill="blue" opacity="0" :width="WIDTH" :height="END_WIDTH"/>

@@ -1,6 +1,7 @@
 import { VICTORY_TYPE } from "@/constants/enums";
 
 export const EAST_CARDS = [
+    { id: 'PRE_BACK', file: 'East_Market_Back.png', name: 'East card back' , description: '' },
     { id: 'PREN058', file: 'PR2_East Card01.png', name: 'The Grim', description: '' },
     { id: 'PREN059', file: 'PR2_East Card02.png', name: 'Safavids', description: '' },
     { id: 'PREN060', file: 'PR2_East Card03.png', name: 'Dervishes', description: '' },
@@ -76,6 +77,7 @@ export const EAST_CARDS = [
 ];
 
 export const WEST_CARDS = [
+    { id: 'PRW_BACK', file: 'West_Market_Back.png', name: 'East card back' , description: '' },
     { id: 'PREN001', file: 'PR2_West Card01.png', name: 'Inquisition Pope', description: '' },
     { id: 'PREN002', file: 'PR2_West Card02.png', name: 'Papal Elephant', description: '' },
     { id: 'PREN003', file: 'PR2_West Card03.png', name: 'Grand Inquisitor', description: '' },
@@ -249,7 +251,7 @@ export const PIECE_FILES = [
     { id: 'MUSLIM_KNIGHT_SIDE', file: 'PPRen_knight_green.png', name: 'Knight Blue - side' },
     { id: 'MUSLIM_KNIGHT_FREE', file: 'PRen_knight_green_empty.png', name: 'Knight Blue - free' },
 
-    // Rook Gold
+    // Rook Gold 
     { id: 'CATHOLIC_ROOK', file: 'PRen_rook_gold_top.png', name: 'Rook Gold' },
     { id: 'CATHOLIC_ROOK_SIDE', file: 'PRen_rook_gold.png', name: 'KnRook Gold - side' },
     { id: 'CATHOLIC_ROOK_FREE', file: 'PRen_rook_gold_empty.png', name: 'Rook Gold - free' },

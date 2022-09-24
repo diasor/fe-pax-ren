@@ -1,5 +1,6 @@
 <template>
     <!-- west market -->
+    <map-card :showCard="showWestMarket0" :card="westMarketCard0" />
     <map-card :showCard="showWestMarket1" :card="westMarketCard1" />
     <map-card :showCard="showWestMarket2" :card="westMarketCard2" />
     <map-card :showCard="showWestMarket3" :card="westMarketCard3" />
@@ -7,6 +8,7 @@
     <map-card :showCard="showWestMarket5" :card="westMarketCard5" />
 
     <!-- east market -->
+    <map-card :showCard="showEastMarket0" :card="eastMarketCard0" />
     <map-card :showCard="showEastMarket1" :card="eastMarketCard1" />
     <map-card :showCard="showEastMarket2" :card="eastMarketCard2" />
     <map-card :showCard="showEastMarket3" :card="eastMarketCard3" />
@@ -25,11 +27,13 @@ export default ({
     components: { MapCard },
     setup() {
         // west market
+        let showWestMarket0 = ref(false);
         let showWestMarket1 = ref(false);
         let showWestMarket2 = ref(false);
         let showWestMarket3 = ref(false);
         let showWestMarket4 = ref(false);
         let showWestMarket5 = ref(false);
+        const westMarketCard0 = ref({ cardId: "PRW_BACK", cardMarkerId: "WEST_MARKET_0", cardRegion: REGION.WEST, cardType: CARD_TYPE.MARKET_CARD });
         let westMarketCard1 = ref({ cardId: "", cardMarkerId: "WEST_MARKET_1", cardRegion: REGION.WEST, cardType: CARD_TYPE.MARKET_CARD });
         let westMarketCard2 = ref({ cardId: "", cardMarkerId: "WEST_MARKET_2", cardRegion: REGION.WEST, cardType: CARD_TYPE.MARKET_CARD });
         let westMarketCard3 = ref({ cardId: "", cardMarkerId: "WEST_MARKET_3", cardRegion: REGION.WEST, cardType: CARD_TYPE.MARKET_CARD });
@@ -37,11 +41,13 @@ export default ({
         let westMarketCard5 = ref({ cardId: "", cardMarkerId: "WEST_MARKET_5", cardRegion: REGION.WEST, cardType: CARD_TYPE.MARKET_CARD });
 
         // east market
+        let showEastMarket0 = ref(false);
         let showEastMarket1 = ref(false);
         let showEastMarket2 = ref(false);
         let showEastMarket3 = ref(false);
         let showEastMarket4 = ref(false);
         let showEastMarket5 = ref(false);
+        const eastMarketCard0 = ref({ cardId: "PRE_BACK", cardMarkerId: "EAST_MARKET_0", cardRegion: REGION.EAST, cardType: CARD_TYPE.MARKET_CARD });
         let eastMarketCard1 = ref({ cardMarkerId: "EAST_MARKET_1", cardRegion: REGION.EAST, cardType: CARD_TYPE.MARKET_CARD });
         let eastMarketCard2 = ref({ cardMarkerId: "EAST_MARKET_2", cardRegion: REGION.EAST, cardType: CARD_TYPE.MARKET_CARD });
         let eastMarketCard3 = ref({ cardMarkerId: "EAST_MARKET_3", cardRegion: REGION.EAST, cardType: CARD_TYPE.MARKET_CARD });
@@ -57,72 +63,104 @@ export default ({
 
         watch(refreshWestMarket, (refreshWestMarket) => {
             if (refreshWestMarket) {
-                const maxCard = westMarket.value.length;
-                if ( maxCard >= 1) {
-                    westMarketCard1.value.cardId = westMarket.value[0].cardId;
-                    showWestMarket1.value = true;
-                }
-               if ( maxCard >= 2) {
-                    westMarketCard2.value.cardId = westMarket.value[1].cardId;
-                    showWestMarket2.value = true;
-                }
-                if ( maxCard >= 3) {
-                    westMarketCard3.value.cardId = westMarket.value[2].cardId;
-                    showWestMarket3.value = true;
-                }
-                if ( maxCard >= 4) {
-                    westMarketCard4.value.cardId = westMarket.value[3].cardId;
-                    showWestMarket4.value = true;
-                }
-                if ( maxCard >= 5) {
-                    westMarketCard5.value.cardId = westMarket.value[4].cardId;
-                    showWestMarket5.value = true;
+                for (let i = 0; i < westMarket.value.length; i++) {
+                    if (i === 0) {
+                        showWestMarket0.value = true;
+                    }
+                    if (i === 1) {
+                        westMarketCard1.value.cardId = westMarket.value[i].cardId;
+                        showWestMarket1.value = true;
+                    }
+                    if ( i === 2) {
+                        westMarketCard2.value.cardId = westMarket.value[i].cardId;
+                        showWestMarket2.value = true;
+                    }
+                    if ( i === 3) {
+                        westMarketCard3.value.cardId = westMarket.value[i].cardId;
+                        showWestMarket3.value = true;
+                    }
+                    if ( i === 4) {
+                        westMarketCard4.value.cardId = westMarket.value[i].cardId;
+                        showWestMarket4.value = true;
+                    }
+                    if ( i === 5) {
+                        westMarketCard5.value.cardId = westMarket.value[i].cardId;
+                        showWestMarket5.value = true;
+                    }
                 }
             }
         });
         
         watch(refreshEastMarket, (refreshEastMarket) => {
             if (refreshEastMarket) {
-                const maxCard = eastMarket.value.length;
-                if ( maxCard >= 1) {
-                    eastMarketCard1.value.cardId = eastMarket.value[0].cardId;
-                    showEastMarket1.value = true;
+                for (let i = 0; i < eastMarket.value.length; i++) {
+                    if (i === 0) {
+                        showEastMarket0.value = true;
+                    }
+                    if (i === 1) {
+                        eastMarketCard1.value.cardId = eastMarket.value[i].cardId;
+                        showEastMarket1.value = true; 
+                    }
+                    if ( i === 2) {
+                        eastMarketCard2.value.cardId = eastMarket.value[i].cardId;
+                        showEastMarket2.value = true;
+                    }
+                    if ( i === 3) {
+                        eastMarketCard3.value.cardId = eastMarket.value[i].cardId;
+                        showEastMarket3.value = true;
+                    }
+                    if ( i === 4) {
+                        eastMarketCard4.value.cardId = eastMarket.value[i].cardId;
+                        showEastMarket4.value = true;
+                    }
+                    if ( i === 5) {
+                        eastMarketCard5.value.cardId = eastMarket.value[i].cardId;
+                        showEastMarket5.value = true;
+                    }
                 }
-               if ( maxCard >= 2) {
-                    eastMarketCard2.value.cardId = eastMarket.value[1].cardId;
-                    showEastMarket2.value = true;
-                }
-                if ( maxCard >= 3) {
-                    eastMarketCard3.value.cardId = eastMarket.value[2].cardId;
-                    showEastMarket3.value = true;
-                }
-                if ( maxCard >= 4) {
-                    eastMarketCard4.value.cardId = eastMarket.value[3].cardId;
-                    showEastMarket4.value = true;
-                }
-                if ( maxCard >= 5) {
-                    eastMarketCard5.value.cardId = eastMarket.value[4].cardId;
-                    showEastMarket5.value = true;
-                }
+                // if ( maxCard >= 1) {
+                //     eastMarketCard1.value.cardId = eastMarket.value[0].cardId;
+                //     showEastMarket1.value = true;
+                // }
+            //    if ( maxCard >= 2) {
+            //         eastMarketCard2.value.cardId = eastMarket.value[1].cardId;
+            //         showEastMarket2.value = true;
+            //     }
+                // if ( maxCard >= 3) {
+                //     eastMarketCard3.value.cardId = eastMarket.value[2].cardId;
+                //     showEastMarket3.value = true;
+                // }
+                // if ( maxCard >= 4) {
+                //     eastMarketCard4.value.cardId = eastMarket.value[3].cardId;
+                //     showEastMarket4.value = true;
+                // }
+                // if ( maxCard >= 5) {
+                //     eastMarketCard5.value.cardId = eastMarket.value[4].cardId;
+                //     showEastMarket5.value = true;
+                // }
             }
         });
 
         return {
+            showWestMarket0,
             showWestMarket1,
             showWestMarket2,
             showWestMarket3,
             showWestMarket4,
             showWestMarket5,
+            westMarketCard0,
             westMarketCard1,
             westMarketCard2,
             westMarketCard3,
             westMarketCard4,
             westMarketCard5,
+            showEastMarket0,
             showEastMarket1,
             showEastMarket2,
             showEastMarket3,
             showEastMarket4,
             showEastMarket5,
+            eastMarketCard0,
             eastMarketCard1,
             eastMarketCard2,
             eastMarketCard3,
