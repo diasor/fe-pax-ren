@@ -117,3 +117,10 @@ export const CARD_POSITION = {
     TOP: "TOP",
     EMPTY: "EMPTY",
 };
+
+export const BANKERS = {
+    FUGGER: "Fugger",
+    MARCHIONNI: "Marchionni",
+    COEUR: "Coeur",
+    MEDICI: "Medici",
+};

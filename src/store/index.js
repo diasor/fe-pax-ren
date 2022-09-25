@@ -3,6 +3,7 @@ import { board } from "./modules/board";
 import { kingdoms } from "./modules/kingdoms";
 import { markets } from "./modules/markets";
 import { borders } from "./modules/borders";
+import { bankers } from "./modules/bankers";
 
 const store = createStore({
     modules: {
@@ -10,6 +11,7 @@ const store = createStore({
         kingdoms,
         markets,
         borders,
+        bankers,
     }
   })
 

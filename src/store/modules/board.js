@@ -74,6 +74,9 @@ export const board = {
 
             // borders
             await dispatch("borders/setBorders", data.borders, { root: true });
+
+            // bankers
+            await dispatch("bankers/setAllBankers", data.bankers, { root: true });
         },
 
         setNavOpen({ commit }, isOpen) {
