@@ -1,4 +1,20 @@
-$navFontColor: #D7C69D;
 $waterColor: rgb(99,119,129,255);
-$sandColor: rgb(175,151,108,255);
-$buttonColor: rgba(149,51,28,255);
+$sandColor: #af9764;
+$buttonColor: #95331c;
+
+$backdropColor: #00000033;
+
+// navigation
+$navFontColor: #D7C69D;
+$navButton: #95331c;
+$navButtonHover: #888;
+
+
+// buttons
+$darkButtonColor: #95331c;
+$bigButtonWidth: 3rem;
+$bigButtonHeight: 1rem;
+
+:export {
+    darkButtonColor: $darkButtonColor;
+}
