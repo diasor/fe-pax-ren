@@ -1,0 +1,1829 @@
+{
+  "Right" : {
+    "value" : {
+      "uuid" : "eccb1709-d1bb-4e71-984f-9c7aed58f69f",
+      "bankers" : [
+        {
+          "entityId" : "BANKER#648428f8-2bdd-438b-a1ec-2a2ba853d5e0",
+          "playerUuid" : "f985c725-5a32-4227-b640-06aa46a753d4",
+          "playerHandle" : "leibnitz",
+          "name" : "Medici",
+          "freeConcessions" : 9,
+          "florins" : 3,
+          "eastTableau" : [
+          ],
+          "westTableau" : [
+          ],
+          "oldWidows" : [
+          ],
+          "handCards" : [
+          ],
+          "bishops" : {
+            
+          }
+        },
+        {
+          "entityId" : "BANKER#0667c8ff-9908-4b97-a1c7-d7ac8e3c14a2",
+          "playerUuid" : "4a30e117-ff4e-46a2-819b-f3b644cafbe5",
+          "playerHandle" : "pascal",
+          "name" : "Coeur",
+          "freeConcessions" : 9,
+          "florins" : 4,
+          "eastTableau" : [
+          ],
+          "westTableau" : [
+          ],
+          "oldWidows" : [
+          ],
+          "handCards" : [
+          ],
+          "bishops" : {
+            
+          }
+        },
+        {
+          "entityId" : "BANKER#11fa9ced-f4dd-465b-879e-cb37262238ac",
+          "playerUuid" : "371b27e1-62ff-4e39-9e82-dc759d4673e2",
+          "playerHandle" : "newton",
+          "name" : "Marchionni",
+          "freeConcessions" : 9,
+          "florins" : 5,
+          "eastTableau" : [
+          ],
+          "westTableau" : [
+          ],
+          "oldWidows" : [
+          ],
+          "handCards" : [
+          ],
+          "bishops" : {
+            
+          }
+        },
+        {
+          "entityId" : "BANKER#e507c2c1-8ecd-4306-812a-cc860b85bf83",
+          "playerUuid" : "044322ab-43c7-40da-bcf7-237dce4f4f23",
+          "playerHandle" : "kepler",
+          "name" : "Fugger",
+          "freeConcessions" : 9,
+          "florins" : 6,
+          "eastTableau" : [
+          ],
+          "westTableau" : [
+            {
+              "cardId" : "PREN148X",
+              "cardType" : "MARKET_CARD",
+              "cardName" : "Tolfa Alum",
+              "locationType" : "KINGDOM",
+              "locationKingdom" : "PAPAL_STATES",
+              "locationRegion" : null,
+              "tableauActions" : [
+                "VOTE_WEST",
+                "COMMERCE_WEST"
+              ],
+              "oneShotAction" : null,
+              "suitors" : [
+              ],
+              "agents" : [
+                "GENERIC_CONCESSION",
+                "GENERIC_CONCESSION"
+              ],
+              "prestige" : [
+              ],
+              "abilities" : [
+              ]
+            },
+            {
+              "cardId" : "ENGLAND",
+              "cardType" : "KINGDOM",
+              "cardName" : "King Edward IV, House of York",
+              "locationType" : "KINGDOM",
+              "locationKingdom" : "ENGLAND",
+              "locationRegion" : null,
+              "tableauActions" : [
+                "CAMPAIGN"
+              ],
+              "oneShotAction" : null,
+              "suitors" : [
+              ],
+              "agents" : [
+              ],
+              "prestige" : [
+              ],
+              "abilities" : [
+              ]
+            },
+            {
+              "cardId" : "PREN143X",
+              "cardType" : "MARKET_CARD",
+              "cardName" : "Wolf of Rimini",
+              "locationType" : "KINGDOM",
+              "locationKingdom" : "FRANCE",
+              "locationRegion" : null,
+              "tableauActions" : [
+                "SIEGE",
+                "COMMERCE_WEST"
+              ],
+              "oneShotAction" : "CONSPIRACY",
+              "suitors" : [
+              ],
+              "agents" : [
+                "CATHOLIC_KNIGHT",
+                "CATHOLIC_KNIGHT"
+              ],
+              "prestige" : [
+              ],
+              "abilities" : [
+                "CONDOTTIERE"
+              ]
+            },
+            {
+              "cardId" : "FRANCE",
+              "cardType" : "KINGDOM",
+              "cardName" : "Louis XI the Spider, House of Valois",
+              "locationType" : "KINGDOM",
+              "locationKingdom" : "FRANCE",
+              "locationRegion" : null,
+              "tableauActions" : [
+                "CAMPAIGN"
+              ],
+              "oneShotAction" : null,
+              "suitors" : [
+              ],
+              "agents" : [
+              ],
+              "prestige" : [
+              ],
+              "abilities" : [
+              ]
+            },
+            {
+              "cardId" : "PORTUGAL",
+              "cardType" : "KINGDOM",
+              "cardName" : "Henry the Navigator",
+              "locationType" : "KINGDOM",
+              "locationKingdom" : "PORTUGAL",
+              "locationRegion" : null,
+              "tableauActions" : [
+                "CAMPAIGN"
+              ],
+              "oneShotAction" : null,
+              "suitors" : [
+              ],
+              "agents" : [
+              ],
+              "prestige" : [
+                "DISCOVERY"
+              ],
+              "abilities" : [
+              ]
+            }
+          ],
+          "oldWidows" : [
+          ],
+          "handCards" : [
+          ],
+          "bishops" : {
+            
+          }
+        }
+      ],
+      "kingdoms" : [
+        {
+          "entityId" : "KINGDOM#6ba0d4ba-3449-46e4-b761-8691794d30fd",
+          "name" : "ENGLAND",
+          "government" : "FEUDAL",
+          "religion" : "SECULAR",
+          "cities" : {
+            "LONDON" : "CATHOLIC_ROOK",
+            "BORDEAUX" : "CATHOLIC_KNIGHT_FREE"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "TABLEAU_FUGGER_WEST",
+          "marriedTo" : null,
+          "vassalOf" : null
+        },
+        {
+          "entityId" : "KINGDOM#ae9d40d2-e775-4aa2-9d0a-e8696630ed34",
+          "name" : "FRANCE",
+          "government" : "FEUDAL",
+          "religion" : "SECULAR",
+          "cities" : {
+            "BRUGES" : "CATHOLIC_ROOK_FREE",
+            "PARIS" : "CATHOLIC_KNIGHT",
+            "LYON" : "CATHOLIC_KNIGHT_FREE"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "TABLEAU_FUGGER_WEST",
+          "marriedTo" : null,
+          "vassalOf" : "ENGLAND"
+        },
+        {
+          "entityId" : "KINGDOM#8183ae67-9c66-4e7f-a14c-ff5a37fc1bb0",
+          "name" : "HRE",
+          "government" : "FEUDAL",
+          "religion" : "SECULAR",
+          "cities" : {
+            "LUBECK" : "CATHOLIC_ROOK_FREE",
+            "NOVGOROD" : "BUSTED_TOKEN_EAST",
+            "NURNBERG" : "REFORMIST_KNIGHT_FREE",
+            "VIENNA" : "CATHOLIC_ROOK"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "THRONE",
+          "marriedTo" : null,
+          "vassalOf" : null
+        },
+        {
+          "entityId" : "KINGDOM#97dffda1-75e3-4184-b679-c57aea9cf78e",
+          "name" : "HUNGARY",
+          "government" : "FEUDAL",
+          "religion" : "SECULAR",
+          "cities" : {
+            "BUDA" : "CATHOLIC_KNIGHT",
+            "VARNA" : "REFORMIST_KNIGHT_FREE"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "THRONE",
+          "marriedTo" : null,
+          "vassalOf" : null
+        },
+        {
+          "entityId" : "KINGDOM#870157ed-7593-4dfb-8d11-3e98b775410e",
+          "name" : "BYZANTIUM",
+          "government" : "FEUDAL",
+          "religion" : "SECULAR",
+          "cities" : {
+            "TANA" : "MUSLIM_KNIGHT",
+            "CAFFA" : "CATHOLIC_KNIGHT_FREE",
+            "TREBIZOND" : "REFORMIST_ROOK_FREE"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "THRONE",
+          "marriedTo" : null,
+          "vassalOf" : null
+        },
+        {
+          "entityId" : "KINGDOM#58905a21-e7f7-4d6e-a336-27088423784f",
+          "name" : "PORTUGAL",
+          "government" : "FEUDAL",
+          "religion" : "SECULAR",
+          "cities" : {
+            "TOLEDO" : "CATHOLIC_KNIGHT",
+            "GRANADA" : "MUSLIM_ROOK_FREE",
+            "SPICE_ISLANDS" : "BUSTED_TOKEN_WEST"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "TABLEAU_FUGGER_WEST",
+          "marriedTo" : null,
+          "vassalOf" : "ENGLAND"
+        },
+        {
+          "entityId" : "KINGDOM#fdab8844-ea6b-48cb-aba0-f66eabab852d",
+          "name" : "ARAGON",
+          "government" : "FEUDAL",
+          "religion" : "SECULAR",
+          "cities" : {
+            "VALENCIA" : "CATHOLIC_KNIGHT",
+            "ALGIERS" : "MUSLIM_ROOK_FREE",
+            "TIMBUKTU" : "BUSTED_TOKEN_EAST"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "THRONE",
+          "marriedTo" : null,
+          "vassalOf" : null
+        },
+        {
+          "entityId" : "KINGDOM#588708de-8396-4ce9-929a-b1c16a36acd0",
+          "name" : "PAPAL_STATES",
+          "government" : "FEUDAL",
+          "religion" : "CATHOLIC",
+          "cities" : {
+            "VENICE" : "CATHOLIC_KNIGHT",
+            "VENICE_2" : "INACTIVE"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "THRONE",
+          "marriedTo" : null,
+          "vassalOf" : null
+        },
+        {
+          "entityId" : "KINGDOM#6888d8a9-5ce3-458d-87d5-78c6af6f470d",
+          "name" : "OTTOMAN",
+          "government" : "FEUDAL",
+          "religion" : "SECULAR",
+          "cities" : {
+            "CONSTANTINOPLE_2" : "MUSLIM_KNIGHT",
+            "RHODES" : "CATHOLIC_ROOK_FREE",
+            "MODON" : "REFORMIST_ROOK_FREE",
+            "CONSTANTINOPLE" : "MUSLIM_ROOK",
+            "CONSTANTINOPLE_3" : "MUSLIM_KNIGHT"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "THRONE",
+          "marriedTo" : null,
+          "vassalOf" : null
+        },
+        {
+          "entityId" : "KINGDOM#e6ad0e23-6b88-4d58-8b49-774d6c6b9610",
+          "name" : "MAMLUK",
+          "government" : "FEUDAL",
+          "religion" : "ISLAMIC",
+          "cities" : {
+            "CYPRUS" : "CATHOLIC_ROOK_FREE",
+            "CAIRO" : "MUSLIM_ROOK",
+            "RED_SEA" : "BUSTED_TOKEN_WEST"
+          },
+          "repressedPieces" : [
+          ],
+          "location" : "THRONE",
+          "marriedTo" : null,
+          "vassalOf" : null
+        }
+      ],
+      "borders" : [
+        {
+          "entityId" : "BORDER#3901aadf-2e19-49d8-b88d-8ab673e564b1",
+          "firstKingdom" : "ENGLAND",
+          "secondKingdom" : "FRANCE",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#82d487e5-389e-4690-b6ae-a53db07110c7",
+          "firstKingdom" : "ENGLAND",
+          "secondKingdom" : "PORTUGAL",
+          "occupiedBy" : "MARCHIONNI_CONCESSION"
+        },
+        {
+          "entityId" : "BORDER#a507df7d-39ff-479a-b62d-ed91676c955f",
+          "firstKingdom" : "FRANCE",
+          "secondKingdom" : "HRE",
+          "occupiedBy" : "FUGGER_CONCESSION"
+        },
+        {
+          "entityId" : "BORDER#7d173cdc-e1e0-4046-924e-15251330cb2d",
+          "firstKingdom" : "FRANCE",
+          "secondKingdom" : "ARAGON",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#a2655519-aeec-4f04-883b-2d5b3b273c15",
+          "firstKingdom" : "HRE",
+          "secondKingdom" : "HUNGARY",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#d73b0535-91de-4488-99b9-95d31f9556e3",
+          "firstKingdom" : "HRE",
+          "secondKingdom" : "PAPAL_STATES",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#1a6b5dcf-6a25-4e0d-b0d1-d0bfebbb8047",
+          "firstKingdom" : "HUNGARY",
+          "secondKingdom" : "BYZANTIUM",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#d4c454df-e86e-4fab-9b3a-9f97216d6a50",
+          "firstKingdom" : "HUNGARY",
+          "secondKingdom" : "OTTOMAN",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#ff26cb38-38ba-4965-874e-aabaa57014dd",
+          "firstKingdom" : "BYZANTIUM",
+          "secondKingdom" : "MAMLUK",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#0a9509c4-85fa-4a64-994e-363b2200ecac",
+          "firstKingdom" : "PORTUGAL",
+          "secondKingdom" : "ARAGON",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#d86eedcf-3d31-42ae-9ffc-cb233a49a7a2",
+          "firstKingdom" : "ARAGON",
+          "secondKingdom" : "PAPAL_STATES",
+          "occupiedBy" : "MEDICI_CONCESSION"
+        },
+        {
+          "entityId" : "BORDER#74d11287-de00-4f45-9fe3-411339964085",
+          "firstKingdom" : "PAPAL_STATES",
+          "secondKingdom" : "OTTOMAN",
+          "occupiedBy" : "FREE"
+        },
+        {
+          "entityId" : "BORDER#563fcc38-16f5-4107-8bbb-4a573ed48a1d",
+          "firstKingdom" : "OTTOMAN",
+          "secondKingdom" : "MAMLUK",
+          "occupiedBy" : "COEUR_CONCESSION"
+        }
+      ],
+      "market" : {
+        "entityId" : "MARKET#2aa0665b-155c-497f-befa-e08cc7e0b73d",
+        "eastDeck" : [
+          {
+            "cardId" : "PREN118X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Grand Mufti",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "EAST",
+            "tableauActions" : [
+              "BEHEAD"
+            ],
+            "oneShotAction" : "JIHAD",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_BISHOP"
+            ],
+            "prestige" : [
+              "MUSLIM"
+            ],
+            "abilities" : [
+              "GENOCIDE"
+            ]
+          },
+          {
+            "cardId" : "PREN066",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Black Army",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "HUNGARY",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX",
+              "SIEGE",
+              "INQUISITOR_REFORMIST"
+            ],
+            "oneShotAction" : "REFORMATION",
+            "suitors" : [
+            ],
+            "agents" : [
+              "REFORMIST_KNIGHT",
+              "REFORMIST_KNIGHT"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN075",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Elzbieta of Bohemia",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "EAST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : "CORONATION",
+            "suitors" : [
+              "HUNGARY",
+              "PORTUGAL",
+              "HRE"
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN108X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Isfendiyarid dynasty",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "BYZANTIUM",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "REPRESS_CONCESSION",
+              "CORSAIR_MUSLIM"
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN082",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Damascus Coffee",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "MAMLUK",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "SIEGE",
+              "COMMERCE_EAST"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_ROOK"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN166X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Bank of St. George",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "BYZANTIUM",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "COMMERCE_WEST"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+              "JEWISH_BANKERS"
+            ]
+          },
+          {
+            "cardId" : "PREN102X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Sahn-i Seman Medrese",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "OTTOMAN",
+            "locationRegion" : null,
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+              "DISCOVERY"
+            ],
+            "abilities" : [
+              "ASTRONOMICAL_NAVIGATION"
+            ]
+          },
+          {
+            "cardId" : "PREN084",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "The Timar System",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "EAST",
+            "tableauActions" : [
+              "TAX",
+              "SIEGE",
+              "INQUISITOR_MUSLIM"
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_ROOK"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN074",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "The Kremlin",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "HRE",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "COMMERCE_EAST"
+            ],
+            "oneShotAction" : "TRADE_SHIFT_NOVGOROD",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+              "BISHOP_IMMUNITY"
+            ]
+          },
+          {
+            "cardId" : "PREN086",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Saint Stefan cel Mare",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "HUNGARY",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "SIEGE",
+              "INQUISITOR_REFORMIST"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "REFORMIST_ROOK",
+              "REFORMIST_ROOK"
+            ],
+            "prestige" : [
+              "REFORMIST"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN123X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Nothing New",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "HUNGARY",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "REPRESS_CONCESSION_KNIGHT",
+              "VOTE_EAST",
+              "SIEGE"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_ROOK"
+            ],
+            "prestige" : [
+              "RENAISSANCE"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN077",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Hurrem Sultan Roxelana",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "EAST",
+            "tableauActions" : [
+              "REPRESS_CONCESSION",
+              "BEHEAD"
+            ],
+            "oneShotAction" : "CORONATION",
+            "suitors" : [
+              "BYZANTIUM",
+              "OTTOMAN",
+              "MAMLUK"
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "COMET_EAST_1",
+            "cardType" : "COMET",
+            "cardName" : "COMET_EAST_1",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "EAST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN121X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Nomads of Tlemcen",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "ARAGON",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "COMMERCE_EAST"
+            ],
+            "oneShotAction" : "TRADE_SHIFT_TIMBUKTU",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_ROOK"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN111X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Glinski's Rebellion",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "HUNGARY",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "REPRESS_ROOK_KNIGHT",
+              "SIEGE",
+              "COMMERCE_EAST"
+            ],
+            "oneShotAction" : "PEASANT_REVOLT",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+              "REFORMIST"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN164X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Circassian Mamluks",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "MAMLUK",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX"
+            ],
+            "oneShotAction" : "JIHAD",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_KNIGHT"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+              "MAMLUK_GOLDEN_AGE",
+              "SLAVE_SOLDIERS"
+            ]
+          },
+          {
+            "cardId" : "PREN065",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Mamluk Slave Soldiers",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "MAMLUK",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX",
+              "SIEGE"
+            ],
+            "oneShotAction" : "JIHAD",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_KNIGHT"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN080",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Greek Klephts",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "OTTOMAN",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX",
+              "SIEGE"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "REFORMIST_ROOK"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN094X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Zaporozhian Host",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "BYZANTIUM",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX",
+              "SIEGE"
+            ],
+            "oneShotAction" : "REFORMATION",
+            "suitors" : [
+            ],
+            "agents" : [
+              "REFORMIST_KNIGHT"
+            ],
+            "prestige" : [
+              "REFORMIST"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN076",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Sophia Palaiologina",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "EAST",
+            "tableauActions" : [
+              "REPRESS_CONCESSION",
+              "INQUISITOR_REFORMIST"
+            ],
+            "oneShotAction" : "CORONATION",
+            "suitors" : [
+              "HUNGARY",
+              "BYZANTIUM",
+              "HRE"
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+              "REFORMIST"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN062",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Barbarosa Brothers",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PAPAL_STATES",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "REPRESS_CONCESSION",
+              "CORSAIR_MUSLIM"
+            ],
+            "oneShotAction" : "APOSTASY_MUSLIM_REFORMIST",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_PIRATE"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN122X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "The Last Sigh",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PORTUGAL",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX",
+              "SIEGE"
+            ],
+            "oneShotAction" : "TRADE_SHIFT_TIMBUKTU",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_ROOK"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+              "DOUBLE_OPS"
+            ]
+          },
+          {
+            "cardId" : "PREN090",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Duke of Athens",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "OTTOMAN",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "SIEGE"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "REFORMIST_ROOK"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "COMET_EAST_2",
+            "cardType" : "COMET",
+            "cardName" : "COMET_EAST_2",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "EAST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          }
+        ],
+        "eastMarket" : [
+          {
+            "cardId" : "PREN114X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Counts of Celji",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "HRE",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "REPRESS_CONCESSION_KNIGHT"
+            ],
+            "oneShotAction" : "PEASANT_REVOLT",
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_ROOK"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN168X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Zionist State",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "MAMLUK",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "INQUISITOR_REFORMIST",
+              "COMMERCE_EAST"
+            ],
+            "oneShotAction" : "REFORMATION",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+              "REFORMIST"
+            ],
+            "abilities" : [
+              "SULEYMAN_PATRONAGE"
+            ]
+          },
+          {
+            "cardId" : "PREN058",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "The Grim",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "OTTOMAN",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "BEHEAD",
+              "SIEGE",
+              "INQUISITOR_MUSLIM"
+            ],
+            "oneShotAction" : "JIHAD",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_BISHOP"
+            ],
+            "prestige" : [
+              "MUSLIM"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN068",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Black Sheep Tribe",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "BYZANTIUM",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX",
+              "SIEGE"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_KNIGHT"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN101X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Civil Engineer",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "EAST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+              "PATRONAGE"
+            ],
+            "abilities" : [
+              "FREE_EASTERN_OPS"
+            ]
+          },
+          {
+            "cardId" : "PREN088",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Cem Anti-Hostage",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "OTTOMAN",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "BEHEAD",
+              "SIEGE"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_ROOK",
+              "MUSLIM_ROOK"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+              "SELL_FOUR_FLORINS"
+            ]
+          }
+        ],
+        "eastMarketCoins" : [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "westDeck" : [
+          {
+            "cardId" : "PREN009",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "House of Borgia",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+              "SIEGE",
+              "INQUISITOR_CATHOLIC"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_BISHOP"
+            ],
+            "prestige" : [
+              "PATRONAGE"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN037",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "The Hidden",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "ARAGON",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "VOTE_WEST",
+              "INQUISITOR_REFORMIST",
+              "COMMERCE_WEST"
+            ],
+            "oneShotAction" : "PEASANT_REVOLT",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+              "RENAISSANCE"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN014",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "India Armada",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PORTUGAL",
+            "locationRegion" : null,
+            "tableauActions" : [
+            ],
+            "oneShotAction" : "TRADE_SHIFT_SPICE_ISLANDS",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+              "DISCOVERY"
+            ],
+            "abilities" : [
+              "CAPE_GOOD_HOPE"
+            ]
+          },
+          {
+            "cardId" : "PREN033",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Schwarzer Haufen",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+              "TAX",
+              "SIEGE"
+            ],
+            "oneShotAction" : "PEASANT_REVOLT",
+            "suitors" : [
+            ],
+            "agents" : [
+              "MUSLIM_KNIGHT"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN0128X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Man for all seasons",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "ENGLAND",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "BEHEAD",
+              "INQUISITOR_CATHOLIC"
+            ],
+            "oneShotAction" : "CRUSADE",
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_BISHOP"
+            ],
+            "prestige" : [
+              "CATHOLIC"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN047",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Margaret of Anjou",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+              "REPRESS_ROOK",
+              "SIEGE"
+            ],
+            "oneShotAction" : "CORONATION",
+            "suitors" : [
+              "ENGLAND",
+              "ARAGON",
+              "FRANCE"
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN0134X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Mining Engineer",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+              "CATHOLIC"
+            ],
+            "abilities" : [
+              "FREE_WESTERN_OPS"
+            ]
+          },
+          {
+            "cardId" : "PREN148X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Tolfa Alum",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PAPAL_STATES",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "VOTE_WEST",
+              "COMMERCE_WEST"
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION",
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN0130X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Cryptography",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PAPAL_STATES",
+            "locationRegion" : null,
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+              "PATRONAGE"
+            ],
+            "abilities" : [
+              "MEDICI_CIPHERS_BROKEN"
+            ]
+          },
+          {
+            "cardId" : "PREN0131X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Michelangelo",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+              "PATRONAGE"
+            ],
+            "abilities" : [
+              "PATRONS_RENOWN"
+            ]
+          },
+          {
+            "cardId" : "PREN018",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Almeida Armada",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PORTUGAL",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "REPRESS_CONCESSION",
+              "CORSAIR_CATHOLIC"
+            ],
+            "oneShotAction" : "TRADE_SHIFT_SPICE_ISLANDS",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+              "DISCOVERY"
+            ],
+            "abilities" : [
+              "CAPE_GOOD_HOPE"
+            ]
+          },
+          {
+            "cardId" : "PREN138X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Reichskrone",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+              "VOTE_WEST"
+            ],
+            "oneShotAction" : "CORONATION",
+            "suitors" : [
+              "HRE"
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+              "CATHOLIC"
+            ],
+            "abilities" : [
+              "SELL_FOUR_FLORINS"
+            ]
+          },
+          {
+            "cardId" : "PREN019",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Gold Coast Monopoly",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PORTUGAL",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "COMMERCE_WEST",
+              "CORSAIR_CATHOLIC"
+            ],
+            "oneShotAction" : "TRADE_SHIFT_SPICE_ISLANDS",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN156X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Humanism",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "FRANCE",
+            "locationRegion" : null,
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_BISHOP"
+            ],
+            "prestige" : [
+              "PATRONAGE"
+            ],
+            "abilities" : [
+              "HOLY_VICTORY_2_ACTIONS",
+              "BISHOP_IMMUNITY"
+            ]
+          },
+          {
+            "cardId" : "PREN010",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Bonfire of the Vanities",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PAPAL_STATES",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX",
+              "VOTE_WEST",
+              "INQUISITOR_CATHOLIC"
+            ],
+            "oneShotAction" : "PEASANT_REVOLT",
+            "suitors" : [
+            ],
+            "agents" : [
+              "REFORMIST_BISHOP"
+            ],
+            "prestige" : [
+              "RENAISSANCE"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "COMET_WEST_2",
+            "cardType" : "COMET",
+            "cardName" : "COMET_WEST_2",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN159X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Consent of the Governed",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : "PEASANT_REVOLT",
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+              "RENAISSANCE"
+            ],
+            "abilities" : [
+              "PATRONAGE_RENAISSANCE_PRESTIGE"
+            ]
+          },
+          {
+            "cardId" : "PREN016",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "The Company of Merchant Adventurers",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "ENGLAND",
+            "locationRegion" : null,
+            "tableauActions" : [
+            ],
+            "oneShotAction" : "TRADE_SHIFT_SPICE_ISLANDS",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+              "DISCOVERY"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "COMET_WEST_1",
+            "cardType" : "COMET",
+            "cardName" : "COMET_WEST_1",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN0133X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Romantic Realism",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PAPAL_STATES",
+            "locationRegion" : null,
+            "tableauActions" : [
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+              "PATRONAGE_RENAISSANCE_PRESTIGE"
+            ]
+          },
+          {
+            "cardId" : "PREN036",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Flanders Guild",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "FRANCE",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "VOTE_WEST",
+              "SIEGE",
+              "COMMERCE_WEST"
+            ],
+            "oneShotAction" : "PEASANT_REVOLT",
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+              "RENAISSANCE"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN032",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Duke of Milan",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "ARAGON",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "TAX",
+              "SIEGE"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_KNIGHT",
+              "CATHOLIC_KNIGHT"
+            ],
+            "prestige" : [
+              "PATRONAGE"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN147X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "William Caxton",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "ENGLAND",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "COMMERCE_WEST"
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+              "GENERIC_CONCESSION"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+              "UNLIMITED_HAND_SIZE"
+            ]
+          },
+          {
+            "cardId" : "PREN024",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Gonfalonier",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PAPAL_STATES",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "VOTE_WEST",
+              "SIEGE",
+              "INQUISITOR_CATHOLIC"
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_KNIGHT",
+              "CATHOLIC_KNIGHT"
+            ],
+            "prestige" : [
+              "PATRONAGE",
+              "RENAISSANCE"
+            ],
+            "abilities" : [
+              "CONDOTTIERE"
+            ]
+          }
+        ],
+        "westMarket" : [
+          {
+            "cardId" : "PREN013",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Genoese Fleet",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "ARAGON",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "REPRESS_CONCESSION",
+              "CORSAIR_CATHOLIC"
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_PIRATE"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN160X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Consent of the Governed",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "FRANCE",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "INQUISITOR_REFORMIST"
+            ],
+            "oneShotAction" : "REFORMATION",
+            "suitors" : [
+            ],
+            "agents" : [
+              "REFORMIST_BISHOP"
+            ],
+            "prestige" : [
+              "REFORMIST"
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN017",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Scottish Privateers",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "ENGLAND",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "CORSAIR_REFORMIST",
+              "REPRESS_CONCESSION"
+            ],
+            "oneShotAction" : null,
+            "suitors" : [
+            ],
+            "agents" : [
+              "REFORMIST_PIRATE"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          },
+          {
+            "cardId" : "PREN143X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Wolf of Rimini",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "FRANCE",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "SIEGE",
+              "COMMERCE_WEST"
+            ],
+            "oneShotAction" : "CONSPIRACY",
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_KNIGHT",
+              "CATHOLIC_KNIGHT"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+              "CONDOTTIERE"
+            ]
+          },
+          {
+            "cardId" : "PREN0129X",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Oratory of Divine Love",
+            "locationType" : "KINGDOM",
+            "locationKingdom" : "PAPAL_STATES",
+            "locationRegion" : null,
+            "tableauActions" : [
+              "INQUISITOR_CATHOLIC"
+            ],
+            "oneShotAction" : "APOSTASY_CATHOLIC_REFORMIST",
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_BISHOP",
+              "CATHOLIC_BISHOP"
+            ],
+            "prestige" : [
+              "CATHOLIC"
+            ],
+            "abilities" : [
+              "COUNTER_REFORMATION"
+            ]
+          },
+          {
+            "cardId" : "PREN030",
+            "cardType" : "MARKET_CARD",
+            "cardName" : "Santa Hermandad",
+            "locationType" : "REGION",
+            "locationKingdom" : null,
+            "locationRegion" : "WEST",
+            "tableauActions" : [
+              "TAX",
+              "INQUISITOR_CATHOLIC"
+            ],
+            "oneShotAction" : "APOSTASY_CATHOLIC_REFORMIST",
+            "suitors" : [
+            ],
+            "agents" : [
+              "CATHOLIC_KNIGHT"
+            ],
+            "prestige" : [
+            ],
+            "abilities" : [
+            ]
+          }
+        ],
+        "westMarketCoins" : [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "bishops" : {
+        
+      },
+      "playerTurnUuid" : "371b27e1-62ff-4e39-9e82-dc759d4673e2",
+      "freeMuslimKnights" : 4,
+      "freeCatholicKnights" : 5,
+      "freeReformistKnights" : 7,
+      "freeMuslimRooks" : 5,
+      "freeCatholicRooks" : 8,
+      "freeReformistRooks" : 7,
+      "freeMuslimBishops" : 5,
+      "freeCatholicBishops" : 5,
+      "freeReformistBishops" : 5,
+      "freeMuslimPirates" : 3,
+      "freeCatholicPirates" : 6,
+      "freeReformistPirates" : 3,
+      "eastFairStart" : "TANA",
+      "westFairStart" : "TREBIZOND",
+      "isRenaissanceVictoryActive" : false,
+      "isGlobalizationVictoryActive" : false,
+      "isImperialVictoryActive" : false,
+      "isHolyVictoryActive" : false
+    }
+  }
+}

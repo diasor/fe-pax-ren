@@ -3,8 +3,13 @@
   <slide-in-out entry="left" exit="left" :duration="800" appear>
     <div v-if="showPanel" class="tableau-container">
       <div class="card-title">
-        <div class="title">
-          <label>{{ title }}</label>
+        <div class="banker">
+          <div class="banker__icon">
+            <b-img width="60px" :src="bankerData.shield" :alt="title" />
+          </div>
+          <div class="banker__title">
+            <label>{{ title }}</label>
+          </div>
         </div>
         <div class="close" @click="closeTableau">
           <span class="close">+</span>
@@ -13,21 +18,17 @@
       <!-- main tableau grid -->
       <div class="card-grid" :style="cardGridStyle">
         <div v-if="!hideWest" class="card-west-gallery" :style="cardWestStyle">
-          <base-carousel
-            :slides="westCardSlides"
-            carouselId="west"
+          <tableau-ops-market
+            id="west"
+            :slides="westCards"
             :width="carouselWidth"
-          />
-          <base-button
-            :text="westButtonTitle"
-            :color="westButtonColor"
-            :fontColor="westFontColor"
-            @clickButton="showWest"
+            :showOneMarket="showOneMarket"
+            @toggleWest="toggleButtonWest"
           />
         </div>
         <div class="banker-container" v-if="!showOneMarket">
           <b-img
-            :src="bankerImage"
+            :src="bankerData.image"
             rounded
             center
             class="object-center"
@@ -36,16 +37,12 @@
           />
         </div>
         <div v-if="!hideEast" class="card-east-gallery" :style="cardEastStyle">
-          <base-carousel
-            :slides="eastCardSlides"
-            carouselId="east"
+          <tableau-ops-market
+            id="east"
+            :slides="eastCards"
             :width="carouselWidth"
-          />
-          <base-button
-            :text="eastButtonTitle"
-            :color="eastButtonColor"
-            :fontColor="eastFontColor"
-            @clickButton="showEast"
+            :showOneMarket="showOneMarket"
+            @toggleEast="toggleButtonEast"
           />
         </div>
       </div>
@@ -55,80 +52,84 @@
 
 <script>
 import { computed, ref } from "vue";
+import { forEach } from "lodash";
 import { SlideInOut } from "vue3-transitions";
-import BaseCarousel from "@/components/generic/BaseCarousel.vue";
-import BaseButton from "@/components/generic/BaseButton.vue";
+import TableauOpsMarket from "./TableauOpsMarket.vue";
 import { useStore } from "vuex";
+import { useCard } from "@/composables/card";
+import { CARD_TYPE, REGION } from "@/constants/enums";
 
 export default {
   name: "TableauSlideBar",
-  components: { SlideInOut, BaseCarousel, BaseButton },
+  components: { SlideInOut, TableauOpsMarket },
   props: {
     showPanel: {
       type: Boolean,
       default: false,
     },
+    banker: {
+      type: String,
+      required: true,
+    },
   },
 
   emits: ["closeTableau"],
 
-  setup(_, context) {
-    const bankerImage = "/images/PR2_punchout_playerboard_Blue.png";
-    const westButtonColor = "#e9e7db";
-    const westFontColor = "#4e4e49";
-    const eastButtonColor = "#171717";
-    const eastFontColor = "#c0c0c0";
-
+  setup(props, context) {
     const store = useStore();
-    const fugger = computed(() => store.getters["bankers/getFugger"]);
-    const title = computed(() => `${fugger.value.name}'s tableau ops`);
+    const bankerData = computed(() =>
+      store.getters["bankers/getBanker"](props.banker)
+    );
+    const title = computed(() => `${bankerData.value.name}'s tableau ops`);
 
     let hideEast = ref(false);
     let hideWest = ref(false);
 
     const showOneMarket = computed(() => hideEast.value || hideWest.value);
+    const carouselWidth = computed(() => (showOneMarket.value ? "85" : "37"));
 
-    const eastCardSlides = [
-      "/images/PR2_East Card19.png",
-      "/images/PR2_East Card21.png",
-      "/images/PR2_East Card22.png",
-      "/images/PR2_East Card23.png",
-      "/images/PR2_East Card24.png",
-    ];
+    const { cardFile } = useCard();
 
-    const westCardSlides = [
-      "/images/PR2_West Card20.png",
-      "/images/PR2_East Card68.png",
-      "/images/PR2_East Card69.png",
-      "/images/PR2_East Card70.png",
-      "/images/PR2_East Card71.png",
-    ];
+    const westCards = computed(() =>
+      buildCardSet(bankerData.value.full.westTableau, REGION.WEST)
+    );
+
+    const eastCards = computed(() =>
+      buildCardSet(bankerData.value.full.eastTableau, REGION.EAST)
+    );
+
+    const buildCardSet = (tableau, cardRegion) => {
+      let cards = [];
+      forEach(tableau, (item) => {
+        const cardType =
+          item.cardType === "KINGDOM" ? CARD_TYPE.EMPIRE : item.cardType;
+        const card = {
+          cardId: item.cardId,
+          cardType,
+          cardRegion,
+          cardName: item.cardName,
+        };
+        cards.push(cardFile(card));
+      });
+
+      return cards;
+    };
+
+    const toggleButtonWest = () => {
+      hideEast.value = !hideEast.value;
+    };
+
+    const toggleButtonEast = () => {
+      hideWest.value = !hideWest.value;
+    };
 
     const closeTableau = () => {
       context.emit("closeTableau", true);
     };
 
-    const eastButtonTitle = computed(() =>
-      showOneMarket.value ? "Tableau" : "East"
-    );
-    const westButtonTitle = computed(() =>
-      showOneMarket.value ? "Tableau" : "West"
-    );
-    const showWest = () => {
-      hideEast.value = !hideEast.value;
-    };
-
-    const showEast = () => {
-      hideWest.value = !hideWest.value;
-    };
-
     const cardGridStyle = computed(() => {
       return {
-        display: "grid",
-        "grid-template-columns": showOneMarket.value ? "1fr" : "1fr 0.3fr 1fr",
-        "grid-template-rows": "1fr",
-        "grid-column-gap": "0px",
-        "grid-row-gap": "0px",
+        "grid-template-columns": showOneMarket.value ? "1fr" : "1fr 0.2fr 1fr",
       };
     });
 
@@ -154,23 +155,14 @@ export default {
       };
     });
 
-    const carouselWidth = computed(() =>
-      hideEast.value || hideWest.value ? "85" : "37"
-    );
-
     return {
-      bankerImage,
-      fugger,
       title,
+      bankerData,
       closeTableau,
-      eastCardSlides,
-      westCardSlides,
-      eastButtonColor,
-      eastFontColor,
-      westButtonColor,
-      westFontColor,
-      showWest,
-      showEast,
+      eastCards,
+      westCards,
+      toggleButtonWest,
+      toggleButtonEast,
       hideWest,
       hideEast,
       showOneMarket,
@@ -178,8 +170,6 @@ export default {
       cardWestStyle,
       carouselWidth,
       cardEastStyle,
-      eastButtonTitle,
-      westButtonTitle,
     };
   },
 };
@@ -222,16 +212,27 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  font-family: "Mrs_Sheppards" !important;
+  font-family: "Lobster Two" !important;
 }
 
-.title {
+.banker {
   display: flex;
+  justify-content: space-between;
   width: 90%;
-  margin: 1rem auto;
-  justify-content: center;
-  color: $buttonColor !important;
-  font-size: 3rem !important;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    margin: auto 1rem;
+    padding: 1rem 0;
+  }
+
+  &__title {
+    display: flex;
+    color: $buttonColor !important;
+    font-size: 3rem !important;
+    margin: 1rem auto;
+  }
 }
 
 .close {
@@ -253,6 +254,10 @@ export default {
 }
 
 .card-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-column-gap: "0px";
+  grid-row-gap: "0px";
   align-self: center;
   justify-content: center;
   padding: 0;

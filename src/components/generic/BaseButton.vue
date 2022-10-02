@@ -50,7 +50,7 @@ export default {
         "text-decoration": "none",
         width: "auto",
         padding: "0 10px",
-        "font-family": "Mrs_Sheppards",
+        "font-family": "Lobster Two",
         "font-size": "1.2rem",
         color: props.fontColor !== null ? props.fontColor : defaultFontColor,
       };

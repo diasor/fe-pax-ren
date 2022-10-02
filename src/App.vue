@@ -25,6 +25,12 @@ export default defineComponent({
 }
 
 @font-face {
+  font-family: "Lobster Two";
+  src: local("Lobster Two"),
+    url(./fonts/LobsterTwo/LobsterTwo-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "Satisfy";
   src: local("Satisfy"),
     url(./fonts/Satisfy/Satisfy-Regular.ttf) format("truetype");

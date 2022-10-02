@@ -20,6 +20,7 @@
   <tableau-side-bar
     v-if="showTableau"
     :showPanel="showTableau"
+    :banker="banker"
     @closeTableau="closeTableau"
   />
 </template>
@@ -55,6 +56,7 @@ export default defineComponent({
   setup() {
     let hideDashboard = ref(false);
     let showTableau = ref(false);
+    let banker = ref("");
     let markersId = ref(0);
     let kingdomsId = ref(100);
     const store = useStore();
@@ -71,8 +73,9 @@ export default defineComponent({
       store.dispatch("board/setResumeGame", true, { root: true });
     };
 
-    const openTableau = () => {
-      console.log(" MapDashboard openTableau");
+    const openTableau = (bankerName) => {
+      console.log(" MapDashboard openTableau", bankerName);
+      banker.value = bankerName;
       showTableau.value = true;
     };
 
@@ -106,6 +109,7 @@ export default defineComponent({
       kingdomsId,
       showTableau,
       openTableau,
+      banker,
       closeTableau,
     };
   },

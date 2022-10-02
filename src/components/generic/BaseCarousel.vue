@@ -6,17 +6,18 @@
       @click.prevent="previousCard"
     />
 
-    <div class="hs full no-scrollbar" :style="cardStyle">
+    <div class="carousel full no-scrollbar" :style="cardStyle">
       <div
         v-for="(slide, index) in slides"
         :key="index"
-        :id="`${carouselId}-${index}`"
+        :id="`${id}-${index}`"
         class="item"
         @click.prevent="goToSlide(index)"
       >
         <b-img rounded fluid :src="slide" alt="Image 1" />
       </div>
     </div>
+
     <font-awesome-icon
       icon="fa-circle-chevron-right"
       class="nav-button nav-button__next"
@@ -31,17 +32,17 @@ export default defineComponent({
   name: "BaseCarousel",
 
   props: {
-    slides: {
-      type: Array,
-      default: () => [],
-    },
-    carouselId: {
+    id: {
       type: String,
       default: "",
     },
     width: {
       type: String,
       default: "35vw",
+    },
+    slides: {
+      type: Array,
+      default: () => [],
     },
   },
 
@@ -51,7 +52,7 @@ export default defineComponent({
     );
     const previousCard = () => {
       if (slideLengh.value !== -1) {
-        const firstId = `${props.carouselId}-0`;
+        const firstId = `${props.id}-0`;
         let element = document.getElementById(firstId);
         element.scrollIntoView({ behavior: "smooth" });
       }
@@ -60,7 +61,7 @@ export default defineComponent({
     const nextCard = () => {
       if (slideLengh.value !== -1) {
         const lastIndex = props.slides.length - 1;
-        const lastId = `${props.carouselId}-${lastIndex}`;
+        const lastId = `${props.id}-${lastIndex}`;
         let element = document.getElementById(lastId);
         element.scrollIntoView({ behavior: "smooth" });
       }
@@ -102,11 +103,11 @@ export default defineComponent({
 @import url("https://unpkg.com/vue-agile/dist/VueAgile.css");
 @import "./../../assets/colors.scss";
 .tableau-slides {
-  padding: 20px 0 20px 10px;
+  padding: 20px 5px;
   position: relative;
 }
 
-.hs {
+.carousel {
   display: grid;
   grid-gap: 10px;
   grid-template-rows: minmax(150px, 1fr);
@@ -118,7 +119,7 @@ export default defineComponent({
   margin-bottom: calc(-0.25 * 20px);
 }
 
-.hs > div,
+.carousel > div,
 .item {
   scroll-snap-align: center;
   display: flex;
@@ -154,7 +155,7 @@ export default defineComponent({
   transition-duration: 0.3s;
 
   &__prev {
-    left: 0;
+    left: -20px;
   }
   &__next {
     right: -15px;

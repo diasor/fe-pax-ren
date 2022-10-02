@@ -90,6 +90,7 @@ export const CARD_TYPE = {
   MARKET_CARD: "MARKET_CARD",
   BORDER: "BORDER",
   PIRATE: "PIRATE",
+  EMPIRE: "EMPIRE",
 };
 
 export const PIECE_TYPE = {

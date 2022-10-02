@@ -1026,7 +1026,120 @@ export const VICTORY_FILES = [
 ];
 
 export const MAIN_LAYOUT = [
-  { id: "BOARD", file: "PR2_board_plain.jpg", name: "Globalization Victory" },
+  { id: "BOARD", file: "Empire card1.png", name: "Globalization Victory" },
+];
+
+export const EMPIRE_FILES = [
+  // England
+  {
+    id: "ENGLAND",
+    file: "Empire card1.png",
+    name: "King Edward IV, House of York",
+  },
+  {
+    id: "ENGLAND",
+    file: "Empire card2.png",
+    name: "English Parliament",
+  },
+  // France
+  {
+    id: "FRANCE",
+    file: "Empire card3.png",
+    name: "Louis XI the Spider, House of Valois",
+  },
+  {
+    id: "FRANCE",
+    file: "Empire card4.png",
+    name: "States General of Burgundy",
+  },
+  // Aragon
+  {
+    id: "ARAGON",
+    file: "Empire card5.png",
+    name: "John the Faithless, King of Aragon",
+  },
+  {
+    id: "ARAGON",
+    file: "Empire card6.png",
+    name: "Golden Ambrosian Republic",
+  },
+  // Papal States
+  {
+    id: "PAPAL_STATES",
+    file: "Empire card7.png",
+    name: "Pope Julius II",
+  },
+  {
+    id: "PAPAL_STATES",
+    file: "Empire card8.png",
+    name: "Florentine Signoria",
+  },
+  // Portugal
+  {
+    id: "PORTUGAL",
+    file: "Empire card9.png",
+    name: "Henry the Navigator",
+  },
+  {
+    id: "PORTUGAL",
+    file: "Empire card10.png",
+    name: "Cortes Generales of Castile",
+  },
+  // Holly Roman Empire
+  {
+    id: "HRE",
+    file: "Empire card11.png",
+    name: "Frederick III, House of Habsburg",
+  },
+  {
+    id: "HRE",
+    file: "Empire card12.png",
+    name: "Reichstag Imperial Diet",
+  },
+  // Hungary
+  {
+    id: "HUNGARY",
+    file: "Empire card13.png",
+    name: "Matyas Corvinus, King of Hungary",
+  },
+  {
+    id: "HUNGARY",
+    file: "Empire card14.png",
+    name: "Polish Lithuanian Sejm",
+  },
+  // Ottoman
+  {
+    id: "OTTOMAN",
+    file: "Empire card15.png",
+    name: "Sultan Mehmed II the Conqueror",
+  },
+  {
+    id: "OTTOMAN",
+    file: "Empire card16.png",
+    name: "Ottoman Millet System",
+  },
+  // Byzantium
+  {
+    id: "BYZANTIUM",
+    file: "Empire card17.png",
+    name: "David Comnenus Basileus of Trebizond",
+  },
+  {
+    id: "BYZANTIUM",
+    file: "Empire card18.png",
+    name: "Confederation of White Sheep Turkomen",
+  },
+  // Mamluk
+  {
+    id: "MAMLUK",
+    file: "Empire card19.png",
+    name: "Qa'it Bay ot the Burji Dynasty",
+  },
+  {
+    id: "MAMLUK",
+    file: "Empire card20.png",
+    name: "Karaman Bylik",
+  },
 ];
 
 export const KINGDOM_FILES = [

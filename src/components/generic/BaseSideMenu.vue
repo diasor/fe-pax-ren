@@ -1,6 +1,10 @@
 <template>
   <nav class="floating-menu">
-    <div v-if="showFugger" class="shield" @click.prevent="openTableau">
+    <div
+      v-if="showFugger"
+      class="shield"
+      @click.prevent="openTableau('fugger')"
+    >
       <b-img
         width="30px"
         circle
@@ -9,7 +13,7 @@
         alt="Fugger"
       />
     </div>
-    <div v-if="showCoeur" class="shield">
+    <div v-if="showCoeur" class="shield" @click.prevent="openTableau('coeur')">
       <b-img
         width="30px"
         circle
@@ -18,7 +22,11 @@
         alt="Coeur"
       />
     </div>
-    <div v-if="showMedici" class="shield">
+    <div
+      v-if="showMedici"
+      class="shield"
+      @click.prevent="openTableau('medici')"
+    >
       <b-img
         width="30px"
         circle
@@ -27,7 +35,11 @@
         alt="Medici"
       />
     </div>
-    <div v-if="showMarchionni" class="shield">
+    <div
+      v-if="showMarchionni"
+      class="shield"
+      @click.prevent="openTableau('marchionni')"
+    >
       <b-img
         width="30px"
         circle
@@ -57,8 +69,8 @@ export default defineComponent({
       () => store.getters["bankers/isMarchionniPlaying"]
     );
 
-    const openTableau = () => {
-      context.emit("openTableau");
+    const openTableau = (banker) => {
+      context.emit("openTableau", banker);
     };
     return { showFugger, showMedici, showCoeur, showMarchionni, openTableau };
   },

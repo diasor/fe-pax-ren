@@ -34,6 +34,38 @@ export const bankers = {
     getMedici: (state) => state.medici,
     getRefreshMedici: (state) => state.refreshMedici,
     isMediciPlaying: (state) => state.medici !== null,
+
+    getBanker: (state) => (bankerName) => {
+      let bankerData = {};
+      switch (bankerName) {
+        case "fugger":
+          bankerData.name = "Fugger";
+          bankerData.image = "/images/PR2_punchout_playerboard_Blue.png";
+          bankerData.shield = "/images/PRen_Icon_Shield_Fugger_small.png";
+          bankerData.full = { ...state.fugger };
+          break;
+        case "marchionni":
+          bankerData.name = "Marchionni";
+          bankerData.image = "/images/PR2_punchout_playerboard_Green.png";
+          bankerData.shield = "/images/PRen_Icon_Shield_Marchionni_small.png";
+          bankerData.full = { ...state.marchionni };
+          break;
+        case "coeur":
+          bankerData.name = "Coeur";
+          bankerData.image = "/images/PR2_punchout_playerboard_Purple.png";
+          bankerData.shield = "/images/PRen_Icon_Shield_Coeur_small.png";
+          bankerData.full = { ...state.coeur };
+          break;
+        case "medici":
+          bankerData.name = "Medici";
+          bankerData.image = "/images/PR2_punchout_playerboard_Yellow.png";
+          bankerData.shield = "/images/PRen_Icon_Shield_Medici_small.png";
+          bankerData.full = { ...state.medici };
+          break;
+      }
+
+      return bankerData;
+    },
   },
 
   mutations: {
@@ -88,7 +120,7 @@ export const bankers = {
             commit("SET_COEUR", banker);
             break;
           case BANKERS.MEDICI:
-            commit("SET_MEIDICI", banker);
+            commit("SET_MEDICI", banker);
             break;
         }
       });

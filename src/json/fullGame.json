@@ -4,10 +4,10 @@
             "uuid": "3d353b29-114b-41ab-a531-9b6e15eea252",
             "bankers": [
                 {
-                    "entityId": "BANKER#c03e3201-20e4-44da-84b2-f4f8e6c5c85a",
-                    "playerUuid": "c844b133-2fb0-4003-83ed-6c5ec0985344",
-                    "playerHandle": "alvrod",
-                    "name": "Marchionni",
+                    "entityId": "BANKER#648428f8-2bdd-438b-a1ec-2a2ba853d5e0",
+                    "playerUuid": "f985c725-5a32-4227-b640-06aa46a753d4",
+                    "playerHandle": "leibnitz",
+                    "name": "Medici",
                     "freeConcessions": 9,
                     "florins": 3,
                     "eastTableau": [],
@@ -17,10 +17,10 @@
                     "bishops": {}
                 },
                 {
-                    "entityId": "BANKER#789ed316-a234-4926-9217-e0238d0e3db8",
-                    "playerUuid": "8f9eb391-6f7e-40c9-b5e6-4ebf070d7bf9",
-                    "playerHandle": "luigi",
-                    "name": "Fugger",
+                    "entityId": "BANKER#0667c8ff-9908-4b97-a1c7-d7ac8e3c14a2",
+                    "playerUuid": "4a30e117-ff4e-46a2-819b-f3b644cafbe5",
+                    "playerHandle": "pascal",
+                    "name": "Coeur",
                     "freeConcessions": 9,
                     "florins": 4,
                     "eastTableau": [],
@@ -30,14 +30,120 @@
                     "bishops": {}
                 },
                 {
-                    "entityId": "BANKER#33c04519-407b-4cb4-9857-f55fb9cc865d",
-                    "playerUuid": "ff8b5a63-6a4f-4ab2-ae2a-c44c138fdcbd",
-                    "playerHandle": "diana",
-                    "name": "Coeur",
+                    "entityId": "BANKER#11fa9ced-f4dd-465b-879e-cb37262238ac",
+                    "playerUuid": "371b27e1-62ff-4e39-9e82-dc759d4673e2",
+                    "playerHandle": "newton",
+                    "name": "Marchionni",
                     "freeConcessions": 9,
                     "florins": 5,
                     "eastTableau": [],
                     "westTableau": [],
+                    "oldWidows": [],
+                    "handCards": [],
+                    "bishops": {}
+                },
+                {
+                    "entityId": "BANKER#e507c2c1-8ecd-4306-812a-cc860b85bf83",
+                    "playerUuid": "044322ab-43c7-40da-bcf7-237dce4f4f23",
+                    "playerHandle": "kepler",
+                    "name": "Fugger",
+                    "freeConcessions": 9,
+                    "florins": 6,
+                    "eastTableau": [],
+                    "westTableau": [
+                        {
+                            "cardId": "PREN148X",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Tolfa Alum",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "PAPAL_STATES",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "VOTE_WEST",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [
+                                "GENERIC_CONCESSION",
+                                "GENERIC_CONCESSION"
+                            ],
+                            "prestige": [],
+                            "abilities": []
+                        },
+                        {
+                            "cardId": "ENGLAND",
+                            "cardType": "KINGDOM",
+                            "cardName": "King Edward IV, House of York",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "ENGLAND",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "CAMPAIGN"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [],
+                            "abilities": []
+                        },
+                        {
+                            "cardId": "PREN143X",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Wolf of Rimini",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "FRANCE",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "SIEGE",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": "CONSPIRACY",
+                            "suitors": [],
+                            "agents": [
+                                "CATHOLIC_KNIGHT",
+                                "CATHOLIC_KNIGHT"
+                            ],
+                            "prestige": [],
+                            "abilities": [
+                                "CONDOTTIERE"
+                            ]
+                        },
+                        {
+                            "cardId": "FRANCE",
+                            "cardType": "KINGDOM",
+                            "cardName": "Louis XI the Spider, House of Valois",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "FRANCE",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "CAMPAIGN"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [],
+                            "abilities": []
+                        },
+                        {
+                            "cardId": "PORTUGAL",
+                            "cardType": "KINGDOM",
+                            "cardName": "Henry the Navigator",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "PORTUGAL",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "CAMPAIGN"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [
+                                "DISCOVERY"
+                            ],
+                            "abilities": []
+                        }
+                    ],
                     "oldWidows": [],
                     "handCards": [],
                     "bishops": {}

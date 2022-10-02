@@ -7,6 +7,7 @@ import {
   EAST_CARDS,
   CONCESSION_FILES,
   PIRATE_FILES,
+  EMPIRE_FILES,
 } from "@/constants/cards";
 import { CARD_TYPE, RELIGION, REGION, PIECE_TYPE } from "@/constants/enums";
 
@@ -23,9 +24,11 @@ export function useCard() {
       pieceId,
       cardRegion,
       cardPosition,
+      cardName,
     } = propsCard;
     let id = "";
     let card = {};
+
     if (cardType === CARD_TYPE.VICTORY) {
       card = find(VICTORY_FILES, (iter) => iter.id === cardId);
     }
@@ -57,6 +60,13 @@ export function useCard() {
     // East market card
     if (cardType === CARD_TYPE.MARKET_CARD && cardRegion === REGION.EAST) {
       card = find(EAST_CARDS, (iter) => iter.id === cardId);
+    }
+    // Empire card
+    if (cardType === CARD_TYPE.EMPIRE) {
+      card = find(
+        EMPIRE_FILES,
+        (iter) => iter.id === cardId && iter.name === cardName
+      );
     }
     return `/images/${card.file}`;
   }
