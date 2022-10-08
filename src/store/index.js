@@ -6,13 +6,13 @@ import { borders } from "./modules/borders";
 import { bankers } from "./modules/bankers";
 
 const store = createStore({
-  modules: {
-    board,
-    kingdoms,
-    markets,
-    borders,
-    bankers,
-  },
+    modules: {
+        board,
+        kingdoms,
+        markets,
+        borders,
+        bankers,
+    },
 });
 
 export default store;

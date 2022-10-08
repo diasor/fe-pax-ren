@@ -49,7 +49,48 @@
                     "name": "Fugger",
                     "freeConcessions": 9,
                     "florins": 6,
-                    "eastTableau": [],
+                    "eastTableau": [
+                        {
+                            "cardId": "PREN058",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "The Grim",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "KINGDOM",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "VOTE_WEST",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [
+                                "GENERIC_CONCESSION",
+                                "GENERIC_CONCESSION"
+                            ],
+                            "prestige": [],
+                            "abilities": []
+                        },
+                        {
+                            "cardId": "PREN062",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Barbossa Brothers",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "KINGDOM",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "VOTE_WEST",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [
+                                "GENERIC_CONCESSION",
+                                "GENERIC_CONCESSION"
+                            ],
+                            "prestige": [],
+                            "abilities": []
+                        }
+                    ],
                     "westTableau": [
                         {
                             "cardId": "PREN148X",

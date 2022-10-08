@@ -1,26 +1,26 @@
 <template>
-  <div v-show="showKingdoms">
-    <!-- kingdom cards -->
-    <map-card-england />
-    <map-card-france />
-    <map-card-holly-roman-empire />
-    <map-card-hungary />
-    <map-card-byzantium />
-    <map-card-portugal />
-    <map-card-aragon />
-    <map-card-papal-states />
-    <map-card-ottoman />
-    <map-card-mamluk />
+    <div v-show="showKingdoms">
+        <!-- kingdom cards -->
+        <map-card-england />
+        <map-card-france />
+        <map-card-holly-roman-empire />
+        <map-card-hungary />
+        <map-card-byzantium />
+        <map-card-portugal />
+        <map-card-aragon />
+        <map-card-papal-states />
+        <map-card-ottoman />
+        <map-card-mamluk />
 
-    <!-- victories -->
-    <map-card-victories />
+        <!-- victories -->
+        <map-card-victories />
 
-    <!-- markets -->
-    <map-card-markets />
+        <!-- markets -->
+        <map-card-markets />
 
-    <!-- borders -->
-    <map-card-borders />
-  </div>
+        <!-- borders -->
+        <map-card-borders />
+    </div>
 </template>
 
 <script>
@@ -40,41 +40,41 @@ import MapCardMarkets from "@/components/markets/MapCardMarkets.vue";
 import MapCardBorders from "@/components/map/MapCardBorders.vue";
 
 export default defineComponent({
-  name: "MapKingdoms",
-  components: {
-    MapCardEngland,
-    MapCardFrance,
-    MapCardHollyRomanEmpire,
-    MapCardHungary,
-    MapCardByzantium,
-    MapCardPortugal,
-    MapCardAragon,
-    MapCardPapalStates,
-    MapCardOttoman,
-    MapCardMamluk,
-    MapCardVictories,
-    MapCardMarkets,
-    MapCardBorders,
-  },
-
-  props: {
-    showKingdoms: {
-      type: Boolean,
-      default: false,
+    name: "MapKingdoms",
+    components: {
+        MapCardEngland,
+        MapCardFrance,
+        MapCardHollyRomanEmpire,
+        MapCardHungary,
+        MapCardByzantium,
+        MapCardPortugal,
+        MapCardAragon,
+        MapCardPapalStates,
+        MapCardOttoman,
+        MapCardMamluk,
+        MapCardVictories,
+        MapCardMarkets,
+        MapCardBorders,
     },
-  },
+
+    props: {
+        showKingdoms: {
+            type: Boolean,
+            default: false,
+        },
+    },
 });
 </script>
 
 <style lang="scss" scoped>
 .map-container {
-  position: relative;
+    position: relative;
 }
 
 image {
-  width: 100% !important;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 </style>
