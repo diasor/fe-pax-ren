@@ -61,6 +61,7 @@ export default {
         watch(refreshHRE, (refreshHRE) => {
             if (refreshHRE) {
                 hreCard.value.cardReligion = hre.value.religion;
+                hreCard.value.cardGovernment = hre.value.government;
                 showCard.value = true;
 
                 // cities & pieces

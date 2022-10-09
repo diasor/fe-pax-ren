@@ -44,6 +44,7 @@ export default {
         watch(refreshHungary, (refreshHungary) => {
             if (refreshHungary) {
                 hungaryCard.value.cardReligion = hungary.value.religion;
+                hungaryCard.value.cardGovernment = hungary.value.government;
                 showCard.value = true;
 
                 // cities & pieces

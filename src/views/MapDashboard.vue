@@ -80,7 +80,6 @@ export default defineComponent({
         };
 
         const openTableau = (bankerName) => {
-            console.log(" MapDashboard openTableau", bankerName);
             banker.value = bankerName;
             showTableau.value = true;
         };

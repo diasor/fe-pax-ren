@@ -114,7 +114,6 @@ export default defineComponent({
         });
 
         const goToSlide = (index) => {
-            console.log("goto ind ", index);
             thumbnails.value.goTo(index);
         };
 

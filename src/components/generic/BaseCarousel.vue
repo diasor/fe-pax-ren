@@ -15,7 +15,7 @@
                 class="item"
                 @click.prevent="showRelated(index)"
             >
-                <b-img rounded fluid :src="slide" />
+                <b-img rounded fluid :src="slide.file" />
             </div>
         </div>
 
@@ -125,8 +125,6 @@ export default defineComponent({
                 .getElementById(cardId)
                 .getBoundingClientRect();
 
-            console.log("LIMITS", limits.value);
-            console.log("origial dimensions ", cardDimenssions);
             // calculate the dismensions for displaying the vassal to the right or left, depending on the space
             let extendedDimenssions = { top: 0, left: 0 };
 
@@ -134,15 +132,12 @@ export default defineComponent({
                 cardDimenssions.left + 2 * cardDimenssions.width + 40 >
                 limits.value.max
             ) {
-                console.log(" ENTRA EN 1");
                 // if the dimensions exceed the limits, then find the previous card
                 const previousId = `${props.id}-${index - 1}`;
                 extendedDimenssions = document
                     .getElementById(previousId)
                     .getBoundingClientRect();
-                console.log("EXCEEDS dimensions ", extendedDimenssions);
             } else {
-                console.log(" ENTRA EN 2");
                 if (index + 1 <= slideLength.value) {
                     // if there is still another card, get the other card position
                     const nextId = `${props.id}-${index + 1}`;
@@ -156,6 +151,8 @@ export default defineComponent({
                     };
                 }
             }
+
+            const vassals = props.slides[index].vassals;
             const dimensions = {
                 cardId: index,
                 top: cardDimenssions.top,
@@ -163,6 +160,7 @@ export default defineComponent({
                 width: cardDimenssions.width,
                 nextLeft: extendedDimenssions.left,
                 nextTop: extendedDimenssions.top,
+                vassals,
             };
             context.emit("showVassals", dimensions);
         };

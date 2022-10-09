@@ -41,6 +41,7 @@ export default {
             cardRegion: "",
             cardMarkerId: "",
             cardPosition: "",
+            cardGovernment: "",
         },
     },
 

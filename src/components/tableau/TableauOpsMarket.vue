@@ -3,12 +3,13 @@
         :id="id"
         :slides="slides"
         :width="width"
-        @showVassals="setVassalsDimensions"
+        @showVassals="setVassalsData"
     />
     <tableau-ops-vassals
         v-if="showVassals"
+        :showVassals="showVassals"
         :cardId="cardId"
-        :vassals="westVassals"
+        :vassals="vassalFiles"
         :vassalsXPosition="vassalCoordX"
         :vassalsFullXPosition="vassalFullCoordX"
         :vassalsWidth="vassalWidth"
@@ -55,64 +56,56 @@ export default defineComponent({
     emits: ["toggleWest", "toggleEast"],
 
     setup(props, context) {
-        const showButton = computed(() => props.slides.length > 0);
-
-        const buttonTitle = computed(() =>
-            props.showOneMarket ? "Tableau" : upperFirst(props.id)
-        );
-
-        const buttonColor = computed(() =>
-            props.id === "west" ? "#e9e7db" : "#171717"
-        );
-
-        const buttonFontColor = computed(() =>
-            props.id === "west" ? "#4e4e49" : "#c0c0c0"
-        );
-
-        const toggleButton = () => {
-            const emitted = props.id === "west" ? "toggleWest" : "toggleEast";
-            context.emit(emitted);
-            showVassals.value = false;
-        };
-        const eastVassals = [
-            "/images/Empire card17.png",
-            "/images/Empire card15.png",
-            "/images/Empire card13.png",
-        ];
-        const westVassals = [
-            "/images/Empire card9.png",
-            "/images/Empire card11.png",
-            "/images/Empire card3.png",
-            "/images/Empire card1.png",
-        ];
-
         let vassalCoordX = ref(0);
         let vassalFullCoordX = ref(0);
         let vassalWidth = ref(0);
         let showVassals = ref(false);
-        let cardId = ref(0);
-        const setVassalsDimensions = (dimensions) => {
-            cardId.value = dimensions.cardId;
+        let cardId = ref("");
+        let vassalFiles = ref([]);
+        const resetVassal = () => {
+            cardId.value = "";
+            vassalFiles.value = [];
             showVassals.value = false;
-            vassalCoordX.value = dimensions.left;
-            vassalFullCoordX.value = dimensions.nextLeft;
-            vassalWidth.value = dimensions.width;
+        };
+
+        const setVassalsData = (data) => {
+            cardId.value = data.cardId;
+            showVassals.value = false;
+            vassalCoordX.value = data.left;
+            vassalFullCoordX.value = data.nextLeft;
+            vassalWidth.value = data.width;
+            vassalFiles.value = data.vassals;
             showVassals.value = true;
         };
+
+        const toggleButton = () => {
+            resetVassal();
+            const emitted = props.id === "west" ? "toggleWest" : "toggleEast";
+            context.emit(emitted);
+        };
+        const showButton = computed(() => props.slides.length > 0);
+        const buttonTitle = computed(() =>
+            props.showOneMarket ? "Back to Tableau" : `Show only ${upperFirst(props.id)}`
+        );
+        const buttonColor = computed(() =>
+            props.id === "west" ? "#e9e7db" : "#171717"
+        );
+        const buttonFontColor = computed(() =>
+            props.id === "west" ? "#4e4e49" : "#c0c0c0"
+        );
         return {
             showButton,
             buttonTitle,
             buttonColor,
             buttonFontColor,
             toggleButton,
-            eastVassals,
-            westVassals,
-            setVassalsDimensions,
+            setVassalsData,
             cardId,
             showVassals,
             vassalCoordX,
             vassalFullCoordX,
             vassalWidth,
+            vassalFiles,
         };
     },
 });

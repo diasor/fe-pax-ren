@@ -51,6 +51,7 @@ export default {
         watch(refreshFrance, (refreshFrance) => {
             if (refreshFrance) {
                 franceCard.value.cardReligion = france.value.religion;
+                franceCard.value.cardGovernment = france.value.government;
                 showCard.value = true;
 
                 // cities & pieces

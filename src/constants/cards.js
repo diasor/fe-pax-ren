@@ -1035,110 +1035,130 @@ export const EMPIRE_FILES = [
         id: "ENGLAND",
         file: "Empire card1.png",
         name: "King Edward IV, House of York",
+        government: "FEUDAL",
     },
     {
         id: "ENGLAND",
         file: "Empire card2.png",
         name: "English Parliament",
+        government: "REPUBLIC",
     },
     // France
     {
         id: "FRANCE",
         file: "Empire card3.png",
         name: "Louis XI the Spider, House of Valois",
+        government: "FEUDAL",
     },
     {
         id: "FRANCE",
         file: "Empire card4.png",
         name: "States General of Burgundy",
+        government: "REPUBLIC",
     },
     // Aragon
     {
         id: "ARAGON",
         file: "Empire card5.png",
         name: "John the Faithless, King of Aragon",
+        government: "FEUDAL",
     },
     {
         id: "ARAGON",
         file: "Empire card6.png",
         name: "Golden Ambrosian Republic",
+        government: "REPUBLIC",
     },
     // Papal States
     {
         id: "PAPAL_STATES",
         file: "Empire card7.png",
         name: "Pope Julius II",
+        government: "FEUDAL",
     },
     {
         id: "PAPAL_STATES",
         file: "Empire card8.png",
         name: "Florentine Signoria",
+        government: "REPUBLIC",
     },
     // Portugal
     {
         id: "PORTUGAL",
         file: "Empire card9.png",
         name: "Henry the Navigator",
+        government: "FEUDAL",
     },
     {
         id: "PORTUGAL",
         file: "Empire card10.png",
         name: "Cortes Generales of Castile",
+        government: "REPUBLIC",
     },
     // Holly Roman Empire
     {
         id: "HRE",
         file: "Empire card11.png",
         name: "Frederick III, House of Habsburg",
+        government: "FEUDAL",
     },
     {
         id: "HRE",
         file: "Empire card12.png",
         name: "Reichstag Imperial Diet",
+        government: "REPUBLIC",
     },
     // Hungary
     {
         id: "HUNGARY",
         file: "Empire card13.png",
         name: "Matyas Corvinus, King of Hungary",
+        government: "FEUDAL",
     },
     {
         id: "HUNGARY",
         file: "Empire card14.png",
         name: "Polish Lithuanian Sejm",
+        government: "REPUBLIC",
     },
     // Ottoman
     {
         id: "OTTOMAN",
         file: "Empire card15.png",
         name: "Sultan Mehmed II the Conqueror",
+        government: "FEUDAL",
     },
     {
         id: "OTTOMAN",
         file: "Empire card16.png",
         name: "Ottoman Millet System",
+        government: "REPUBLIC",
     },
     // Byzantium
     {
         id: "BYZANTIUM",
         file: "Empire card17.png",
         name: "David Comnenus Basileus of Trebizond",
+        government: "FEUDAL",
     },
     {
         id: "BYZANTIUM",
         file: "Empire card18.png",
         name: "Confederation of White Sheep Turkomen",
+        government: "REPUBLIC",
     },
     // Mamluk
     {
         id: "MAMLUK",
         file: "Empire card19.png",
         name: "Qa'it Bay ot the Burji Dynasty",
+        government: "FEUDAL",
     },
     {
         id: "MAMLUK",
         file: "Empire card20.png",
         name: "Karaman Bylik",
+        government: "REPUBLIC",
     },
 ];
 

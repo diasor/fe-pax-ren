@@ -40,6 +40,7 @@ export default {
         watch(refreshPapalStates, (refreshPapalStates) => {
             if (refreshPapalStates) {
                 papalStatesCard.value.cardReligion = papalStates.value.religion;
+                papalStatesCard.value.cardGovernment = papalStates.value.government;
                 showCard.value = true;
 
                 // cities & pieces

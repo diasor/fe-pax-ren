@@ -53,6 +53,7 @@ export default {
         watch(refreshByzantium, (refreshByzantium) => {
             if (refreshByzantium) {
                 byzantiumCard.value.cardReligion = byzantium.value.religion;
+                byzantiumCard.value.cardGovernment = byzantium.value.government;
                 showCard.value = true;
 
                 // cities & pieces

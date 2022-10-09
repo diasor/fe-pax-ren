@@ -11,7 +11,27 @@
                     "freeConcessions": 9,
                     "florins": 3,
                     "eastTableau": [],
-                    "westTableau": [],
+                    "westTableau": [
+                        {
+                            "cardId": "PREN030",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Santa Hermandad",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "FRANCE",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "SIEGE",
+                                "TAX_WEST"
+                            ],
+                            "oneShotAction": "SIEGE",
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [],
+                            "abilities": [
+                                "CONDOTTIERE"
+                            ]
+                        }
+                    ],
                     "oldWidows": [],
                     "handCards": [],
                     "bishops": {}
@@ -183,6 +203,44 @@
                                 "DISCOVERY"
                             ],
                             "abilities": []
+                        },
+                        {
+                            "cardId": "PREN003",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Grand Inquisitor",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "FRANCE",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "SIEGE",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": "INQUISITOR",
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [],
+                            "abilities": [
+                                "CONDOTTIERE"
+                            ]
+                        },
+                        {
+                            "cardId": "PREN022",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "The Last Knight",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "FRANCE",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "SIEGE",
+                                "TAX_WEST"
+                            ],
+                            "oneShotAction": "SIEGE",
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [],
+                            "abilities": [
+                                "CONDOTTIERE"
+                            ]
                         }
                     ],
                     "oldWidows": [],
@@ -216,9 +274,9 @@
                         "LYON": "CATHOLIC_ROOK"
                     },
                     "repressedPieces": [],
-                    "location": "THRONE",
                     "marriedTo": null,
-                    "vassalOf": null
+                    "location": "TABLEAU_FUGGER_WEST",
+                    "vassalOf": "ENGLAND"
                 },
                 {
                     "entityId": "KINGDOM#e1ca0a40-6d84-4a32-9d8d-8da974f1d5de",
@@ -276,9 +334,9 @@
                         "SPICE_ISLANDS": "REFORMIST_KNIGHT"
                     },
                     "repressedPieces": [],
-                    "location": "THRONE",
                     "marriedTo": null,
-                    "vassalOf": null
+                    "location": "TABLEAU_FUGGER_WEST",
+                    "vassalOf": "ENGLAND"
                 },
                 {
                     "entityId": "KINGDOM#a18d00c7-d5f4-4e2f-936d-8a0037c6f268",

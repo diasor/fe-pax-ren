@@ -52,6 +52,7 @@ export default {
         watch(refreshPortugal, (newRefreshPortugal) => {
             if (newRefreshPortugal) {
                 portugalCard.value.cardReligion = portugal.value.religion;
+                portugalCard.value.cardGovernment = portugal.value.government;
                 showCard.value = true;
 
                 // cities & pieces

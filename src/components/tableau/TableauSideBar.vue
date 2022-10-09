@@ -27,6 +27,7 @@
                     :style="cardWestStyle"
                 >
                     <tableau-ops-market
+                        :key="`west_${banker}`"
                         id="west"
                         :slides="westCards"
                         :width="carouselWidth"
@@ -50,6 +51,7 @@
                     :style="cardEastStyle"
                 >
                     <tableau-ops-market
+                        :key="`east_${banker}`"
                         id="east"
                         :slides="eastCards"
                         :width="carouselWidth"
@@ -67,8 +69,7 @@ import { defineComponent, computed, ref } from "vue";
 import { SlideInOut } from "vue3-transitions";
 import TableauOpsMarket from "./TableauOpsMarket.vue";
 import { useStore } from "vuex";
-import { useCard } from "@/composables/card";
-import { REGION } from "@/constants/enums";
+import { useBanker } from "@/composables/banker";
 
 export default defineComponent({
     name: "TableauSlideBar",
@@ -93,7 +94,6 @@ export default defineComponent({
             store.getters["bankers/getBanker"](props.banker)
         );
         const title = computed(() => `${bankerData.value.name}'s tableau ops`);
-        // const vassals = computed(() => bankerData.value.vassals);
 
         let hideEast = ref(false);
         let hideWest = ref(false);
@@ -104,14 +104,15 @@ export default defineComponent({
         );
 
         // build west and east market sets
-        const { cardMarketSet } = useCard();
-        const westCards = computed(() =>
-            cardMarketSet(bankerData.value.full.westTableau, REGION.WEST)
-        );
-        const eastCards = computed(() =>
-            cardMarketSet(bankerData.value.full.eastTableau, REGION.EAST)
-        );
-
+        const kingdoms = computed(() => store.getters["kingdoms/getKingdoms"]);
+        const { builBankerMakets } = useBanker();
+        const bankerMarkets = computed(() => {
+            const markets = builBankerMakets(bankerData.value.full, kingdoms.value );
+            return markets;
+        });
+        const westCards = computed(() => bankerMarkets.value.westMarket);
+        const eastCards = computed(() => bankerMarkets.value.eastMarket);
+        
         const toggleButtonWest = () => {
             hideEast.value = !hideEast.value;
         };

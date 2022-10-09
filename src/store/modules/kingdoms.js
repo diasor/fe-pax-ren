@@ -58,6 +58,20 @@ export const kingdoms = {
         getRefreshOttoman: (state) => state.refreshOttoman,
         getMamluk: (state) => state.mamluk,
         getRefreshMamluk: (state) => state.refreshMamluk,
+        getKingdoms: (state) => {
+            return {
+                england: state.england,
+                france: state.france,
+                hre: state.hre,
+                hungary: state.hungary,
+                byzantium: state.byzantium,
+                portugal: state.portugal,
+                aragon: state.aragon,
+                papalStates: state.papalStates,
+                ottoman: state.ottoman,
+                mamluk: state.mamluk,
+            }
+        }
     },
 
     mutations: {

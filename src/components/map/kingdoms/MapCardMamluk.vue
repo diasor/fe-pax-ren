@@ -51,6 +51,7 @@ export default {
         watch(refreshMamluk, (refreshMamluk) => {
             if (refreshMamluk) {
                 mamlukCard.value.cardReligion = mamluk.value.religion;
+                mamlukCard.value.cardGovernment = mamluk.value.government;
                 showCard.value = true;
 
                 // cities & pieces

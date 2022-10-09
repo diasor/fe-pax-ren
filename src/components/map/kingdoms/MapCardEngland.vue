@@ -44,6 +44,7 @@ export default {
         watch(refreshEngland, (refreshEngland) => {
             if (refreshEngland) {
                 englandCard.value.cardReligion = england.value.religion;
+                englandCard.value.cardGovernment = england.value.government;
                 showCard.value = true;
 
                 // cities & pieces

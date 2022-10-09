@@ -24,7 +24,7 @@ export function useCard() {
             pieceId,
             cardRegion,
             cardPosition,
-            cardName,
+            cardGovernment,
         } = propsCard;
         let id = "";
         let card = {};
@@ -65,7 +65,7 @@ export function useCard() {
         if (cardType === CARD_TYPE.EMPIRE) {
             card = find(
                 EMPIRE_FILES,
-                (iter) => iter.id === cardId && iter.name === cardName
+                (iter) => iter.id === cardId && iter.government === cardGovernment
             );
         }
         return `/images/${card.file}`;

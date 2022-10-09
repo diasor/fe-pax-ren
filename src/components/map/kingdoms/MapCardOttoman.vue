@@ -71,6 +71,7 @@ export default {
         watch(refreshOttoman, (newRefreshOttoman) => {
             if (newRefreshOttoman) {
                 ottomanCard.value.cardReligion = ottoman.value.religion;
+                ottomanCard.value.cardGovernment = ottoman.value.government;
                 showCard.value = true;
 
                 // cities & pieces

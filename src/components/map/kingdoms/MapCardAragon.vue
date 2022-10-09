@@ -52,6 +52,7 @@ export default {
             if (refreshAragon) {
                 // aragon card
                 aragonCard.value.cardReligion = aragon.value.religion;
+                aragonCard.value.cardGovernment = aragon.value.government;
                 showCard.value = true;
 
                 // cities & pieces

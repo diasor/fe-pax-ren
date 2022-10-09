@@ -1,7 +1,6 @@
 <template>
-    <div id="vassal-main-container">
+    <div id="vassal-main-container" class="vassal-container">
         <div
-            class="vassal-container"
             v-for="(vassal, index) in vassals"
             :key="`vassal_${index}`"
         >
@@ -24,11 +23,15 @@
 </template>
 
 <script>
-import { defineComponent, ref, onMounted, computed, watch } from "vue";
+import { defineComponent, ref, onMounted, computed } from "vue";
 
 export default defineComponent({
     name: "TableauOpsVassals",
     props: {
+        showVassals: {
+            type: Boolean,
+            default: false,
+        },
         cardId: {
             type: Number,
             default: -1,
@@ -56,33 +59,27 @@ export default defineComponent({
     },
 
     setup(props) {
-        let originalCardId = ref(props.cardId);
-        let currentCardId = ref(-1);
         let defaultY = ref(0);
+        let showVassalImage = ref(false);
         onMounted(() => {
             const container = document.getElementById("vassal-main-container");
             defaultY.value = props.showOneMarket
                 ? container.getBoundingClientRect().top - 50
                 : container.getBoundingClientRect().top - 10;
+
         });
 
-        watch(originalCardId, (originalCardId) => {
-            console.log("changed original", originalCardId);
-        });
         const buttonHeight = computed(() =>
             props.showOneMarket ? "55" : "40"
         );
         const heightIndex = computed(() => (props.showOneMarket ? "60" : "45"));
 
         const showButton = (index) => {
-            currentCardId.value = props.cardId;
             return selected.value !== index || props.showOneMarket;
         };
 
         const showVassalCard = (index) => {
-            return (
-                currentCardId.value === props.cardId && selected.value === index
-            );
+            return showVassalImage.value && selected.value === index;
         };
 
         const vassalPosition = (index) => {
@@ -102,10 +99,11 @@ export default defineComponent({
 
         const vassalButtonStyle = (index, vassalImage) => {
             const position = vassalPosition(index);
+            const buttonName = vassalImage.slice(0, -4);
             return {
                 ...position,
                 height: `${buttonHeight.value}px`,
-                backgroundImage: `url("${vassalImage}")`,
+                backgroundImage: `url("${buttonName}-button.png")`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "start",
@@ -134,9 +132,11 @@ export default defineComponent({
         let selected = ref(-1);
         const selectVassal = (index) => {
             selected.value = index;
+            showVassalImage.value = true;
         };
         const hideVassal = () => {
             selected.value = -1;
+            showVassalImage.value = false;
         };
         return {
             selected,
@@ -150,3 +150,5 @@ export default defineComponent({
     },
 });
 </script>
+
+    

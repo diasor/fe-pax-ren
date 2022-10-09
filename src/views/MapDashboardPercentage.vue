@@ -103,8 +103,6 @@ export default {
         const resizeScreen = () => {
             const newx = parseInt(originalXPer.value * getPageWidth(), 10);
             const newy = parseInt(originalYPer.value * getPageHeight(), 10);
-            // console.log(`===width: ${getPageWidth()} height ${getPageHeight()}`);
-            // console.log(`NEW France X: ${newx} / Y: ${newy}`);
             kingdomMap.value = fullMap(newx, newy);
         };
 
@@ -126,14 +124,11 @@ export default {
         };
 
         const renderCard = (card) => {
-            // console.log('card', card);
             if (card === "france-islamic") {
                 showIslamico.value = true;
-                // console.log('RENDER ISLAMIC FRNACE');
                 const mapAreaCoords = document.getElementById("france").coords;
                 const coordX = mapAreaCoords.substring(0, 3);
                 const coordY = mapAreaCoords.substring(4, 7);
-                // console.log(`x: ${coordX} y: ${coordY}`);
 
                 franceDynamicClass.value = {
                     top: `${coordY}px !important`,
