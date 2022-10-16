@@ -20,6 +20,7 @@
     "install": "^0.13.0",
     "lodash": "^4.17.21",
     "npm": "^8.19.2",
+    "v-contextmenu": "^3.0.0",
     "vue": "^3.2.13",
     "vue-agile": "^2.0.0",
     "vue-router": "^4.0.3",

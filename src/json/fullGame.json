@@ -10,7 +10,28 @@
                     "name": "Medici",
                     "freeConcessions": 9,
                     "florins": 3,
-                    "eastTableau": [],
+                    "eastTableau": [
+                        {
+                            "cardId": "PREN107X",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Tersane-i Amire",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "KINGDOM",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "VOTE_WEST",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [
+                                "GENERIC_CONCESSION",
+                                "GENERIC_CONCESSION"
+                            ],
+                            "prestige": [],
+                            "abilities": []
+                        }
+                    ],
                     "westTableau": [
                         {
                             "cardId": "PREN030",
@@ -33,7 +54,27 @@
                         }
                     ],
                     "oldWidows": [],
-                    "handCards": [],
+                    "handCards": [
+                        {
+                            "cardId": "PREN018",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Almeida Almada",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "FRANCE",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "SIEGE",
+                                "TAX_WEST"
+                            ],
+                            "oneShotAction": "SIEGE",
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [],
+                            "abilities": [
+                                "CONDOTTIERE"
+                            ]
+                        }
+                    ],
                     "bishops": {}
                 },
                 {
@@ -56,7 +97,68 @@
                     "name": "Marchionni",
                     "freeConcessions": 9,
                     "florins": 5,
-                    "eastTableau": [],
+                    "eastTableau": [
+                        {
+                            "cardId": "PREN100X",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Unified Christendom",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "KINGDOM",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "VOTE_WEST",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [
+                                "GENERIC_CONCESSION",
+                                "GENERIC_CONCESSION"
+                            ],
+                            "prestige": [],
+                            "abilities": []
+                        },
+                        {
+                            "cardId": "PREN105X",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Franco-Ottoman Navy",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "KINGDOM",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "VOTE_WEST",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [
+                                "GENERIC_CONCESSION",
+                                "GENERIC_CONCESSION"
+                            ],
+                            "prestige": [],
+                            "abilities": []
+                        },
+                        {
+                            "cardId": "PREN106X",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Prussian League Navy",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "KINGDOM",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "VOTE_WEST",
+                                "COMMERCE_WEST"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [
+                                "GENERIC_CONCESSION",
+                                "GENERIC_CONCESSION"
+                            ],
+                            "prestige": [],
+                            "abilities": []
+                        }
+                    ],
                     "westTableau": [],
                     "oldWidows": [],
                     "handCards": [],
@@ -241,10 +343,40 @@
                             "abilities": [
                                 "CONDOTTIERE"
                             ]
+                        },
+                        {
+                            "cardId": "ARAGON",
+                            "cardType": "KINGDOM",
+                            "cardName": "King Edward IV, House of York",
+                            "locationType": "KINGDOM",
+                            "locationKingdom": "ARAGON",
+                            "locationRegion": null,
+                            "tableauActions": [
+                                "CAMPAIGN"
+                            ],
+                            "oneShotAction": null,
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [],
+                            "abilities": []
                         }
                     ],
                     "oldWidows": [],
-                    "handCards": [],
+                    "handCards": [
+                        {
+                            "cardId": "PREN018",
+                            "cardType": "MARKET_CARD",
+                            "cardName": "Almeida Almada",
+                            "deck": "WEST",
+                            "oneShotAction": "SIEGE",
+                            "suitors": [],
+                            "agents": [],
+                            "prestige": [],
+                            "abilities": [
+                                "CONDOTTIERE"
+                            ]
+                        }
+                    ],
                     "bishops": {}
                 }
             ],

@@ -49,9 +49,9 @@ export default {
                 "line-height": lineHeight,
                 "text-decoration": "none",
                 width: "auto",
-                padding: "0 10px",
+                padding: "0",
                 "font-family": "Lobster Two",
-                "font-size": "1.2rem",
+                "font-size": "1.1rem",
                 color:
                     props.fontColor !== null
                         ? props.fontColor

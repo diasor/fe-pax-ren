@@ -1,7 +1,7 @@
 export function useCore() {
     function getNavBarHeight() {
         return parseInt(
-            document.getElementById("pr-mainMenu").offsetHeight,
+            document.getElementById("pr-main-menu").offsetHeight,
             10
         );
     }

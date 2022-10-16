@@ -1,4 +1,9 @@
 <template>
+    <v-contextmenu ref="contextmenu">
+        <v-contextmenu-item>Menu Item 1</v-contextmenu-item>
+        <v-contextmenu-item>Menu Item 2</v-contextmenu-item>
+        <v-contextmenu-item>Menu Item 3</v-contextmenu-item>
+    </v-contextmenu>
     <div :id="carouselId" class="tableau-slides" :style="carouselStyle">
         <font-awesome-icon
             v-if="showPreviousIcon"
@@ -7,7 +12,7 @@
             @click.prevent="previousCard"
         />
 
-        <div class="carousel full no-scrollbar" :style="cardStyle">
+        <div class="carousel no-scrollbar" :style="cardStyle">
             <div
                 v-for="(slide, index) in slides"
                 :key="index"
@@ -15,7 +20,12 @@
                 class="item"
                 @click.prevent="showRelated(index)"
             >
-                <b-img rounded fluid :src="slide.file" />
+                <b-img
+                    rounded
+                    fluid
+                    v-contextmenu:contextmenu
+                    :src="slide.file"
+                />
             </div>
         </div>
 
@@ -92,7 +102,7 @@ export default defineComponent({
             const width = parseInt(props.width, 10);
             if (width > 80) {
                 return {
-                    "grid-auto-columns": "calc(24% - 60px)",
+                    "grid-auto-columns": "calc(19% - 40px)",
                 };
             }
             if (width > 50) {
@@ -192,7 +202,7 @@ export default defineComponent({
 .carousel {
     display: grid;
     grid-gap: 10px;
-    grid-template-rows: minmax(150px, 1fr);
+    grid-template-rows: minmax(150px, 0.9fr);
     grid-auto-flow: column;
 
     overflow-x: scroll;
@@ -211,6 +221,7 @@ export default defineComponent({
     border-radius: 5px;
     margin-top: 40px;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .no-scrollbar {

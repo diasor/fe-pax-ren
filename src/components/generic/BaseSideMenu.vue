@@ -11,6 +11,7 @@
                 src="/images/PRen_Icon_Shield_Fugger_small.png"
                 fluid
                 alt="Fugger"
+                v-b-popover.hover.right="'Show Fugger\'s full tableau overview.'"
             />
         </div>
         <div
@@ -24,6 +25,7 @@
                 src="/images/PRen_Icon_Shield_Coeur_small.png"
                 fluid
                 alt="Coeur"
+                v-b-popover.hover.right="'Show Coeur\'s full tableau overview.'"
             />
         </div>
         <div
@@ -37,6 +39,7 @@
                 src="/images/PRen_Icon_Shield_Medici_small.png"
                 fluid
                 alt="Medici"
+                v-b-popover.hover.right="'Show Medici\'s full tableau overview.'"
             />
         </div>
         <div
@@ -50,6 +53,7 @@
                 src="/images/PRen_Icon_Shield_Marchionni_small.png"
                 fluid
                 alt="Marchionni"
+                v-b-popover.hover.right="'Show Marchionni\'s full tableau overview.'"
             />
         </div>
     </nav>
@@ -94,6 +98,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "./../../assets/colors.scss";
+
 .floating-menu {
     margin-top: 14rem;
     font-family: sans-serif;
@@ -106,5 +112,16 @@ export default defineComponent({
 .shield {
     margin-top: 0.9rem;
     cursor: pointer;
+}
+</style>
+
+<style lang="scss">
+@import "./../../assets/colors.scss";
+.popover {
+    background-color: $sandColor !important;
+    font-family: "Lobster Two" !important;
+}
+.popover-arrow::after  {
+    border-right-color: $sandColor !important;
 }
 </style>

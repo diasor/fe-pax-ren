@@ -1,5 +1,5 @@
 <template>
-    <b-nav id="pr-mainMenu" tabs fill>
+    <b-nav id="pr-main-menu" tabs fill>
         <b-nav-text class="mx-5 pt-3"><h3>Pax Renaissance</h3></b-nav-text>
         <b-nav-item class="mt-4" @click="newGame">New game</b-nav-item>
         <b-nav-item class="mt-4">Players</b-nav-item>
@@ -47,19 +47,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./../../assets/colors.scss";
 
 ul > li > h3 {
     font-family: "Mrs_Sheppards" !important;
     font-size: 3.3rem;
-    color: $navFontColor !important;
-}
-
-ul > li > a,
-button {
-    font-family: "Permanent_Marker" !important;
-    font-size: 1.4rem !important;
     color: $navFontColor !important;
 }
 
@@ -81,8 +74,15 @@ ul {
 .dropdown-divider {
     background-color: $navFontColor;
 }
+</style>
 
-ul > li .dropdown-menu button {
-    font-size: 0.8rem !important;
+<style lang="scss">
+@import "./../../assets/colors.scss";
+
+#pr-main-menu a.nav-link, button {
+    font-family: "Permanent_Marker" !important;
+    font-size: 1.4rem !important;
+    color: $navFontColor !important;
 }
 </style>
+

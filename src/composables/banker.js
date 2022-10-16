@@ -80,5 +80,26 @@ export function useBanker() {
             eastMarket,
         };
     }
-    return { builBankerMakets };
+
+    function buildHand(handCards) {
+        let hand = [];
+        if (handCards) {
+            forEach(handCards, (card) => {
+                const iterCard = {
+                    ...card,
+                    id: card.cardId,
+                    cardType: CARD_TYPE.MARKET_CARD,
+                    cardRegion: card.deck,
+                }
+                const file = cardFile(iterCard);
+                hand.push({
+                    file,
+                    vassals: []
+                });
+            });
+        }
+        return hand;
+    }
+
+    return { builBankerMakets, buildHand };
 }

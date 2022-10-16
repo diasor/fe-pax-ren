@@ -70,7 +70,7 @@ export default {
             x? = originalXPer * windowWidth
         */
 
-        // const navBar = parseInt(document.getElementById('pr-mainMenu').offsetHeight, 10);
+        // const navBar = parseInt(document.getElementById('pr-main-menu').offsetHeight, 10);
         // const getPageHeight = () => document.documentElement.scrollHeight;
         const getPageHeight = () => {
             return document.documentElement.getBoundingClientRect().height;
