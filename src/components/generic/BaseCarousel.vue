@@ -88,7 +88,7 @@ const mainContainerStyle = computed(() => {
 
 const carouselStyle = computed(() => {
     let alignment = "flex-start";
-    if (slideLength.value < 3 && props.align === "flex-end") {
+    if (slideLength.value < 3 && props.align === "flex-end" && props.width < 40) {
         alignment = "flex-end";
     } else if (props.align === "center") {
         alignment = props.align;

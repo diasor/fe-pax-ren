@@ -77,7 +77,7 @@ const clickButton = () => {
 .pr-button-container {
     display: flex;
     background-color: inherit;
-    margin: 5px;
+    margin: 0 5px;
     width: fit-content; 
 }
 </style>

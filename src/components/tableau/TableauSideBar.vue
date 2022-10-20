@@ -1,5 +1,5 @@
 <template>
-    <div class="tableau-backdrop" @click="closeSidebarPanel" v-if="showPanel" />
+    <div class="backdrop-modal" @click="closeSidebarPanel" v-if="showPanel" />
     <slide-in-out entry="left" exit="left" :duration="800" appear>
         <div v-if="showPanel" class="tableau-container">
             <tableau-ops-header
@@ -27,8 +27,8 @@
     </slide-in-out>
 </template>
 
-<script>
-import { defineComponent, computed } from "vue";
+<script setup>
+import { defineProps, defineEmits, computed } from "vue";
 import { SlideInOut } from "vue3-transitions";
 import TableauOpsHeader from "./TableauOpsHeader.vue";
 import TableauOpsCards from "./TableauOpsCards.vue";
@@ -39,64 +39,34 @@ import { useStore } from "vuex";
 import { useBanker } from "@/composables/banker";
 import { DOCUMENTATION } from "@/constants/enums";
 
-export default defineComponent({
-    name: "TableauSlideBar",
-    components: { SlideInOut, TableauOpsHeader, TableauOpsCards, TableauOpsHand, TableauOpsDocumentation, BaseInformation },
-    props: {
-        showPanel: {
-            type: Boolean,
-            default: false,
-        },
-        banker: {
-            type: String,
-            required: true,
-        },
-    },
-
-    emits: ["closeTableau"],
-
-    setup(props, context) {
-        // fetch data
-        const store = useStore();
-        const bankerData = computed(() =>
-            store.getters["bankers/getBanker"](props.banker)
-        );
-        const { buildHand } = useBanker();
-        const bankerHandCards = computed(() => {
-            const hand = buildHand(bankerData.value.full.handCards );
-            console.log("hands", hand);
-            return hand;
-        });
-
-        const closeTableau = () => {
-            context.emit("closeTableau", true);
-        };
-
-        const cardInformation = "Right click on a card to see all the possible actions on it.";
-        return {
-            bankerData,
-            bankerHandCards,
-            closeTableau,
-            DOCUMENTATION,
-            cardInformation,
-        };
-    },
+const props = defineProps ({
+    showPanel: Boolean,
+    banker: String,
 });
+
+const emit = defineEmits(["closeTableau"]);
+
+// fetch data
+const store = useStore();
+const bankerData = computed(() =>
+    store.getters["bankers/getBanker"](props.banker)
+);
+const { buildHand } = useBanker();
+const bankerHandCards = computed(() => {
+    const hand = buildHand(bankerData.value.full.handCards );
+    console.log("hands", hand);
+    return hand;
+});
+
+const closeTableau = () => {
+    emit("closeTableau", true);
+};
+
+const cardInformation = "Right click on a card to see all the possible actions on it.";
 </script>
 
 <style lang="scss" scoped>
 @import "./../../assets/colors.scss";
-
-.tableau-backdrop {
-    background-color: $backdropColor;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    overflow: hidden;
-}
 .tableau-container {
     overflow-y: auto;
     background: url("./../../../public/images/card-background.jpeg");
