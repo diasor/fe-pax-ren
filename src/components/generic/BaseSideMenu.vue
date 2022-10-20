@@ -5,68 +5,66 @@
             class="shield"
             @click.prevent="openTableau('fugger')"
         >
-            <b-img
-                width="30px"
-                circle
-                src="/images/PRen_Icon_Shield_Fugger_small.png"
-                fluid
-                alt="Fugger"
-                v-b-popover.hover.right="'Show Fugger\'s full tableau overview.'"
-            />
+            <base-tooltip :text="'Show Fugger\'s full tableau overview.'">
+                <b-img
+                    width="30px"
+                    src="/images/PRen_Icon_Shield_Fugger_small.png"
+                    alt="Fugger"
+                />
+            </base-tooltip>
         </div>
         <div
             v-if="showCoeur"
             class="shield"
             @click.prevent="openTableau('coeur')"
         >
-            <b-img
-                width="30px"
-                circle
-                src="/images/PRen_Icon_Shield_Coeur_small.png"
-                fluid
-                alt="Coeur"
-                v-b-popover.hover.right="'Show Coeur\'s full tableau overview.'"
-            />
+            <base-tooltip :text="'Show Coeur\'s full tableau overview.'">
+                <b-img
+                    width="30px"
+                    src="/images/PRen_Icon_Shield_Coeur_small.png"
+                    alt="Coeur"
+                />
+            </base-tooltip>
         </div>
         <div
             v-if="showMedici"
             class="shield"
             @click.prevent="openTableau('medici')"
         >
-            <b-img
-                width="30px"
-                circle
-                src="/images/PRen_Icon_Shield_Medici_small.png"
-                fluid
-                alt="Medici"
-                v-b-popover.hover.right="'Show Medici\'s full tableau overview.'"
-            />
+            <base-tooltip :text="'Show Coeur\'s full tableau overview.'">
+                <b-img
+                    width="30px"
+                    src="/images/PRen_Icon_Shield_Medici_small.png"
+                    alt="Medici"
+                />
+            </base-tooltip>
         </div>
         <div
             v-if="showMarchionni"
             class="shield"
             @click.prevent="openTableau('marchionni')"
         >
-            <b-img
-                width="30px"
-                circle
-                src="/images/PRen_Icon_Shield_Marchionni_small.png"
-                fluid
-                alt="Marchionni"
-                v-b-popover.hover.right="'Show Marchionni\'s full tableau overview.'"
-            />
+            <base-tooltip :text="'Show Coeur\'s full tableau overview.'">
+                <b-img
+                    width="30px"
+                    src="/images/PRen_Icon_Shield_Marchionni_small.png"
+                    alt="Marchionni"
+                />
+            </base-tooltip>
         </div>
     </nav>
 </template>
 
 <script>
 import { defineComponent, computed } from "vue";
+import BaseTooltip from "./BaseTooltip.vue";
 import { useStore } from "vuex";
 
 export default defineComponent({
     name: "BaseSideMenu",
 
     emits: ["openTableau"],
+    components: { BaseTooltip },
 
     setup(_, context) {
         const store = useStore();
@@ -104,7 +102,7 @@ export default defineComponent({
     margin-top: 14rem;
     font-family: sans-serif;
     padding-left: 3px;
-    width: 130px;
+    width: 50px;
     z-index: 100;
     position: fixed;
 }
@@ -115,13 +113,3 @@ export default defineComponent({
 }
 </style>
 
-<style lang="scss">
-@import "./../../assets/colors.scss";
-.popover {
-    background-color: $sandColor !important;
-    font-family: "Lobster Two" !important;
-}
-.popover-arrow::after  {
-    border-right-color: $sandColor !important;
-}
-</style>

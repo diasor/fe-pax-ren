@@ -1,0 +1,24 @@
+@import "./colors.scss";
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.close-sand {
+    font-family: "Mrs_Sheppards" !important;
+    float: right;
+    padding-right: 7px !important;
+    font-size: 40px;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(45deg);
+    color: $sandColor;
+    cursor: pointer;
+}

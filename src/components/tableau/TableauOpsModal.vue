@@ -1,11 +1,11 @@
 <template>
     <div class="modal-backdrop" @click="closeModal" v-if="showModal" />
     <fade-in-out entry="center" exit="center" :duration="800" appear>
-        <div :class="containerClass">
+        <div class="modal-container">
             <div @click="closeModal">
                 <span class="close-sand">+</span>
             </div>
-            <div :class="contentClass" :style="imageStyle" />
+            <div class="modal-content" :style="imageStyle" />
         </div>
     </fade-in-out>
 </template>
@@ -15,16 +15,12 @@ import { defineComponent, computed } from "vue";
 import { FadeInOut } from "vue3-transitions";
 
 export default defineComponent({
-    name: "MapCardModal",
+    name: "TableauOpsModal",
     components: { FadeInOut },
     props: {
         imageName: {
             type: String,
             default: "",
-        },
-        imageType: {
-            type: String,
-            default: "square",
         },
         showModal: {
             type: Boolean,
@@ -42,22 +38,13 @@ export default defineComponent({
                 backgroundImage: `url("${props.imageName}")`,
                 overflow: "hidden",
                 backgroundPosition: "center",
-                backgroundSize: "cover",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                borderRadius: "20px !important",
             };
         });
-        const containerClass = computed(() =>
-            props.imageType === "square"
-                ? "modal-container-square"
-                : "modal-container"
-        );
 
-        const contentClass = computed(() =>
-            props.imageType === "square"
-                ? "modal-content-square"
-                : "modal-content"
-        );
-
-        return { closeModal, imageStyle, containerClass, contentClass };
+        return { closeModal, imageStyle };
     },
 });
 </script>
@@ -68,10 +55,10 @@ export default defineComponent({
 .modal-container {
     overflow: hidden;
     position: fixed;
-    left: 34%;
-    top: 5%;
-    width: 30.5vw !important;
-    height: 91vh !important;
+    left: 20%;
+    top: 1%;
+    width: 58vw !important;
+    height: 98vh !important;
     z-index: 1500;
     border-radius: 20px !important;
     box-shadow: inset 0px 12px 27px 5px $sandColor;
@@ -80,38 +67,14 @@ export default defineComponent({
 .modal-content {
     overflow-y: auto;
     position: fixed;
-    left: 35.5%;
-    top: 8%;
-    min-width: 300px;
-    min-height: 300px;
-    width: 27vw !important;
-    height: 85vh !important;
+    left: 21%;
+    top: 2%;
+    min-width: 500px;
+    min-height: 500px;
+    width: 55vw !important;
+    height: 96vh !important;
     z-index: 2000;
     border-radius: 20px !important;
 }
 
-.modal-container-square {
-    overflow: hidden;
-    position: fixed;
-    left: 34%;
-    top: 12%;
-    width: 42vw !important;
-    height: 81vh !important;
-    z-index: 1500;
-    border-radius: 20px !important;
-    box-shadow: inset 0px 12px 27px 5px $sandColor;
-}
-
-.modal-content-square {
-    overflow-y: auto;
-    position: fixed;
-    left: 35.5%;
-    top: 15%;
-    min-width: 300px;
-    min-height: 300px;
-    width: 38vw !important;
-    height: 75vh !important;
-    z-index: 2000;
-    border-radius: 20px !important;
-}
 </style>

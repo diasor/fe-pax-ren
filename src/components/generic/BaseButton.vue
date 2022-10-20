@@ -7,89 +7,69 @@
         <div :style="prButtonRight" />
     </div>
 </template>
-<script>
-import { computed } from "vue";
+<script setup>
+import { defineProps, defineEmits, computed } from "vue";
+const props = defineProps({
+    text: String,
+    color: String,
+    fontColor: String,
+});
 
-export default {
-    name: "BaseButton",
+const emit = defineEmits(["clickButton"]);
 
-    props: {
-        text: {
-            type: String,
-            default: "",
-        },
-        color: {
-            type: String,
-            default: null,
-        },
-        fontColor: {
-            type: String,
-            default: null,
-        },
-    },
+const defaultBackgroundColor = "#95331c";
+const defaultFontColor = "#D7C69D";
+const lineHeight = "2rem";
+const halfLineHeight = "1rem";
+const backgroundColor = props.color !== null ? props.color : defaultBackgroundColor;
+const prButtonStyle = computed(() => {
+    return {
+        display: "flex",
+        "align-content": "center",
+        "justify-content": "center",
+        background: backgroundColor,
+        border: "none",
+        height: lineHeight,
+        "line-height": lineHeight,
+        "text-decoration": "none",
+        width: "auto",
+        padding: "0",
+        "font-family": "Lobster Two",
+        "font-size": "1.1rem",
+        color: props.fontColor !== null
+            ? props.fontColor
+            : defaultFontColor,
+    };
+});
 
-    emits: ["clickButton"],
+const prButtonRight = computed(() => {
+    return {
+        display: "flex",
+        width: lineHeight,
+        height: lineHeight,
+        border: `${halfLineHeight} solid ${backgroundColor}`,
+        "border-top-color": backgroundColor,
+        "border-right-color": "transparent",
+        "border-bottom-color": backgroundColor,
+        "border-left-color": backgroundColor,
+    };
+});
 
-    setup(props, context) {
-        const defaultBackgroundColor = "#95331c";
-        const defaultFontColor = "#D7C69D";
-        const lineHeight = "2rem";
-        const halfLineHeight = "1rem";
-        const backgroundColor =
-            props.color !== null ? props.color : defaultBackgroundColor;
+const prButtonLeft = computed(() => {
+    return {
+        display: "flex",
+        width: lineHeight,
+        height: lineHeight,
+        border: `${halfLineHeight} solid ${backgroundColor}`,
+        "border-top-color": backgroundColor,
+        "border-right-color": backgroundColor,
+        "border-bottom-color": backgroundColor,
+        "border-left-color": "transparent",
+    };
+});
 
-        const prButtonStyle = computed(() => {
-            return {
-                display: "flex",
-                "align-content": "center",
-                "justify-content": "center",
-                background: backgroundColor,
-                border: "none",
-                height: lineHeight,
-                "line-height": lineHeight,
-                "text-decoration": "none",
-                width: "auto",
-                padding: "0",
-                "font-family": "Lobster Two",
-                "font-size": "1.1rem",
-                color:
-                    props.fontColor !== null
-                        ? props.fontColor
-                        : defaultFontColor,
-            };
-        });
-
-        const prButtonRight = computed(() => {
-            return {
-                display: "flex",
-                width: lineHeight,
-                height: lineHeight,
-                border: `${halfLineHeight} solid ${backgroundColor}`,
-                "border-top-color": backgroundColor,
-                "border-right-color": "transparent",
-                "border-bottom-color": backgroundColor,
-                "border-left-color": backgroundColor,
-            };
-        });
-
-        const prButtonLeft = computed(() => {
-            return {
-                display: "flex",
-                width: lineHeight,
-                height: lineHeight,
-                border: `${halfLineHeight} solid ${backgroundColor}`,
-                "border-top-color": backgroundColor,
-                "border-right-color": backgroundColor,
-                "border-bottom-color": backgroundColor,
-                "border-left-color": "transparent",
-            };
-        });
-
-        const clickButton = () => {
-            context.emit("clickButton");
-        };
-        return { prButtonStyle, prButtonRight, prButtonLeft, clickButton };
-    },
+const clickButton = () => {
+    emit("clickButton");
 };
 </script>
 
@@ -98,5 +78,6 @@ export default {
     display: flex;
     background-color: inherit;
     margin: 5px;
+    width: fit-content; 
 }
 </style>

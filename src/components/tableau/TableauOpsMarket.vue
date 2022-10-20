@@ -3,6 +3,7 @@
         :id="id"
         :slides="slides"
         :width="width"
+        :align="alignMarket"
         @showVassals="setVassalsData"
     />
     <tableau-ops-vassals
@@ -30,6 +31,7 @@ import { upperFirst } from "lodash";
 import TableauOpsVassals from "./TableauOpsVassals.vue";
 import BaseCarousel from "@/components/generic/BaseCarousel.vue";
 import BaseButton from "@/components/generic/BaseButton.vue";
+import { REGION } from "@/constants/enums";
 
 export default defineComponent({
     name: "TableauOpsMarket",
@@ -50,6 +52,10 @@ export default defineComponent({
         showOneMarket: {
             type: Boolean,
             default: false,
+        },
+        market: {
+            type: String,
+            default: REGION.EAST,
         },
     },
 
@@ -93,6 +99,7 @@ export default defineComponent({
         const buttonFontColor = computed(() =>
             props.id === "west" ? "#4e4e49" : "#c0c0c0"
         );
+        const alignMarket = computed(() => props.market === REGION.WEST ? "flex-end" : "flex-start");
         return {
             showButton,
             buttonTitle,
@@ -106,6 +113,7 @@ export default defineComponent({
             vassalFullCoordX,
             vassalWidth,
             vassalFiles,
+            alignMarket,
         };
     },
 });

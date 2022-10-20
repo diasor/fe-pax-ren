@@ -125,3 +125,8 @@ export const BANKERS = {
     COEUR: "Coeur",
     MEDICI: "Medici",
 };
+
+export const DOCUMENTATION = {
+    OPERATIONS: "OPERATIONS",
+    BATTLE_TABLE: "BATTLE_TABLE",
+};

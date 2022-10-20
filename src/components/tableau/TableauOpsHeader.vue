@@ -17,35 +17,21 @@
         </div>
     </div>
 </template>
-<script>
-import { defineComponent, computed, } from "vue";
+<script setup>
+import { defineProps, defineEmits, computed } from "vue";
 
-export default defineComponent({
-    name: "TableauOpsHeader",
-    props: {
-        name: {
-            type: String,
-            default: "",
-        },
-        shield: {
-            type: String,
-            required: "",
-        },
-    },
-
-    emits: ["closeTableau"],
-
-    setup(props, context) {
-        const title = computed(() => `${props.name}'s tableau overview`);
-        const closeTableau = () => {
-            context.emit("closeTableau", true);
-        };
-        return {
-            title,
-            closeTableau,
-        };
-    },
+const props = defineProps ({
+    name: String,
+    shield: String,
 });
+
+const emit = defineEmits(["closeTableau"]);
+
+
+const title = computed(() => `${props.name}'s tableau overview`);
+const closeTableau = () => {
+    emit("closeTableau", true);
+};
 </script>
 
 <style lang="scss" scoped>
@@ -78,7 +64,6 @@ export default defineComponent({
         margin: 1rem auto;
     }
 }
-
 .close {
     display: flex;
     justify-content: flex-end;

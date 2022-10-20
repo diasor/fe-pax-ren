@@ -1598,3 +1598,9 @@ export const BANKER_FILES = [
         name: "Medici",
     },
 ];
+
+
+export const DOCUMENTATION_FILES = [
+    { id: "OPERATIONS", file: "PR2_Play-aid_operations.jpg", name: "Operations and One Shots documentation" },
+    { id: "BATTLE_TABLE", file: "PR2_Play-aid_battle-table.jpg", name: "Battle table documentation" },
+];

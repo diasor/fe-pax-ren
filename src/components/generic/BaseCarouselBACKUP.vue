@@ -1,5 +1,5 @@
 <template>
-    <div :id="carouselId" class="tableau-slides" :style="mainContainerStyle">
+    <div :id="carouselId" class="tableau-slides" :style="carouselStyle">
         <font-awesome-icon
             v-if="showPreviousIcon"
             icon="fa-circle-chevron-left"
@@ -7,13 +7,12 @@
             @click.prevent="previousCard"
         />
 
-        <div class="carousel no-scrollbar" :style="carouselStyle">
+        <div class="carousel no-scrollbar" :style="cardStyle">
             <div
                 v-for="(slide, index) in slides"
                 :key="index"
                 :id="`${id}-${index}`"
-                class="card"
-                :style="cardStyle"
+                class="item"
                 @click.prevent="showRelated(index)"
             >
                 <b-img
@@ -44,7 +43,6 @@ const props = defineProps({
     id: String,
     width: String,
     slides: Array,
-    align: String,
 });
 const emit = defineEmits(["showVassals"]);
 
@@ -78,7 +76,7 @@ const nextCard = () => {
     }
 };
 
-const mainContainerStyle = computed(() => {
+const carouselStyle = computed(() => {
     return {
         width: props.width
             ? `${props.width}vw !important`
@@ -86,26 +84,21 @@ const mainContainerStyle = computed(() => {
     };
 });
 
-const carouselStyle = computed(() => {
-    let alignment = "flex-start";
-    if (slideLength.value < 3 && props.align === "flex-end") {
-        alignment = "flex-end";
-    } else if (props.align === "center") {
-        alignment = props.align;
-    } 
-    return {
-        "justify-content": alignment,
-        "margin-left": showPreviousIcon.value ? "20px" : "0",
-        "margin-right": showNextIcon.value ? "20px" : "0",
-    };
-});
-
 const cardStyle = computed(() => {
-    return {
-        width: props.width && props.width > 40
-            ? "12rem"
-            : "9rem",
+    const width = parseInt(props.width, 10);
+    if (width > 80) {
+        return {
+            "grid-auto-columns": "calc(19% - 40px)",
+        };
     }
+    if (width > 50) {
+        return {
+            "grid-auto-columns": "calc(30% - 60px)",
+        };
+    }
+    return {
+        "grid-auto-columns": "calc(40% - 40px)",
+    };
 });
 
 const limits = computed(() => {
@@ -188,19 +181,27 @@ const openContextMenu = (e) => {
 }
 
 .carousel {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: minmax(150px, 0.9fr);
+    grid-auto-flow: column;
+
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(0.75 * 20px);
+    margin-bottom: calc(-0.25 * 20px);
 }
 
-.card {
-    flex: 0 0 auto;
-    // width: 9rem !important;
-    margin: auto 0.5rem;
-    border-radius: 10px;
-    border: solid 1px $sandColor;
+.carousel > div,
+.item {
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     cursor: pointer;
 }
 
@@ -228,10 +229,10 @@ const openContextMenu = (e) => {
     transition-duration: 0.3s;
 
     &__prev {
-        left: 0;
+        left: -20px;
     }
     &__next {
-        right: 0;
+        right: -20px;
     }
     &:hover {
         color: $navButtonHover;

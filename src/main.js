@@ -17,7 +17,13 @@ import {
     faChevronRight,
     faCircleChevronLeft,
     faCircleChevronRight,
+    faCircleArrowRight,
+    faArrowRight,
+    faInfoCircle,
+    faInfo,
 } from "@fortawesome/free-solid-svg-icons";
+import "./assets/general.scss";
+
 library.add(
     faMagnifyingGlassPlus,
     faMagnifyingGlass,
@@ -25,7 +31,11 @@ library.add(
     faChevronLeft,
     faChevronRight,
     faCircleChevronLeft,
-    faCircleChevronRight
+    faCircleChevronRight,
+    faCircleArrowRight,
+    faArrowRight,
+    faInfoCircle,
+    faInfo,
 );
 
 createApp(App)

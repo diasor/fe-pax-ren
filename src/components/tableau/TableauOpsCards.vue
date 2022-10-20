@@ -12,6 +12,7 @@
                 :slides="westCards"
                 :width="carouselWidth"
                 :showOneMarket="showOneMarket"
+                :market="REGION.WEST"
                 @toggleWest="toggleButtonWest"
             />
         </div>
@@ -35,6 +36,7 @@
                 :slides="eastCards"
                 :width="carouselWidth"
                 :showOneMarket="showOneMarket"
+                :market="REGION.EAST"
                 @toggleEast="toggleButtonEast"
             />
         </div>
@@ -46,6 +48,7 @@ import { defineComponent, computed, ref, watch } from "vue";
 import TableauOpsMarket from "./TableauOpsMarket.vue";
 import { useStore } from "vuex";
 import { useBanker } from "@/composables/banker";
+import { REGION } from "@/constants/enums";
 
 export default defineComponent({
     name: "TableauOpsCards",
@@ -140,6 +143,7 @@ export default defineComponent({
             cardWestStyle,
             carouselWidth,
             cardEastStyle,
+            REGION,
         };
     },
 });

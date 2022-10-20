@@ -1,24 +1,21 @@
 <template>
-    <base-carousel
-        id="banker-hand-cards"
-        class="mt-5 pl-8"
-        :slides="bankerHandCards"
-        width="90vw"
-    />
+    <div class="mt-5 pl-8">
+        <base-carousel
+            id="banker-hand-cards"
+            :slides="slides"
+            width="90"
+            align="center"
+        />
+    </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { defineProps, computed } from "vue";
 import BaseCarousel from "@/components/generic/BaseCarousel.vue";
 
-export default defineComponent({
-    name: "TableauOpsHand",
-    components: { BaseCarousel },
-    props: {
-        bankerHandCards: {
-            type: Array,
-            default: () => [],
-        },
-    },
+const props = defineProps({
+    bankerHandCards: Array,
 });
+
+const slides = computed(() => props.bankerHandCards);
 </script>

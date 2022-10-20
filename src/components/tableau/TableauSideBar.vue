@@ -9,10 +9,18 @@
             />
             <b-tabs id="tableau-menu" class="mx-4" content-class="mt-3">
                 <b-tab title="Tableau" active>
+                    <base-information :text="cardInformation" />
                     <tableau-ops-cards :banker="banker" class="mt-0"/>
                 </b-tab>
                 <b-tab title="Hand">
+                    <base-information :text="cardInformation" />
                     <tableau-ops-hand :bankerHandCards="bankerHandCards" />
+                </b-tab>
+                <b-tab title="Operations manual">
+                    <tableau-ops-documentation :imageName="DOCUMENTATION.OPERATIONS" />
+                </b-tab>
+                <b-tab title="Table Battle manual">
+                    <tableau-ops-documentation :imageName="DOCUMENTATION.BATTLE_TABLE" />
                 </b-tab>
             </b-tabs>
         </div>
@@ -25,12 +33,15 @@ import { SlideInOut } from "vue3-transitions";
 import TableauOpsHeader from "./TableauOpsHeader.vue";
 import TableauOpsCards from "./TableauOpsCards.vue";
 import TableauOpsHand from "./TableauOpsHand.vue";
+import TableauOpsDocumentation from "./TableauOpsDocumentation.vue";
+import BaseInformation from "@/components/generic/BaseInformation.vue";
 import { useStore } from "vuex";
 import { useBanker } from "@/composables/banker";
+import { DOCUMENTATION } from "@/constants/enums";
 
 export default defineComponent({
     name: "TableauSlideBar",
-    components: { SlideInOut, TableauOpsHeader, TableauOpsCards, TableauOpsHand },
+    components: { SlideInOut, TableauOpsHeader, TableauOpsCards, TableauOpsHand, TableauOpsDocumentation, BaseInformation },
     props: {
         showPanel: {
             type: Boolean,
@@ -57,20 +68,17 @@ export default defineComponent({
             return hand;
         });
 
-        // const bankerHandCards = computed(() => {
-        //     const hands = bankerData.value.full.handCards;
-        //     console.log(' hadnd', hands);
-        //     return hands;
-        // });
-
         const closeTableau = () => {
             context.emit("closeTableau", true);
         };
 
+        const cardInformation = "Right click on a card to see all the possible actions on it.";
         return {
             bankerData,
             bankerHandCards,
             closeTableau,
+            DOCUMENTATION,
+            cardInformation,
         };
     },
 });
