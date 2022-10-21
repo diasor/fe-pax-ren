@@ -47,8 +47,7 @@
 </template>
 
 <script setup>
-// import { ref, computed, defineProps, onMounted, nextTick } from "vue";
-import { ref, computed, defineProps } from "vue";
+import { defineProps, ref, computed } from "vue";
 import ContextMenu from '@/components/generic/ContextMenu';
 import TableauOpsVassals from "@/components/tableau/TableauOpsVassals.vue";
 
@@ -60,86 +59,35 @@ const props = defineProps({
     showOneMarket: Boolean,
 });
 
-// let carouselContainer = ref(null);
-const firstId = computed(() => `${props.id}-0`);
-// const firstCard = ref(null);
-
+let selectedCard = ref(0);
 const carouselId = computed(() =>
     props.width >= 50
         ? `x-carousel-${props.id}`
         : `carousel-${props.id}`
 );
-// const carouselWidth = ref(0);
-// const carouselLeft = ref(0);
 
-const slideLength = computed(() =>
-    props.slides.length ? props.slides.length : -1
-);
-
-// const isVisible = (el) => {
-//     console.log("======VISIBLE ======");
-
-//     const carouselRightLimit = carouselLeft.value + carouselWidth.value;
-//     const rightLimit = el.left + el.width;
-//     console.log("isVISIBLE FIRST left", el.left);
-//     console.log("isVISIBLE FIRST width", el.width);
-//     console.log("isVISIBLE rightLimit", rightLimit);
-//     console.log("isVISIBLE carouselRightLimit", carouselRightLimit);
-
-//     return rightLimit <= carouselLeft.value + carouselWidth.value;
-// };
-
-// onMounted(async () => {
-//     console.log("======ON MOUNTED ======", carouselId.value);
-//     if (slideLength.value > 0) {
-//         carouselContainer.value = document.getElementById(carouselId.value).getBoundingClientRect();
-//         firstCard.value = document.getElementById(firstId.value).getBoundingClientRect();
-
-//         // firstCard.value = document.getElementById(firstId.value)?.getBoundingClientRect();
-//         await nextTick(() => {
-//             carouselLeft.value = carouselContainer.value.left;
-//             carouselWidth.value = carouselContainer.value.width;
-//             console.log("carouselLeft", carouselLeft.value);
-//             console.log("carouselWidth", carouselWidth.value);
-
-//             const firstCardVis = isVisible(firstCard.value);
-//             console.log("firstCardVis", firstCardVis);
-//         });
-//     }
-//     console.log("======FINISH ON MOUNTED ======");
-
-// });
-const showPreviousIcon = computed(() => {
-    return true;
-});
-const showNextIcon = computed(() => slideLength.value > 3);
+const slideLength = computed(() => props.slides.length ? props.slides.length : -1);
+const showPreviousIcon = computed(() => selectedCard.value > 0);
+const showNextIcon = computed(() => slideLength.value > 0 && selectedCard.value < slideLength.value - 1);
 
 const previousCard = () => {
     if (slideLength.value > 0) {
-        let element = document.getElementById(firstId.value);
-        element.scrollIntoView({ behavior: "smooth" });
+        selectedCard.value = selectedCard.value - 1;
+        goToSelectedCard();
     }
 };
 
-const nextCard = async () => {
+const nextCard = () => {
     if (slideLength.value > 0) {
-        const lastIndex = props.slides.length - 1;
-        const lastId = `${props.id}-${lastIndex}`;
-        let element = document.getElementById(lastId);
-        element.scrollIntoView({ behavior: "smooth" }, false);
-        // limits.value = document.getElementById(carouselId.value)?.getBoundingClientRect();
-        // firstCard.value = document.getElementById(firstId.value)?.getBoundingClientRect();
-        // carouselContainer.value = document.getElementById(carouselId.value);
-
-        // firstCard.value = document.getElementById(firstId.value);
-        // await nextTick(() => {
-        //     const firstCardVis = isVisible(firstCard.value);
-        //     console.log("firstCardVis", firstCardVis);
-
-        //     const lastCardVis = isVisible(element);
-        //     console.log("MOVED lastCardVis", lastCardVis);
-        // });
+        selectedCard.value = selectedCard.value + 1;
+        goToSelectedCard();
     }
+};
+
+const goToSelectedCard = () => {
+    const nextCardId = `${props.id}-${selectedCard.value}`;
+    const nextCard = document.getElementById(nextCardId);
+    nextCard.scrollIntoView({ behavior: "smooth" });
 };
 
 const mainContainerStyle = computed(() => {
@@ -228,17 +176,6 @@ const openContextMenu = (e) => {
         overflow-y: auto;
         padding: 0 2px;
     }
-}
-
-.no-scrollbar {
-    scrollbar-width: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    overflow: hidden;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
 }
 
 .nav-button {

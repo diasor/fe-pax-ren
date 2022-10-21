@@ -41,6 +41,17 @@
     background: $sandColor;
 }
 
+.no-scrollbar {
+    scrollbar-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 .tab-content {
     margin-top: -2px !important;
 }

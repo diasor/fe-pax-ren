@@ -51,10 +51,18 @@ const buttonFontColor = computed(() =>
 );
 const alignMarket = computed(() => props.market === REGION.WEST ? "flex-end" : "flex-start");
 const buttonStyle = computed(() => {
+    let margin = "0 0";
+    if (!props.showOneMarket) {
+        if (props.id === "west") {
+            margin = "0 17px";
+        } else {
+            margin = "0 5px";
+        }
+    }
     return {
         display: "flex",
         "justify-content": props.showOneMarket ? "flex-start" : `${alignMarket.value} !important`,
-        margin: "0 15px",
+        margin,
     }
 })
 </script>
