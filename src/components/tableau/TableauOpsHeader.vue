@@ -3,7 +3,7 @@
         <div class="banker">
             <div class="banker__icon">
                 <b-img
-                    width="40px"
+                    width="35px"
                     :src="shield"
                     :alt="title"
                 />
@@ -41,7 +41,7 @@ const closeTableau = () => {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    height: 80px;
+    height: 70px;
     font-family: "Lobster Two" !important;
 }
 
@@ -54,13 +54,13 @@ const closeTableau = () => {
         display: flex;
         justify-content: center;
         margin: auto 1rem;
-        padding: 1rem 0;
+        padding: 10px 0;
     }
 
     &__title {
         display: flex;
         color: $buttonColor !important;
-        font-size: 2.5rem !important;
+        font-size: 2.4rem !important;
         margin: 1rem auto;
     }
 }

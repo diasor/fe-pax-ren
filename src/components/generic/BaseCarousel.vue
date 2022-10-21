@@ -20,9 +20,10 @@
                     rounded
                     fluid
                     :src="slide.file"
-                    @contextmenu.prevent='openContextMenu'
+                    @contextmenu.prevent="openContextMenu"
                 />
             </div>
+
         </div>
 
         <font-awesome-icon
@@ -197,7 +198,6 @@ const openContextMenu = (e) => {
 
 .card {
     flex: 0 0 auto;
-    // width: 9rem !important;
     margin: auto 0.5rem;
     border-radius: 10px;
     border: solid 1px $sandColor;

@@ -9,7 +9,7 @@
             />
             <b-tabs id="tableau-menu" class="mx-4" content-class="mt-3">
                 <b-tab title="Tableau" active>
-                    <base-information :text="cardInformation" />
+                    <base-information :text="cardInformation" class="information" />
                     <tableau-ops-cards :banker="banker" class="mt-0"/>
                 </b-tab>
                 <b-tab title="Hand">
@@ -63,6 +63,7 @@ const closeTableau = () => {
 };
 
 const cardInformation = "Right click on a card to see all the possible actions on it.";
+
 </script>
 
 <style lang="scss" scoped>
@@ -90,7 +91,7 @@ const cardInformation = "Right click on a card to see all the possible actions o
 
 <style lang="scss">
 @import "./../../assets/colors.scss";
-$navHeight: 2rem;
+$navHeight: 2.2rem;
 #tableau-menu .nav-tabs {
     height: $navHeight;
     border-color: $buttonColor !important;
@@ -108,7 +109,7 @@ $navHeight: 2rem;
 
 #tableau-menu a.nav-link, #tableau-menu button {
     font-family: "Lobster Two" !important;
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     color: $buttonColor !important;
     border-color: $buttonColor !important;
 }
@@ -120,6 +121,10 @@ $navHeight: 2rem;
 #tableau-menu .nav-tabs .nav-link.active{
     text-decoration: underline;
     text-decoration-color: $buttonColor !important;
+}
+
+.information {
+    margin-left: -5px;
 }
 </style>
 

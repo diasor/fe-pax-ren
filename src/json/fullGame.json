@@ -422,9 +422,9 @@
                         "VIENNA": "CATHOLIC_ROOK"
                     },
                     "repressedPieces": [],
-                    "location": "THRONE",
+                    "location": "TABLEAU_FUGGER_WEST",
                     "marriedTo": null,
-                    "vassalOf": null
+                    "vassalOf": "ARAGON"
                 },
                 {
                     "entityId": "KINGDOM#ae92dd10-a0f5-44af-bb4a-3d6c2943e0c4",
@@ -436,9 +436,9 @@
                         "VARNA": "CATHOLIC_ROOK"
                     },
                     "repressedPieces": [],
-                    "location": "THRONE",
+                    "location": "TABLEAU_FUGGER_WEST",
                     "marriedTo": null,
-                    "vassalOf": null
+                    "vassalOf": "ARAGON"
                 },
                 {
                     "entityId": "KINGDOM#e33fb1dc-31c6-4aef-a846-0177504449dd",
@@ -451,9 +451,9 @@
                         "TREBIZOND": "REFORMIST_ROOK"
                     },
                     "repressedPieces": [],
-                    "location": "THRONE",
+                    "location": "TABLEAU_FUGGER_WEST",
                     "marriedTo": null,
-                    "vassalOf": null
+                    "vassalOf": "ARAGON"
                 },
                 {
                     "entityId": "KINGDOM#b9aca9e8-08ec-4f66-8d54-febf0470fe33",
@@ -512,9 +512,9 @@
                         "MODON": "REFORMIST_KNIGHT"
                     },
                     "repressedPieces": [],
-                    "location": "THRONE",
+                    "location": "TABLEAU_FUGGER_WEST",
                     "marriedTo": null,
-                    "vassalOf": null
+                    "vassalOf": "ARAGON"
                 },
                 {
                     "entityId": "KINGDOM#42d9d3dd-9d0c-4935-b083-84524f56b326",
@@ -527,9 +527,9 @@
                         "RED_SEA": "MUSLIM_KNIGHT"
                     },
                     "repressedPieces": [],
-                    "location": "THRONE",
+                    "location": "TABLEAU_FUGGER_WEST",
                     "marriedTo": null,
-                    "vassalOf": null
+                    "vassalOf": "ARAGON"
                 }
             ],
             "borders": [

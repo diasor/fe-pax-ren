@@ -33,7 +33,7 @@ const toggleInformation = () => {
     display: flex;
     padding: 5px 10px;
     padding-right: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 .information-text {
     font-family: "Lobster Two";
