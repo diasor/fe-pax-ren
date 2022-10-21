@@ -36,7 +36,7 @@ import MapCardPapalStates from "@/components/map/kingdoms/MapCardPapalStates.vue
 import MapCardOttoman from "@/components/map/kingdoms/MapCardOttoman.vue";
 import MapCardMamluk from "@/components/map/kingdoms/MapCardMamluk.vue";
 import MapCardVictories from "@/components/map/MapCardVictories.vue";
-import MapCardMarkets from "@/components/markets/MapCardMarkets.vue";
+import MapCardMarkets from "@/components/map/MapCardMarkets.vue";
 import MapCardBorders from "@/components/map/MapCardBorders.vue";
 
 export default defineComponent({
