@@ -53,7 +53,7 @@ const bankerData = computed(() =>
 );
 const { buildHand } = useBanker();
 const bankerHandCards = computed(() => {
-    const hand = buildHand(bankerData.value.full.handCards );
+    const hand = buildHand(bankerData.value.full.handCards);
     console.log("hands", hand);
     return hand;
 });

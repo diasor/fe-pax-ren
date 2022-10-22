@@ -1,5 +1,5 @@
 <template>
-    <div v-show="showKingdoms">
+    <div v-show="props.show">
         <!-- kingdom cards -->
         <map-card-england />
         <map-card-france />
@@ -23,8 +23,8 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { defineProps } from "vue";
 import MapCardEngland from "@/components/map/kingdoms/MapCardEngland.vue";
 import MapCardFrance from "@/components/map/kingdoms/MapCardFrance.vue";
 import MapCardHollyRomanEmpire from "@/components/map/kingdoms/MapCardHollyRomanEmpire.vue";
@@ -39,30 +39,8 @@ import MapCardVictories from "@/components/map/MapCardVictories.vue";
 import MapCardMarkets from "@/components/map/MapCardMarkets.vue";
 import MapCardBorders from "@/components/map/MapCardBorders.vue";
 
-export default defineComponent({
-    name: "MapKingdoms",
-    components: {
-        MapCardEngland,
-        MapCardFrance,
-        MapCardHollyRomanEmpire,
-        MapCardHungary,
-        MapCardByzantium,
-        MapCardPortugal,
-        MapCardAragon,
-        MapCardPapalStates,
-        MapCardOttoman,
-        MapCardMamluk,
-        MapCardVictories,
-        MapCardMarkets,
-        MapCardBorders,
-    },
-
-    props: {
-        showKingdoms: {
-            type: Boolean,
-            default: false,
-        },
-    },
+const props = defineProps({
+    show: Boolean,
 });
 </script>
 

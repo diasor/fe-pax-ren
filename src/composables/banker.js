@@ -1,6 +1,7 @@
 import { forEach, upperCase, find } from "lodash";
 import { useCard } from "@/composables/card";
-import { CARD_TYPE, REGION, COUNTRY_CODES } from "@/constants/enums";
+import { CARD_TYPE, REGION } from "@/constants/enums";
+import { empireByName } from "@/constants/empires";
 
 export function useBanker() {
     const { cardFile } = useCard();
@@ -11,7 +12,7 @@ export function useBanker() {
         forEach(kingdoms, (iter) => {
             if (iter.vassalOf === kingdom && iter.location === location) {
                 const iterCard = {
-                    cardId: iter.name,
+                    cardId: empireByName(iter.name),
                     cardType: CARD_TYPE.EMPIRE,
                     cardReligion: iter.religion,
                     cardGovernment: iter.government,
@@ -29,15 +30,17 @@ export function useBanker() {
         if (marketDeck) {
             forEach(marketDeck, (card) => {
                 const cardType = card.cardType === "KINGDOM" ? CARD_TYPE.EMPIRE : card.cardType;
-                const cardId = cardType === CARD_TYPE.KINGDOM ? COUNTRY_CODES[card.name] : card.cardId;
+                const cardEmpireId = cardType === CARD_TYPE.EMPIRE ?  empireByName(card.cardId) : card.cardId;
+
                 const iterCard = {
-                    cardId,
                     id: card.cardName,
+                    cardId: card.cardId,
                     cardType,
                     cardRegion: region,
                     cardReligion: card.religion,
                     cardName: card.cardName,
                     cardGovernment: "",
+                    cardEmpireId,
                 }
 
                 if (cardType === CARD_TYPE.MARKET_CARD) {
@@ -47,11 +50,12 @@ export function useBanker() {
                         vassals: []
                     });
                 } else if (cardType === CARD_TYPE.EMPIRE && card.locationType === CARD_TYPE.KINGDOM) {
-                    const fullKingdomeData = find(kingdoms, (k) => k.name === cardId);
+                    const fullKingdomeData = find(kingdoms, (k) => k.name === card.cardId);
                     if (fullKingdomeData.vassalOf === null) {
                         // only the kingdoms that are not vassals, are shown at the market level
                         // if they are vassals of another kingdom, they are shown as vassals
                         iterCard.cardGovernment = fullKingdomeData.government;
+                        iterCard.cardId = cardEmpireId;
                         const file = cardFile(iterCard);
                         const kingdom = card.locationKingdom;
                         const vassals = getVassals(kingdoms, kingdom, upperCase(bankerName), region);

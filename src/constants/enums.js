@@ -29,6 +29,19 @@ export const COUNTRY_CODES = {
     MAMLUK: "ML",
 };
 
+export const COUNTRY_NAMES = {
+    ENGLAND: "ENGLAND",
+    FRANCE: "FRANCE",
+    HRE: "HRE",
+    PORTUGAL: "PORTUGAL",
+    ARAGON: "ARAGON",
+    PAPAL_STATES: "PAPAL_STATES",
+    HUNGARY: "HUNGARY",
+    BYZANTIUM: "BYZANTIUM",
+    OTTOMAN: "OTTOMAN",
+    MAMLUK: "MAMLUK",
+};
+
 export const CITY_NAMES = {
     LONDON: "LONDON",
     BORDEAUX: "BORDEAUX",

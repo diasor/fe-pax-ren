@@ -11,10 +11,7 @@
             <map-markers :key="markersId" :showMarkers="!hideDashboard" />
 
             <!-- all kingdoms -->
-            <map-kingdoms
-                :showKingdoms="!hideDashboard"
-                v-if="!hideDashboard"
-            />
+            <map-kingdoms v-if="!hideDashboard" :show="!hideDashboard" />
         </div>
     </div>
     <side-bar
@@ -31,9 +28,8 @@
     />
 </template>
 
-<script>
+<script setup>
 import {
-    defineComponent,
     ref,
     onMounted,
     onUnmounted,
@@ -48,76 +44,51 @@ import SideBar from "@/components/generic/SideBar.vue";
 import TableauSideBar from "@/components/tableau/TableauSideBar.vue";
 import { useStore } from "vuex";
 
-export default defineComponent({
-    name: "MapDashboard",
-    components: {
-        BaseNavBar,
-        BaseSideMenu,
-        MapMarkers,
-        MapKingdoms,
-        SideBar,
-        TableauSideBar,
-    },
+let hideDashboard = ref(false);
+let showTableau = ref(false);
+let banker = ref("");
+let markersId = ref(0);
+let kingdomsId = ref(100);
+const store = useStore();
+const resumeGame = computed(() => store.getters["board/getResumeGame"]);
+const isNavOpen = computed(() => store.getters["board/isNavOpen"]);
 
-    setup() {
-        let hideDashboard = ref(false);
-        let showTableau = ref(false);
-        let banker = ref("");
-        let markersId = ref(0);
-        let kingdomsId = ref(100);
-        const store = useStore();
-        const resumeGame = computed(() => store.getters["board/getResumeGame"]);
-        const isNavOpen = computed(() => store.getters["board/isNavOpen"]);
+const resizeScreen = async () => {
+    await store.dispatch("board/setNavOpen", true, { root: true });
+    hideDashboard.value = true;
+};
 
-        const resizeScreen = async () => {
-            await store.dispatch("board/setNavOpen", true, { root: true });
-            hideDashboard.value = true;
-        };
+const newGame = async () => {
+    hideDashboard.value = true;
+    store.dispatch("board/setResumeGame", true, { root: true });
+};
 
-        const newGame = async () => {
-            hideDashboard.value = true;
-            store.dispatch("board/setResumeGame", true, { root: true });
-        };
+const openTableau = (bankerName) => {
+    banker.value = bankerName;
+    showTableau.value = true;
+};
 
-        const openTableau = (bankerName) => {
-            banker.value = bankerName;
-            showTableau.value = true;
-        };
+const closeTableau = () => {
+    showTableau.value = false;
+};
 
-        const closeTableau = () => {
-            showTableau.value = false;
-        };
+onMounted(async () => {
+    window.addEventListener("resize", resizeScreen);
+});
 
-        onMounted(async () => {
-            window.addEventListener("resize", resizeScreen);
-        });
+watch(resumeGame, (resumeGame) => {
+    if (resumeGame & !isNavOpen.value) {
+        // if the user stopped resizing (isNavOpen is false) and requested to resume game
+        // the game should be reloaded and both markers and kingdoms re mounted
+        store.dispatch("board/newGameBoard");
+        markersId.value = markersId.value + 1;
+        kingdomsId.value = kingdomsId.value + 1;
+        hideDashboard.value = false;
+    }
+});
 
-        watch(resumeGame, (resumeGame) => {
-            if (resumeGame & !isNavOpen.value) {
-                // if the user stopped resizing (isNavOpen is false) and requested to resume game
-                // the game should be reloaded and both markers and kingdoms re mounted
-                store.dispatch("board/newGameBoard");
-                markersId.value = markersId.value + 1;
-                kingdomsId.value = kingdomsId.value + 1;
-                hideDashboard.value = false;
-            }
-        });
-
-        onUnmounted(() => {
-            window.removeEventListener("resize", resizeScreen);
-        });
-
-        return {
-            hideDashboard,
-            newGame,
-            markersId,
-            kingdomsId,
-            showTableau,
-            openTableau,
-            banker,
-            closeTableau,
-        };
-    },
+onUnmounted(() => {
+    window.removeEventListener("resize", resizeScreen);
 });
 </script>
 

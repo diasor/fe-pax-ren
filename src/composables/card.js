@@ -7,8 +7,8 @@ import {
     EAST_CARDS,
     CONCESSION_FILES,
     PIRATE_FILES,
-    EMPIRE_FILES,
 } from "@/constants/cards";
+import { EMPIRE_FILES } from "@/constants/empires";
 import { CARD_TYPE, RELIGION, REGION, PIECE_TYPE } from "@/constants/enums";
 
 export function useCard() {
@@ -68,6 +68,9 @@ export function useCard() {
                 (iter) => iter.id === cardId && iter.government === cardGovernment
             );
         }
+        if (card === undefined) {
+            console.log(`Card file NOT FOUND. id: ${cardId} `);
+        } 
         return `/images/${card.file}`;
     }
 

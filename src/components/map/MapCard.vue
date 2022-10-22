@@ -69,9 +69,12 @@ export default {
         const loadCard = computed(
             () =>
                 props.showCard &&
-                (props.card.cardType === CARD_TYPE.KINGDOM ||
-                    props.card.cardType === CARD_TYPE.VICTORY ||
-                    props.card.cardType === CARD_TYPE.MARKET_CARD) &&
+                (
+                    props.card.cardType === CARD_TYPE.KINGDOM ||
+                    props.card.cardType === CARD_TYPE.EMPIRE ||
+                    props.card.cardType === CARD_TYPE.MARKET_CARD ||
+                    props.card.cardType === CARD_TYPE.VICTORY
+                ) &&
                 props.card.cardReligion !== RELIGION.SECULAR
         );
         const imageType = computed(() =>

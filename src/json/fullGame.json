@@ -502,7 +502,7 @@
                 {
                     "entityId": "KINGDOM#f930cf7e-38de-4252-9711-060c7e9c3e54",
                     "name": "OTTOMAN",
-                    "government": "FEUDAL",
+                    "government": "REPUBLIC",
                     "religion": "ISLAMIC",
                     "cities": {
                         "CONSTANTINOPLE": "CATHOLIC_ROOK",
@@ -512,7 +512,7 @@
                         "MODON": "REFORMIST_KNIGHT"
                     },
                     "repressedPieces": [],
-                    "location": "TABLEAU_FUGGER_WEST",
+                    "location": "THRONE",
                     "marriedTo": null,
                     "vassalOf": "ARAGON"
                 },
