@@ -4,7 +4,7 @@
         :x="props.x"
         :y="props.y"
         fill="red"
-        opacity="0"
+        :opacity="opacity"
         :width="props.width"
         :height="BLOCK_HEIGHT"
     />
@@ -13,7 +13,7 @@
         :x="endBlockWidth(props.x)"
         :y="props.y"
         fill="yellow"
-        opacity="0"
+        :opacity="opacity"
         :width="BLOCK_HEIGHT"
         :height="BLOCK_HEIGHT"
     />
@@ -22,7 +22,7 @@
         :x="props.x"
         :y="endBlockHeight(props.y)"
         fill="blue"
-        opacity="0"
+        :opacity="opacity"
         :width="props.width"
         :height="BLOCK_HEIGHT"
     />
@@ -36,11 +36,11 @@ const props = defineProps({
     y: Number,
     width: Number,
     height: Number,
+    show: Boolean,
 });
 
-const BLOCK_HEIGHT = 30;
-
-// const height = computed(() => props.height ? props.height : BLOCK_HEIGHT);
+const BLOCK_HEIGHT = 50;
+const opacity = computed(() => props.show ? "0.5" : "0" );
 const endBlockXId = computed(() => `${props.id}-endX`);
 const endBlockYId = computed(() => `${props.id}-endY`);
 const endBlockWidth = (y) => y + props.width;

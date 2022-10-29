@@ -40,9 +40,7 @@ let bordeauxCard = ref({
 const { showPiece } = useCard();
 const store = useStore();
 const england = computed(() => store.getters["kingdoms/getEngland"]);
-const refreshEngland = computed(
-    () => store.getters["kingdoms/getRefreshEngland"]
-);
+const refreshEngland = computed(() => store.getters["kingdoms/getRefreshEngland"]);
 
 watch(refreshEngland, (refreshEngland) => {
     if (refreshEngland) {

@@ -543,13 +543,13 @@
                     "entityId": "BORDER#9e08d8fc-6f8f-439d-af16-de0a0ebc955d",
                     "firstKingdom": "ENGLAND",
                     "secondKingdom": "PORTUGAL",
-                    "occupiedBy": "REFORMIST_PIRATE"
+                    "occupiedBy": "MUSLIM_PIRATE"
                 },
                 {
                     "entityId": "BORDER#cc32799e-50b8-4abf-a42e-7955b9ce6eb8",
                     "firstKingdom": "FRANCE",
                     "secondKingdom": "HRE",
-                    "occupiedBy": "CATHOLIC_PIRATE"
+                    "occupiedBy": "MUSLIM_PIRATE"
                 },
                 {
                     "entityId": "BORDER#1cec141a-3d11-48ba-97d3-b25ceb8fee95",

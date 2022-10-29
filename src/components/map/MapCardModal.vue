@@ -5,61 +5,57 @@
             <div @click="closeModal">
                 <span class="close-sand">+</span>
             </div>
-            <div :class="contentClass" :style="imageStyle" />
+            <div v-if="isEngland" class="modal-content-zoom">
+                <zoom-cards :cardId="cardId" />
+            </div>
+            <div v-else :class="contentClass" :style="imageStyle" />
         </div>
     </fade-in-out>
 </template>
 
-<script>
-import { defineComponent, computed } from "vue";
+<script setup>
+import { defineProps, defineEmits, computed } from "vue";
+import ZoomCards from "./zoom/ZoomCards.vue";
 import { FadeInOut } from "vue3-transitions";
 
-export default defineComponent({
-    name: "MapCardModal",
-    components: { FadeInOut },
-    props: {
-        imageName: {
-            type: String,
-            default: "",
-        },
-        imageType: {
-            type: String,
-            default: "square",
-        },
-        showModal: {
-            type: Boolean,
-            default: false,
-        },
-    },
-    emits: ["closeModal"],
-    setup(props, { emit }) {
-        const closeModal = () => {
-            emit("closeModal");
-        };
-
-        const imageStyle = computed(() => {
-            return {
-                backgroundImage: `url("${props.imageName}")`,
-                overflow: "hidden",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-            };
-        });
-        const containerClass = computed(() =>
-            props.imageType === "square"
-                ? "modal-container-square"
-                : "modal-container"
-        );
-
-        const contentClass = computed(() =>
-            props.imageType === "square"
-                ? "modal-content-square"
-                : "modal-content"
-        );
-
-        return { closeModal, imageStyle, containerClass, contentClass };
-    },
+const props = defineProps({
+    imageName: String,
+    imageType: String,
+    showModal: Boolean,
+    cardId: String,
 });
+
+const isEngland = computed(() => (props.cardId === "EN" || props.cardId === "FR"));
+
+const emit = defineEmits(["closeModal"]);
+
+const closeModal = () => {
+    emit("closeModal");
+};
+
+const imageStyle = computed(() => {
+    return {
+        backgroundImage: `url("${props.imageName}")`,
+        overflow: "hidden",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+    };
+});
+const containerClass = computed(() => {
+    if (isEngland.value) {
+        return "modal-container-zoom"
+    } else {
+        return props.imageType === "square"
+            ? "modal-container-square"
+            : "modal-container";
+    }
+});
+
+const contentClass = computed(() =>
+    props.imageType === "square"
+        ? "modal-content-square"
+        : "modal-content"
+);
 </script>
 
 <style lang="scss" scoped>
@@ -88,6 +84,34 @@ export default defineComponent({
     height: 85vh !important;
     z-index: 2000;
     border-radius: 20px !important;
+}
+.modal-container-zoom {
+    position: fixed;
+    width: 550px !important;
+    height: 660px !important;
+
+    // centered
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1500;
+    border-radius: 20px !important;
+    box-shadow: inset 0px 12px 27px 15px $sandColor;
+}
+
+.modal-content-zoom {
+    overflow: hidden;
+    position: fixed;
+    width: 500px !important;
+    height: 600px !important;
+
+    // centered
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1500;
 }
 
 .modal-container-square {

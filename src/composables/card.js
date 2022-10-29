@@ -32,7 +32,7 @@ export function useCard() {
         if (cardType === CARD_TYPE.VICTORY) {
             card = find(VICTORY_FILES, (iter) => iter.id === cardId);
         }
-        if (cardType === CARD_TYPE.KINGDOM) {
+        if (cardType === CARD_TYPE.KINGDOM || cardType === CARD_TYPE.KINGDOM_ZOOM) {
             if (cardReligion === RELIGION.SECULAR) {
                 return "";
             } else {
@@ -69,7 +69,7 @@ export function useCard() {
             );
         }
         if (card === undefined) {
-            console.log(`Card file NOT FOUND. id: ${cardId} `);
+            console.log(`Card file NOT FOUND. id: ${cardId}, religion: ${cardRegion} `);
         } 
         return `/images/${card.file}`;
     }
@@ -84,13 +84,17 @@ export function useCard() {
 
     function cardDynamicStyle(card) {
         const { cardId, cardType, cardMarkerId, pieceId } = card;
-        let markerId =
-            cardType === CARD_TYPE.MARKET_CARD ? cardMarkerId : cardId;
+        let markerId = cardType === CARD_TYPE.MARKET_CARD
+            ? cardMarkerId
+            : cardId;
+
         const cardSvgRec = document.getElementById(markerId);
         const dimensions = cardSvgRec.getBoundingClientRect();
         const navBarOffset = 80;
         let coordX = parseInt(dimensions.left, 10);
-        let coordY = parseInt(dimensions.top, 10) - navBarOffset;
+        let coordY = cardType === CARD_TYPE.KINGDOM_ZOOM
+            ? parseInt(dimensions.top, 10)
+            : parseInt(dimensions.top, 10) - navBarOffset;
         const endId = `${markerId}-endX`;
         const cardSvgRecEnd = document
             .getElementById(endId)
@@ -132,6 +136,33 @@ export function useCard() {
         }
     }
 
+    function cardZoomDynamicStyle(card) {
+        const { cardMarkerId, cardType, pieceId } = card;
+        const cardSvgRec = document.getElementById(cardMarkerId);
+        const box = cardSvgRec.getBBox();
+        let coordX = parseInt(box.x, 10) + 5;
+        let coordY = parseInt(box.y, 10) ;
+        let width = parseInt(cardSvgRec.getBoundingClientRect().width, 10);
+        if (cardType === CARD_TYPE.PIECE && isRook(pieceId)) {
+            // since the rook is too wide on the bottom, a few pixels are shaved off
+            width = width - 5;
+            coordY = coordY - 4;
+        }
+        const height = parseInt(cardSvgRec.getBoundingClientRect().height, 10) + 7;
+
+        return {
+            position: "absolute",
+            top: `${coordY}px !important`,
+            left: `${coordX}px !important`,
+            width: `${width}px !important`,
+            height: `${height}px !important`,
+            borderRadius: "20px !important",
+            border: cardType === CARD_TYPE.PIECE || cardType === CARD_TYPE.PIRATE || cardType === CARD_TYPE.BORDER
+                ? "none"
+                : "1px #2b2d2f solid",
+        };
+    }
+
     function cardMarketSet(tableau, cardRegion) {
         let cards = [];
         forEach(tableau, (item) => {
@@ -149,5 +180,5 @@ export function useCard() {
         return cards;
     }
 
-    return { cardFile, cardDynamicStyle, showPiece, cardMarketSet };
+    return { cardFile, cardDynamicStyle, cardZoomDynamicStyle, showPiece, cardMarketSet };
 }

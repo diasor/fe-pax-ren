@@ -13,27 +13,20 @@
         :imageName="cardSource"
         :imageType="imageType"
         :showModal="showModalCard"
+        :cardId="props.card.cardId"
         @closeModal="closeModal"
     />
 </template>
 
-<script>
-import { ref, computed } from "vue";
+<script setup>
+import { defineProps, ref, computed } from "vue";
 import MapCardModal from "@/components/map/MapCardModal.vue";
 import { useCard } from "@/composables/card";
 import { CARD_TYPE, RELIGION } from "@/constants/enums";
 
-export default {
-    name: "MapCard",
-
-    components: { MapCardModal },
-
-    props: {
-        showCard: {
-            type: Boolean,
-            default: false,
-        },
-        card: {
+const props = defineProps ({
+    showCard: Boolean,
+    card: {
             cardId: "",
             cardType: "",
             cardReligion: "",
@@ -43,69 +36,47 @@ export default {
             cardPosition: "",
             cardGovernment: "",
         },
-    },
+});
 
-    setup(props) {
-        const { cardFile, cardDynamicStyle } = useCard();
-        let showModalCard = ref(false);
+const { cardFile, cardDynamicStyle } = useCard();
+let showModalCard = ref(false);
 
-        const showBrugges = computed(
-            () =>
-                props.card.cardType === CARD_TYPE.PIECE &&
-                props.showCard &&
-                props.card.cardId === "BRUGES"
-        );
-        const showPiece = computed(
-            () => props.card.cardType === CARD_TYPE.PIECE && props.showCard
-        );
-        const showBorder = computed(
-            () =>
-                (props.card.cardType === CARD_TYPE.BORDER ||
-                    props.card.cardType === CARD_TYPE.PIRATE) &&
-                props.showCard
-        );
-        const cardSource = computed(() => cardFile(props.card));
-        const cardStyle = computed(() => cardDynamicStyle(props.card));
-        const loadCard = computed(
-            () =>
-                props.showCard &&
-                (
-                    props.card.cardType === CARD_TYPE.KINGDOM ||
-                    props.card.cardType === CARD_TYPE.EMPIRE ||
-                    props.card.cardType === CARD_TYPE.MARKET_CARD ||
-                    props.card.cardType === CARD_TYPE.VICTORY
-                ) &&
-                props.card.cardReligion !== RELIGION.SECULAR
-        );
-        const imageType = computed(() =>
-            props.showCard && props.card.cardType === CARD_TYPE.VICTORY
-                ? "square"
-                : "rectangular"
-        );
+const showPiece = computed(
+    () => props.card.cardType === CARD_TYPE.PIECE && props.showCard
+);
+const showBorder = computed(
+    () =>
+        (props.card.cardType === CARD_TYPE.BORDER ||
+            props.card.cardType === CARD_TYPE.PIRATE) &&
+        props.showCard
+);
+const cardSource = computed(() => cardFile(props.card));
+const cardStyle = computed(() => cardDynamicStyle(props.card));
+const loadCard = computed(() =>
+    props.showCard &&
+    (
+        props.card.cardType === CARD_TYPE.KINGDOM ||
+        props.card.cardType === CARD_TYPE.EMPIRE ||
+        props.card.cardType === CARD_TYPE.MARKET_CARD ||
+        props.card.cardType === CARD_TYPE.VICTORY
+    ) &&
+    props.card.cardReligion !== RELIGION.SECULAR
+);
+const imageType = computed(() =>
+    props.showCard && props.card.cardType === CARD_TYPE.VICTORY
+        ? "square"
+        : "rectangular"
+);
 
-        const displayModal = () => {
-            if (props.card) {
-                showModalCard.value = true;
-            }
-        };
+const displayModal = () => {
+    if (props.card) {
+        console.log("CARD", props.card);
+        showModalCard.value = true;
+    }
+};
 
-        const closeModal = () => {
-            showModalCard.value = false;
-        };
-
-        return {
-            cardSource,
-            cardStyle,
-            showPiece,
-            showBorder,
-            loadCard,
-            showModalCard,
-            displayModal,
-            closeModal,
-            imageType,
-            showBrugges,
-        };
-    },
+const closeModal = () => {
+    showModalCard.value = false;
 };
 </script>
 <style lang="scss" scoped>
