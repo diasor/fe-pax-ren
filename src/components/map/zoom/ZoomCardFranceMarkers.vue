@@ -26,12 +26,12 @@
             <rect :id="BORDER1_PIRATE" :x="15" :y="150" :width="WIDTH_PIRATE" :height="HEIGHT_PIRATE" fill="red" opacity="0"/>
             <rect :id="BORDER1" :x="10" :y="190" :width="RADIO" :height="RADIO" fill="blue" opacity="0"/>
 
-            <!-- Border 3: France - Aragon (there can not be a pirate between these 2: over land) -->
-            <rect :id="BORDER3_PIRATE" :x="430" :y="40" :width="WIDTH_PIRATE" :height="HEIGHT_PIRATE" fill="yellow" opacity="0  "/>
+            <!-- Border 3: France - Holy Roman Empire  -->
+            <rect :id="BORDER3_PIRATE" :x="430" :y="40" :width="WIDTH_PIRATE" :height="HEIGHT_PIRATE" fill="yellow" opacity="0"/>
             <rect :id="BORDER3" :x="420" :y="40" :width="RADIO" :height="RADIO" fill="blue" opacity="0"/>
 
-            <!-- Border 4: France - Holy Roman Empire -->
-            <rect :id="BORDER4" :x="200" :y="538" :width="RADIO" :height="RADIO" fill="blue" opacity="0"/>
+            <!-- Border 4: France - Aragon (there can not be a pirate between these 2: over land) -->
+            <rect :id="BORDER4" :x="215" :y="538" :width="RADIO" :height="RADIO" fill="blue" opacity="0.5"/>
         </svg>
     </figure>
 </template>
