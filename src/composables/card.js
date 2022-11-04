@@ -34,7 +34,8 @@ export function useCard() {
         }
         if (cardType === CARD_TYPE.KINGDOM || cardType === CARD_TYPE.KINGDOM_ZOOM) {
             if (cardReligion === RELIGION.SECULAR) {
-                return "";
+                id = `${cardId}-MEDIEVAL`;
+                card = find(KINGDOM_FILES, (iter) => iter.id === id);
             } else {
                 id = `${cardId}-${upperCase(cardReligion)}`;
                 card = find(KINGDOM_FILES, (iter) => iter.id === id);
@@ -106,8 +107,8 @@ export function useCard() {
                 .getElementById(endIdY)
                 .getBoundingClientRect();
             if (cardType === CARD_TYPE.PIECE && isRook(pieceId)) {
-                coordX = coordX - 2;
-                coordY = coordY - 8;
+                coordX = coordX - 3;
+                coordY = coordY - 7;
                 coordEndY = parseInt(cardSvgRecEndY.top, 10) - navBarOffset - 5;
             } else if (cardType === CARD_TYPE.PIECE && !isRook(pieceId)) {
                 coordX = coordX - 2;
@@ -145,8 +146,8 @@ export function useCard() {
         let width = parseInt(cardSvgRec.getBoundingClientRect().width, 10);
         if (cardType === CARD_TYPE.PIECE && isRook(pieceId)) {
             // since the rook is too wide on the bottom, a few pixels are shaved off
-            width = width - 5;
-            coordY = coordY - 4;
+            width = width - 7;
+            coordX = coordX + 2;
         }
         const height = parseInt(cardSvgRec.getBoundingClientRect().height, 10) + 7;
 

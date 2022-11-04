@@ -22,8 +22,6 @@ export function usePirate() {
             fullBorder.cardType = CARD_TYPE.PIRATE;
             fullBorder.cardMarkerId = cardId;
         }
-        console.log("3 ", fullBorder);
-
         return fullBorder;
     }
 

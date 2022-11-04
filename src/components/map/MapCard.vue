@@ -22,7 +22,7 @@
 import { defineProps, ref, computed } from "vue";
 import MapCardModal from "@/components/map/MapCardModal.vue";
 import { useCard } from "@/composables/card";
-import { CARD_TYPE, RELIGION } from "@/constants/enums";
+import { CARD_TYPE } from "@/constants/enums";
 
 const props = defineProps ({
     showCard: Boolean,
@@ -59,8 +59,7 @@ const loadCard = computed(() =>
         props.card.cardType === CARD_TYPE.EMPIRE ||
         props.card.cardType === CARD_TYPE.MARKET_CARD ||
         props.card.cardType === CARD_TYPE.VICTORY
-    ) &&
-    props.card.cardReligion !== RELIGION.SECULAR
+    )
 );
 const imageType = computed(() =>
     props.showCard && props.card.cardType === CARD_TYPE.VICTORY
@@ -70,7 +69,6 @@ const imageType = computed(() =>
 
 const displayModal = () => {
     if (props.card) {
-        console.log("CARD", props.card);
         showModalCard.value = true;
     }
 };

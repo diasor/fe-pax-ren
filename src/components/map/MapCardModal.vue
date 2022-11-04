@@ -5,7 +5,7 @@
             <div @click="closeModal">
                 <span class="close-sand">+</span>
             </div>
-            <div v-if="isEngland" class="modal-content-zoom">
+            <div v-if="isKingdom" class="modal-content-zoom">
                 <zoom-cards :cardId="cardId" />
             </div>
             <div v-else :class="contentClass" :style="imageStyle" />
@@ -25,7 +25,9 @@ const props = defineProps({
     cardId: String,
 });
 
-const isEngland = computed(() => (props.cardId === "EN" || props.cardId === "FR"));
+const isKingdom = computed(() => (props.cardId === "EN" || props.cardId === "FR" || props.cardId === "HRE"
+|| props.cardId === "HU" || props.cardId === "BY" || props.cardId === "PT" || props.cardId === "AR"
+|| props.cardId === "PS" || props.cardId === "OT" || props.cardId === "ML"));
 
 const emit = defineEmits(["closeModal"]);
 
@@ -42,7 +44,7 @@ const imageStyle = computed(() => {
     };
 });
 const containerClass = computed(() => {
-    if (isEngland.value) {
+    if (isKingdom.value) {
         return "modal-container-zoom"
     } else {
         return props.imageType === "square"

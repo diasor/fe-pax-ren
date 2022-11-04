@@ -446,8 +446,8 @@
                     "government": "FEUDAL",
                     "religion": "ISLAMIC",
                     "cities": {
-                        "TANA": "MUSLIM_KNIGHT",
-                        "CAFFA": "CATHOLIC_ROOK",
+                        "TANA": "REFORMIST_KNIGHT",
+                        "CAFFA": "MUSLIM_KNIGHT",
                         "TREBIZOND": "REFORMIST_ROOK"
                     },
                     "repressedPieces": [],
@@ -476,9 +476,9 @@
                     "government": "FEUDAL",
                     "religion": "REFORMIST",
                     "cities": {
-                        "VALENCIA": "MUSLIM_ROOK",
-                        "ALGIERS": "MUSLIM_KNIGHT",
-                        "TIMBUKTU": "REFORMIST_KNIGHT"
+                        "VALENCIA": "MUSLIM_KNIGHT",
+                        "ALGIERS": "MUSLIM_ROOK",
+                        "TIMBUKTU": "REFORMIST_ROOK"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -491,7 +491,7 @@
                     "government": "FEUDAL",
                     "religion": "CATHOLIC",
                     "cities": {
-                        "VENICE": "CATHOLIC_ROOK",
+                        "VENICE": "REFORMIST_KNIGHT",
                         "VENICE_2": "INACTIVE"
                     },
                     "repressedPieces": [],
@@ -505,11 +505,11 @@
                     "government": "REPUBLIC",
                     "religion": "ISLAMIC",
                     "cities": {
-                        "CONSTANTINOPLE": "CATHOLIC_ROOK",
-                        "CONSTANTINOPLE_2": "MUSLIM_KNIGHT",
+                        "CONSTANTINOPLE": "CATHOLIC_KNIGHT",
+                        "CONSTANTINOPLE_2": "MUSLIM_ROOK",
                         "CONSTANTINOPLE_3": "REFORMIST_ROOK",
-                        "RHODES": "CATHOLIC_ROOK",
-                        "MODON": "REFORMIST_KNIGHT"
+                        "RHODES": "REFORMIST_KNIGHT",
+                        "MODON": "REFORMIST_ROOK"
                     },
                     "repressedPieces": [],
                     "location": "THRONE",
@@ -522,9 +522,9 @@
                     "government": "FEUDAL",
                     "religion": "ISLAMIC",
                     "cities": {
-                        "CYPRUS": "CATHOLIC_KNIGHT",
+                        "CYPRUS": "MUSLIM_ROOK",
                         "CAIRO": "CATHOLIC_ROOK",
-                        "RED_SEA": "MUSLIM_KNIGHT"
+                        "RED_SEA": "MUSLIM_ROOK"
                     },
                     "repressedPieces": [],
                     "location": "TABLEAU_FUGGER_WEST",
@@ -537,7 +537,7 @@
                     "entityId": "BORDER#01bd6ea0-0e6e-4ec5-8794-5547fde33d5e",
                     "firstKingdom": "ENGLAND",
                     "secondKingdom": "FRANCE",
-                    "occupiedBy": "REFORMIST_PIRATE"
+                    "occupiedBy": "COEUR_CONCESSION"
                 },
                 {
                     "entityId": "BORDER#9e08d8fc-6f8f-439d-af16-de0a0ebc955d",
@@ -597,19 +597,19 @@
                     "entityId": "BORDER#12483d83-b147-4104-b31f-8be525986f8e",
                     "firstKingdom": "ARAGON",
                     "secondKingdom": "PAPAL_STATES",
-                    "occupiedBy": "REFORMIST_PIRATE"
+                    "occupiedBy": "MUSLIM_PIRATE"
                 },
                 {
                     "entityId": "BORDER#e078f5fe-f0ec-4242-8417-397f6b0b51b2",
                     "firstKingdom": "PAPAL_STATES",
                     "secondKingdom": "OTTOMAN",
-                    "occupiedBy": "CATHOLIC_PIRATE"
+                    "occupiedBy": "FUGGER_CONCESSION"
                 },
                 {
                     "entityId": "BORDER#e5fb3c54-2233-49dd-bdd1-ad1eb88642bd",
                     "firstKingdom": "OTTOMAN",
                     "secondKingdom": "MAMLUK",
-                    "occupiedBy": "REFORMIST_PIRATE"
+                    "occupiedBy": "FUGGER_CONCESSION"
                 }
             ],
             "market": {

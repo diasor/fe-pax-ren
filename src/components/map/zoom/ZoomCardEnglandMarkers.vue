@@ -22,12 +22,12 @@
             <rect :id="BORDEAUX" x="328" y="392" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
 
             <!-- Border 1: England - France -->
-            <rect :id="BORDER1_PIRATE" :x="430" :y="150" :width="WIDTH_PIRATE" :height="HEIGHT_PIRATE" fill="red" opacity="0"/>
-            <rect :id="BORDER1" :x="420" :y="200" :width="RADIO" :height="RADIO" fill="blue" opacity="0"/>
+            <rect :id="BORDER1_PIRATE" x="430" y="150" :width="WIDTH_PIRATE" :height="HEIGHT_PIRATE" fill="red" opacity="0"/>
+            <rect :id="BORDER1" x="420" y="200" :width="RADIO" :height="RADIO" fill="blue" opacity="0"/>
             
             <!-- Border 2: England - Portugal -->
-            <rect :id="BORDER2_PIRATE" :x="120" :y="540" :width="HEIGHT_PIRATE" :height="WIDTH_PIRATE" fill="pink" opacity="0"/>
-            <rect :id="BORDER2" :x="155" :y="538" :width="RADIO" :height="RADIO" fill="blue" opacity="0"/>
+            <rect :id="BORDER2_PIRATE" x="120" y="534" :width="HEIGHT_PIRATE" :height="WIDTH_PIRATE" fill="pink" opacity="0"/>
+            <rect :id="BORDER2" x="155" y="538" :width="RADIO" :height="RADIO" fill="blue" opacity="0"/>
         </svg>
     </figure>
 </template>
@@ -35,13 +35,7 @@
 <script setup>
 import { usePirate } from "@/composables/pirate";
 import { COUNTRY_CODES, CITY_NAMES, KINGDOM_NAMES } from "@/constants/enums";
-
-// markers for zoom
-const WIDTH = 80;
-const HEIGHT = 110;
-const WIDTH_PIRATE = 55;
-const HEIGHT_PIRATE = 130;
-const RADIO = 60;
+import { WIDTH, HEIGHT, WIDTH_PIRATE, HEIGHT_PIRATE, RADIO } from "@/constants/pieceSizes";
 
 const { pirateMakerName } = usePirate();
 const ENGLAND = `${COUNTRY_CODES.ENGLAND}-zoom`;
@@ -66,6 +60,6 @@ const BORDER2_PIRATE = pirateMakerName(KINGDOM_NAMES.ENGLAND, KINGDOM_NAMES.PORT
 	display: inline-block;
 	position: absolute;
 	top: 0; left: 0;
-    image { clip-path: inset(0% round 20px); }
+    image { clip-path: inset(0% round 30px); }
 }
 </style>

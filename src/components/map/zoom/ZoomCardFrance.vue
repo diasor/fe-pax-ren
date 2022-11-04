@@ -11,9 +11,9 @@
     <img v-if="lyonCard.show" :src="lyonCard.file" :style="lyonCard.style" />
 
     <!-- borders -->
-    <img v-if="border1Card.show" :src="border1Card.file" class="piece" :style="border1Card.style" />
-    <img v-if="border3Card.show" :src="border3Card.file" class="piece" :style="border3Card.style" />
-    <img v-if="border4Card.show" :src="border4Card.file" class="piece" :style="border4Card.style" />
+    <img v-if="border1Card.show" :src="border1Card.file" :style="border1Card.style" />
+    <img v-if="border3Card.show" :src="border3Card.file" :style="border3Card.style" />
+    <img v-if="border4Card.show" :src="border4Card.file" :style="border4Card.style" />
 </template>
 
 <script setup>
@@ -90,7 +90,7 @@ onMounted(() => {
         // France card
         franceCard.value.file = cardFile(franceCard.value);
         franceCard.value.style = cardZoomDynamicStyle(franceCard.value);
-        // franceCard.value.show = true;
+        franceCard.value.show = true;
 
         // Paris card
         parisCard.value.file = cardFile(parisCard.value);

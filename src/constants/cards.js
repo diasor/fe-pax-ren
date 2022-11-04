@@ -1043,6 +1043,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "EN-CATHOLIC",
+        file: "Map Card Catholic01.png",
+        name: "Catholic England",
+    },
+    {
+        id: "EN-MEDIEVAL",
         file: "Map Card Medieval01.png",
         name: "Catholic England",
     },
@@ -1060,6 +1065,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "FR-CATHOLIC",
+        file: "Map Card Catholic02.png",
+        name: "Catholic France",
+    },
+    {
+        id: "FR-MEDIEVAL",
         file: "Map Card Medieval02.png",
         name: "Catholic France",
     },
@@ -1077,6 +1087,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "HRE-CATHOLIC",
+        file: "Map Card Catholic03.png",
+        name: "Catholic Holy Roman Empire",
+    },
+    {
+        id: "HRE-MEDIEVAL",
         file: "Map Card Medieval03.png",
         name: "Catholic Holy Roman Empire",
     },
@@ -1094,6 +1109,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "HU-CATHOLIC",
+        file: "Map Card Catholic04.png",
+        name: "Catholic Hungary",
+    },
+    {
+        id: "HU-MEDIEVAL",
         file: "Map Card Medieval04.png",
         name: "Catholic Hungary",
     },
@@ -1111,6 +1131,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "BY-CATHOLIC",
+        file: "Map Card Catholic05.png",
+        name: "Catholic Byzantium",
+    },
+    {
+        id: "BY-MEDIEVAL",
         file: "Map Card Medieval05.png",
         name: "Catholic Byzantium",
     },
@@ -1128,6 +1153,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "PT-CATHOLIC",
+        file: "Map Card Catholic06.png",
+        name: "Catholic Portugal",
+    },
+    {
+        id: "PT-MEDIEVAL",
         file: "Map Card Medieval06.png",
         name: "Catholic Portugal",
     },
@@ -1145,6 +1175,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "AR-CATHOLIC",
+        file: "Map Card Catholic07.png",
+        name: "Catholic Aragon",
+    },
+    {
+        id: "AR-MEDIEVAL",
         file: "Map Card Medieval07.png",
         name: "Catholic Aragon",
     },
@@ -1162,6 +1197,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "PS-CATHOLIC",
+        file: "Map Card Catholic08.png",
+        name: "Catholic Papal States",
+    },
+    {
+        id: "PS-MEDIEVAL",
         file: "Map Card Medieval08.png",
         name: "Catholic Papal States",
     },
@@ -1179,6 +1219,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "OT-CATHOLIC",
+        file: "Map Card Catholic09.png",
+        name: "Catholic Ottoman",
+    },
+    {
+        id: "OT-MEDIEVAL",
         file: "Map Card Medieval09.png",
         name: "Catholic Ottoman",
     },
@@ -1196,6 +1241,11 @@ export const KINGDOM_FILES = [
     },
     {
         id: "ML-CATHOLIC",
+        file: "Map Card Catholic10.png",
+        name: "Catholic Mamluk",
+    },
+    {
+        id: "ML-MEDIEVAL",
         file: "Map Card Medieval10.png",
         name: "Catholic Mamluk",
     },

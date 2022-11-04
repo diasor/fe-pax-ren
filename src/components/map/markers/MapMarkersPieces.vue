@@ -24,8 +24,8 @@
     <map-markers-block :id="trebizond" :x="2654" :y="1030" :width="WIDTH"  :height="HEIGHT" />
 
     <!-- Portugal -->
-    <map-markers-block :id="toledo" :x="1018" :y="1322" :width="WIDTH"  :height="HEIGHT" />
-    <map-markers-block :id="granada" :x="1035" :y="1454" :width="WIDTH"  :height="HEIGHT" />
+    <map-markers-block :id="toledo" :x="1019" :y="1323" :width="WIDTH"  :height="HEIGHT" />
+    <map-markers-block :id="granada" :x="1039" :y="1452" :width="WIDTH"  :height="HEIGHT" />
     <map-markers-block :id="spiceIslands" :x="887" :y="1593" :width="WIDTH"  :height="HEIGHT" />
 
     <!-- Aragon -->
