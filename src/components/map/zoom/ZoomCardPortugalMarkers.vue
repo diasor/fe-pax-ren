@@ -20,7 +20,7 @@
             />
             <rect :id="TOLEDO" x="298" y="168" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
             <rect :id="GRANADA" x="318" y="303" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
-            <rect :id="SPICE_ISLANDS" x="160" y="457" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="SPICE_ISLANDS" x="158" y="455" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
 
             <!-- Border 2: England - Portugal -->
             <rect :id="BORDER2_PIRATE" x="140" y="0" :width="HEIGHT_PIRATE" :height="WIDTH_PIRATE" fill="pink" opacity="0"/>

@@ -18,9 +18,9 @@
                 width="360"
                 height="540"
             />
-            <rect :id="VALENCIA" x="105" y="150" :width="WIDTH" :height="HEIGHT" fill="blue" opacity="0" />
-            <rect :id="ALGIERS" x="310" y="360" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
-            <rect :id="TIMBUKTU" x="147" y="410" :width="WIDTH" :height="HEIGHT" fill="pink" opacity="0" />
+            <rect :id="VALENCIA" x="107" y="152" :width="WIDTH" :height="HEIGHT" fill="blue" opacity="0" />
+            <rect :id="ALGIERS" x="312" y="359" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="TIMBUKTU" x="147" y="412" :width="WIDTH" :height="HEIGHT" fill="pink" opacity="0" />
 
 
             <!-- Border 4: France - Aragon (there can not be a pirate between these 2: over land) -->

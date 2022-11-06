@@ -18,9 +18,9 @@
                 width="360"
                 height="540"
             />
-            <rect :id="PARIS" x="90" y="260" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
-            <rect :id="BRUGES" x="193" y="116" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
-            <rect :id="LYON" x="287" y="350" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="PARIS" x="93" y="258" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="BRUGES" x="194" y="113" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="LYON" x="290" y="346" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
 
             <!-- Border 1: England - France -->
             <rect :id="BORDER1_PIRATE" x="15" y="150" :width="WIDTH_PIRATE" :height="HEIGHT_PIRATE" fill="red" opacity="0"/>

@@ -18,8 +18,8 @@
                 width="360"
                 height="540"
             />
-            <rect :id="LONDON" x="260" y="140" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
-            <rect :id="BORDEAUX" x="328" y="392" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="LONDON" x="259" y="135" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="BORDEAUX" x="327" y="394" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
 
             <!-- Border 1: England - France -->
             <rect :id="BORDER1_PIRATE" x="430" y="150" :width="WIDTH_PIRATE" :height="HEIGHT_PIRATE" fill="red" opacity="0"/>

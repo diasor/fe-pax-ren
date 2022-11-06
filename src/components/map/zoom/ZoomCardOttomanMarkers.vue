@@ -11,21 +11,21 @@
             <image width="500" height="600" xlink:href="/images/OT-zoom.png" />
             <rect
                 :id="OTTOMAN"
-                x="65"
-                y="55"
+                x="59"
+                y="57"
                 fill="pink"
                 opacity="0"
-                width="360"
-                height="540"
+                width="361"
+                height="536"
             />
-            <rect :id="CONSTANTINOPLE" x="89" y="77" :width="WIDTH" :height="HEIGHT" fill="blue" opacity="0" />
-            <rect :id="CONSTANTINOPLE_2" x="171" y="77" :width="WIDTH" :height="HEIGHT" fill="pink" opacity="0" />
-            <rect :id="CONSTANTINOPLE_3" x="251" y="77" :width="WIDTH" :height="HEIGHT" fill="yellow" opacity="0" />
-            <rect :id="MODON" x="109" y="249" :width="WIDTH" :height="HEIGHT" fill="pink" opacity="0" />
-            <rect :id="RHODES" x="320" y="225" :width="WIDTH" :height="HEIGHT" fill="yellow" opacity="0" />
+            <rect :id="CONSTANTINOPLE" x="92" y="73" :width="WIDTH" :height="HEIGHT" fill="blue" opacity="0" />
+            <rect :id="CONSTANTINOPLE_2" x="172" y="75" :width="WIDTH" :height="HEIGHT" fill="pink" opacity="0" />
+            <rect :id="CONSTANTINOPLE_3" x="252" y="74" :width="WIDTH" :height="HEIGHT" fill="yellow" opacity="0" />
+            <rect :id="MODON" x="108" y="245" :width="WIDTH" :height="HEIGHT" fill="pink" opacity="0" />
+            <rect :id="RHODES" x="321" y="222" :width="WIDTH" :height="HEIGHT" fill="yellow" opacity="0" />
 
             <!-- Border 8: Hungary - Ottoman -->
-            <rect :id="BORDER8_PIRATE" x="260" y="0" :width="HEIGHT_PIRATE" :height="WIDTH_PIRATE" fill="pink" opacity="0"/>
+            <rect :id="BORDER8_PIRATE" x="260" y="-4" :width="HEIGHT_PIRATE" :height="WIDTH_PIRATE" fill="pink" opacity="0"/>
             <rect :id="BORDER8" x="300" y="0" :width="RADIO" :height="RADIO" fill="blue" opacity="0"/>
 
              <!-- Border 12: Papal States - Ottoman  -->

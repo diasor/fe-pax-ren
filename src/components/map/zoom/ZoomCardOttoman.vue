@@ -99,7 +99,6 @@ const border13Card = ref({
 // map card ref
 let ottomanZoom = ref(null);
 onMounted(() => {
-    console.log("ZOOM CARD OTTOMAN");
     ottomanZoom.value = document.getElementById("ottoman-zoom");
     if (ottomanZoom.value !== null && ottomanZoom.value !== null) {
         // Ottoman card

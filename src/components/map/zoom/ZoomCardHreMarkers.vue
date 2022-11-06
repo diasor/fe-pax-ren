@@ -18,10 +18,10 @@
                 width="364"
                 height="542"
             />
-            <rect :id="VIENNA" x="289" y="318" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
-            <rect :id="NOVGOROD" x="292" y="45" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
-            <rect :id="LUBECK" x="142" y="60" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
-            <rect :id="NURNBERG" x="109" y="264" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="VIENNA" x="289" y="316" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="NOVGOROD" x="290" y="43" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="LUBECK" x="141" y="57" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
+            <rect :id="NURNBERG" x="108" y="264" :width="WIDTH" :height="HEIGHT" fill="red" opacity="0" />
 
             <!-- Border 3: France - Holy Roman Empire  -->
             <rect :id="BORDER3_PIRATE" :x="15" :y="40" :width="WIDTH_PIRATE" :height="HEIGHT_PIRATE" fill="yellow" opacity="0"/>

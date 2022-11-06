@@ -18,7 +18,7 @@
                 width="360"
                 height="540"
             />
-            <rect :id="VENICE" x="168" y="67" :width="WIDTH" :height="HEIGHT" fill="blue" opacity="0" />
+            <rect :id="VENICE" x="168" y="64" :width="WIDTH" :height="HEIGHT" fill="blue" opacity="0" />
 
 
             <!-- Border 4: France - Aragon (there can not be a pirate between these 2: over land) -->
