@@ -1,54 +1,47 @@
 <template>
     <b-modal
-        :title="title"
+        :title="props.title"
         v-model="renderModal"
         hide-footer
         ref="modalCard"
+        data-testid="modal-container"
         @hidden="closeModal"
     >
         <div class="mt-1">
             <b-img
-                :src="imageName"
+                :src="props.imageName"
                 rounded
                 center
-                :alt="title"
+                :alt="props.title"
                 class="object-center"
+                data-testid="modal-image"
             />
         </div>
     </b-modal>
 </template>
 
-<script>
-import { ref } from "vue";
+<script setup>
+import { defineProps, defineEmits, ref } from "vue";
 
-export default {
-    name: "BaseModal",
-    props: {
-        title: {
-            type: String,
-            default: "",
-        },
-        imageName: {
-            type: String,
-            default: "",
-        },
-        showModal: {
-            type: Boolean,
-            default: false,
-        },
+const props = defineProps({
+    title: {
+        type: String,
+        default: "",
     },
-
-    emits: ["closeModal"],
-
-    setup(props, context) {
-        let renderModal = ref(props.showModal);
-
-        const closeModal = () => {
-            renderModal.value = false;
-            context.emit("closeModal");
-        };
-
-        return { closeModal, renderModal };
+    imageName: {
+        type: String,
+        default: "",
     },
+    showModal: {
+        type: Boolean,
+        default: false,
+    },
+});
+const emit = defineEmits(["closeModal"]);
+let renderModal = ref(props.showModal);
+
+const closeModal = () => {
+    renderModal.value = false;
+    emit("closeModal");
 };
 </script>

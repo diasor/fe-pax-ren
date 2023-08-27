@@ -1,8 +1,12 @@
 <template>
-    <b-nav id="pr-main-menu" tabs fill>
-        <b-nav-text class="mx-5 pt-3"><h3>Pax Renaissance</h3></b-nav-text>
-        <b-nav-item class="mt-4" @click="newGame">New game</b-nav-item>
-        <b-nav-item class="mt-4">Players</b-nav-item>
+    <b-nav id="pr-main-menu" tabs fill data-testid="nav-bar-main">
+        <b-nav-text class="mx-5 pt-3" data-testid="nav-bar-title"
+            ><h3>Pax Renaissance</h3>
+        </b-nav-text>
+        <b-nav-item class="mt-4" data-testid="nav-bar-new-game" @click="newGame">
+            New game
+        </b-nav-item>
+        <b-nav-item class="mt-4" data-testid="nav-bar-players">Players</b-nav-item>
 
         <b-nav-item-dropdown
             id="my-nav-dropdown"
@@ -10,6 +14,7 @@
             toggle-class="nav-link-custom"
             class="mt-4"
             right
+            data-testid="nav-bar-profile"
         >
             <b-dropdown-item>Edit my profile</b-dropdown-item>
             <b-dropdown-item>My past games</b-dropdown-item>
@@ -19,32 +24,25 @@
     </b-nav>
 </template>
 
-<script>
-import { ref } from "vue";
+<script setup>
+// import { defineProps } from "vue";
 import { useStore } from "vuex";
-export default {
-    name: "BaseNavBar",
-    props: {
-        selected: {
-            type: [String, null],
-            default: null,
-        },
-    },
-    setup(props, context) {
-        let selectedOption = props.selected ? ref(props.selected) : null;
-        const store = useStore();
-        const newGame = async () => {
-            await store.dispatch("board/newGameBoard");
-        };
 
-        const showCard = (card) => context.emit("showCard", card);
-        return {
-            selectedOption,
-            showCard,
-            newGame,
-        };
-    },
+// const props = defineProps({
+//     selected: {
+//         type: [String, null],
+//         default: null,
+//     },
+// });
+// const emit = defineEmits(["openTableau"]);
+
+// let selectedOption = props.selected ? ref(props.selected) : null;
+const store = useStore();
+const newGame = async () => {
+    await store.dispatch("board/newGameBoard");
 };
+
+// const showCard = (card) => emit("showCard", card);
 </script>
 
 <style lang="scss" scoped>

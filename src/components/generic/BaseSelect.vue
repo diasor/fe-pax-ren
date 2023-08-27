@@ -2,35 +2,31 @@
     <b-form-select
         v-model="selectedOption"
         :options="options"
+        data-testid="select-option"
         @input="changeSelection(selectedOption)"
     />
 </template>
 
-<script>
-import { ref } from "vue";
+<script setup>
+import { defineProps, defineEmits, ref } from "vue";
 
-export default {
-    name: "BaseSelect",
-    props: {
-        options: {
-            type: Array,
-            default: () => [],
-        },
-        selected: {
-            type: [String, null],
-            default: null,
-        },
+const props = defineProps({
+    options: {
+        type: Array,
+        default: () => [],
     },
-    emits: ["selectedOption"],
-    setup(props, context) {
-        let selectedOption = props.selected ? ref(props.selected) : null;
+    selected: {
+        type: [String, null],
+        default: null,
+    },
+});
+const emit = defineEmits(["selectedOption"]);
 
-        const changeSelection = (selectedValue) => {
-            if (selectedValue) {
-                context.emit("selectedOption", selectedValue);
-            }
-        };
-        return { selectedOption, changeSelection };
-    },
+let selectedOption = props.selected ? ref(props.selected) : null;
+
+const changeSelection = (selectedValue) => {
+    if (selectedValue) {
+        emit("selectedOption", selectedValue);
+    }
 };
 </script>

@@ -7,14 +7,13 @@ const itemList = [
     "element two",
 ];
 beforeEach(() => {
-    // render the component
     wrapper = shallowMount(ContextMenu, {
         props: {
             itemList,
         },
         global: {
             stubs: ['FontAwesomeIcon']
-          }
+        }
     });
 });
 

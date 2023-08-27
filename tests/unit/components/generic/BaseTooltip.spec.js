@@ -4,7 +4,6 @@ import BaseTooltip from "@/components/generic/BaseTooltip.vue";
 let wrapper = null;
 const text = "Tooltip text";
 beforeEach(() => {
-    // render the component
     wrapper = shallowMount(BaseTooltip, {
         props: {
             text,

@@ -1,7 +1,11 @@
 <template>
-    <div class="information-container">
-        <div class="information-icon"><font-awesome-icon icon="fa-circle-info" @click.prevent="toggleInformation" /></div>
-        <div v-show="showInformation" class="information-text">{{ information }}</div>
+    <div class="information-container" data-testid="information-container">
+        <div class="information-icon" data-testid="information-image">
+            <font-awesome-icon icon="fa-circle-info" @click.prevent="toggleInformation" />
+        </div>
+        <div v-show="showInformation" class="information-text" data-testid="information-text">
+            {{ information }}
+        </div>
     </div>
 </template>
 
