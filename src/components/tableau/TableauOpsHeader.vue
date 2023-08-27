@@ -27,7 +27,6 @@ const props = defineProps ({
 
 const emit = defineEmits(["closeTableau"]);
 
-
 const title = computed(() => `${props.name}'s tableau overview`);
 const closeTableau = () => {
     emit("closeTableau", true);

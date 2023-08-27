@@ -5,7 +5,6 @@ let wrapper = null;
 const itemList = [
     "element one",
     "element two",
-    "element three",
 ];
 beforeEach(() => {
     // render the component
@@ -58,19 +57,3 @@ describe("Testing ContextMenu Computed properties", () => {
         });
     });
 });
-
-// describe("Testing ContextMenu Methods", () => {
-//     describe("Testing onClickOutside method", () => {
-//         it.only("reset top and left, and should set show to false", async () => {
-//             wrapper.vm.top = 200;
-//             wrapper.vm.left = 500;
-//             wrapper.vm.show = true;
-//             await wrapper.vm.$nextTick();
-
-//             await wrapper.vm.onClickOutside({});
-//             expect(wrapper.vm.show.value).toBeFalsy();
-//             expect(wrapper.vm.top).toBe(0);
-//             expect(wrapper.vm.left).toBe(0);
-//         });
-//     });
-// });

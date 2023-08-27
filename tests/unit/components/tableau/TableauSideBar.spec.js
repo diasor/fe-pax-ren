@@ -1,20 +1,14 @@
 import { shallowMount } from "@vue/test-utils";
 import { SlideInOut } from "vue3-transitions";
-import { createStore } from "vuex";
 import TableauSideBar from "@/components/tableau/TableauSideBar.vue";
 import TableauOpsHeader from "@/components/tableau/TableauOpsHeader.vue";
 import TableauOpsCards from "@/components/tableau/TableauOpsCards.vue";
 import TableauOpsHand from "@/components/tableau/TableauOpsHand.vue";
 import TableauOpsDocumentation from "@/components/tableau/TableauOpsDocumentation.vue";
-import { board } from "@/store/modules/board";
-import { kingdoms } from "@/store/modules/kingdoms";
-import { markets } from "@/store/modules/markets";
-import { borders } from "@/store/modules/borders";
-import { bankers } from "@/store/modules/bankers";
+import { mockStore } from "./../../mocks/store.js";
 
 let wrapper = null;
 beforeEach(async () => {
-    // render the component
     wrapper = shallowMount(TableauSideBar, {
         props: {
             showPanel: true,
@@ -22,15 +16,7 @@ beforeEach(async () => {
         },
         global: { 
             provide: { 
-                store: createStore({
-                    modules: {
-                        board,
-                        kingdoms,
-                        markets,
-                        borders,
-                        bankers,
-                    },
-                }),
+                store: mockStore(),
             }
         }
     });
@@ -74,7 +60,7 @@ describe("Testing TableauSideBar Computed", () => {
 
 describe("Testing TableauSideBar Methods", () => {
     describe("Testing closeTableau method", () => {
-        it("emit something", () => {
+        it("should emit closeTableau", () => {
             wrapper.vm.closeTableau();
             expect(wrapper.emitted('closeTableau')).toBeTruthy();
             expect(wrapper.emitted('closeTableau')).toHaveLength(1);

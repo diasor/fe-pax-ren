@@ -1,19 +1,14 @@
 import { shallowMount } from "@vue/test-utils";
-import { createStore } from "vuex";
 import { SlideInOut } from "vue3-transitions";
 import SideBar from "@/components/generic/SideBar.vue";
-import { board } from "@/store/modules/board";
-import { kingdoms } from "@/store/modules/kingdoms";
-import { markets } from "@/store/modules/markets";
-import { borders } from "@/store/modules/borders";
-import { bankers } from "@/store/modules/bankers";
+import { mockStore } from "./../../mocks/store.js";
 
 let wrapper = null;
 const title = "My side bar";
 const text = "Something to show here";
 const button = "Close";
+const store = mockStore();
 beforeEach(async () => {
-    // render the component
     wrapper = shallowMount(SideBar, {
         props: {
             title,
@@ -22,21 +17,13 @@ beforeEach(async () => {
         },
         global: { 
             provide: { 
-                store: createStore({
-                    modules: {
-                        board: {
-                            ...board,
-                            state: {
-                                ...board,
-                                navOpen: true,
-                            },
-                        },
-                        kingdoms,
-                        markets,
-                        borders,
-                        bankers,
+                store: {
+                    ...store,
+                    board: {
+                        ...store.board,
+                        navOpen: true,
                     },
-                }),
+                }
             }
         }
     });
@@ -48,7 +35,8 @@ afterEach(() => {
 });
 
 describe("Testing SideBar Template", () => {
-    it("should render the sideBar component", async () => {
+    it("should render the sideBar component, if navOpen is true", async () => {
+        // wrapper.vm.store.dispatch("board/setNavOpen", true, { root: true });
         const sideBarContainer = wrapper.find('[data-testid="side-bar-container"]');
         expect(sideBarContainer.exists()).toBeTruthy();
     });
@@ -76,8 +64,10 @@ describe("Testing SideBar Template", () => {
 
 describe("Testing SideBar Computed properties", () => {
     describe("Testing bankerData computed", () => {
-        it("should true if navOpen is true",  () =>
-            expect(wrapper.vm.isPanelOpen).toBeTruthy());
+        it("should true if navOpen is true",  () => {
+            wrapper.vm.store.dispatch("board/setNavOpen", true, { root: true });
+            expect(wrapper.vm.isPanelOpen).toBeTruthy();
+        });
 
         it("should return false if navOpen false", () => {
             wrapper.vm.closeSidebarPanel();

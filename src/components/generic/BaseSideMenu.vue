@@ -1,8 +1,9 @@
 <template>
-    <nav class="floating-menu">
+    <nav class="floating-menu" data-testid="floating-menu-container">
         <div
             v-if="showFugger"
             class="shield"
+            data-testid="fugger-container"
             @click.prevent="openTableau('fugger')"
         >
             <base-tooltip :text="'Show Fugger\'s full tableau overview.'">
@@ -16,6 +17,7 @@
         <div
             v-if="showCoeur"
             class="shield"
+            data-testid="coeur-container"
             @click.prevent="openTableau('coeur')"
         >
             <base-tooltip :text="'Show Coeur\'s full tableau overview.'">
@@ -29,6 +31,7 @@
         <div
             v-if="showMedici"
             class="shield"
+            data-testid="medici-container"
             @click.prevent="openTableau('medici')"
         >
             <base-tooltip :text="'Show Coeur\'s full tableau overview.'">
@@ -42,6 +45,7 @@
         <div
             v-if="showMarchionni"
             class="shield"
+            data-testid="marchionni-container"
             @click.prevent="openTableau('marchionni')"
         >
             <base-tooltip :text="'Show Coeur\'s full tableau overview.'">
@@ -55,44 +59,30 @@
     </nav>
 </template>
 
-<script>
-import { defineComponent, computed } from "vue";
+<script setup>
+import { defineEmits, computed } from "vue";
 import BaseTooltip from "./BaseTooltip.vue";
 import { useStore } from "vuex";
 
-export default defineComponent({
-    name: "BaseSideMenu",
+const emit = defineEmits(["openTableau"]);
 
-    emits: ["openTableau"],
-    components: { BaseTooltip },
+const store = useStore();
+const showFugger = computed(
+    () => store.getters["bankers/isFuggerPlaying"]
+);
+const showMedici = computed(
+    () => store.getters["bankers/isMediciPlaying"]
+);
+const showCoeur = computed(
+    () => store.getters["bankers/isCoeurPlaying"]
+);
+const showMarchionni = computed(
+    () => store.getters["bankers/isMarchionniPlaying"]
+);
 
-    setup(_, context) {
-        const store = useStore();
-        const showFugger = computed(
-            () => store.getters["bankers/isFuggerPlaying"]
-        );
-        const showMedici = computed(
-            () => store.getters["bankers/isMediciPlaying"]
-        );
-        const showCoeur = computed(
-            () => store.getters["bankers/isCoeurPlaying"]
-        );
-        const showMarchionni = computed(
-            () => store.getters["bankers/isMarchionniPlaying"]
-        );
-
-        const openTableau = (banker) => {
-            context.emit("openTableau", banker);
-        };
-        return {
-            showFugger,
-            showMedici,
-            showCoeur,
-            showMarchionni,
-            openTableau,
-        };
-    },
-});
+const openTableau = (banker) => {
+    emit("openTableau", banker);
+};
 </script>
 
 <style lang="scss" scoped>

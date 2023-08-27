@@ -159,7 +159,7 @@ export const bankers = {
         },
 
         setMedici({ commit }, banker) {
-            commit("SET_MEIDICI", banker);
+            commit("SET_MEDICI", banker);
         },
 
         setRefreshMedici({ commit }, refresh) {
