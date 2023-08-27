@@ -1,7 +1,22 @@
 <template>
-    <div v-show="show" class="context-menu"  :style="menuStyle" ref="context" tabindex="0" @blur="closeMenu">
-        <div v-for="item in elements" :key="item.id" class="context-menu-item">
-            <div class="context-menu-item__icon"><font-awesome-icon icon="fa-circle-arrow-right" /></div>
+    <div
+        v-show="show"
+        class="context-menu"
+        :style="menuStyle"
+        ref="context"
+        tabindex="0"
+        data-testid="context-menu-container"
+        @blur="closeMenu"
+        >
+        <div
+            v-for="item in elements"
+            :key="item.id"
+            class="context-menu-item"
+            :data-testid="`context-menu-item-${item.id}`"
+            >
+            <div class="context-menu-item__icon">
+                <font-awesome-icon icon="fa-circle-arrow-right" />
+            </div>
             <div class="context-menu-item__text">{{ item.id }}</div>
         </div>
     </div>
@@ -41,7 +56,6 @@ const openMenu = async (event) => {
             show.value = true;
         });
     }
-
 };
 
 onClickOutside(context, () => {

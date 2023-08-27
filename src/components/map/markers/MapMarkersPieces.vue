@@ -1,6 +1,6 @@
 <template>
     <!-- England -->
-    <map-markers-block :id="london" :x="982" :y="780" :width="WIDTH"  :height="HEIGHT" />
+    <map-markers-block :id="london" :x="984" :y="768" :width="WIDTH"  :height="HEIGHT" />
     <map-markers-block :id="bordeaux" :x="1046" :y="1020" :width="WIDTH"  :height="HEIGHT" />
 
     <!-- France -->

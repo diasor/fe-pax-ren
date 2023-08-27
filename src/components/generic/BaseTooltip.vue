@@ -1,8 +1,8 @@
 <template>
-    <div class="tooltip-container">
+    <div class="tooltip-container" data-testid="tooltip-container">
         <slot />
         <div class="tooltip">
-            <span class="text">{{ information }}</span>
+            <span class="text" data-testid="tooltip-text">{{ information }}</span>
         </div>
     </div>
 </template>

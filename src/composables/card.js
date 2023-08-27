@@ -107,12 +107,16 @@ export function useCard() {
                 .getElementById(endIdY)
                 .getBoundingClientRect();
             if (cardType === CARD_TYPE.PIECE && isRook(pieceId)) {
+                // rook
                 coordX = coordX - 3;
-                coordY = coordY - 7;
+                coordY = coordY - 5;
                 coordEndY = parseInt(cardSvgRecEndY.top, 10) - navBarOffset - 5;
             } else if (cardType === CARD_TYPE.PIECE && !isRook(pieceId)) {
+                // knight
                 coordX = coordX - 2;
+                coordY = coordY + 2;
             } else {
+                // pirate
                 coordEndY = parseInt(cardSvgRecEndY.top, 10) - navBarOffset + 3;
             }
         }

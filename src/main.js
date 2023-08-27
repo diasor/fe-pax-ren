@@ -41,7 +41,7 @@ library.add(
 createApp(App)
     .use(store)
     .use(router)
-    .use(BootstrapVue3)
     .use(contextmenu)
+    .use(BootstrapVue3)
     .component("font-awesome-icon", FontAwesomeIcon)
     .mount("#app");

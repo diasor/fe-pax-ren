@@ -18,6 +18,13 @@
             @closeModal="resetSelected"
         />
     </div>
+
+    <div>
+        <!-- <pdf src="/images/cv-Diana Sormani.pdf" /> -->
+        <p>Open a PDF file 
+        <a href="/images/cv-Diana Sormani.pdf">example</a>.
+        </p>
+    </div>
 </template>
 
 <script>
@@ -26,12 +33,16 @@ import { forEach, find } from "lodash";
 import { EAST_CARDS } from "@/constants/cards";
 import BaseSelect from "@/components/generic/BaseSelect.vue";
 import BaseModal from "@/components/generic/BaseModal.vue";
+// import VuePdfEmbed from "vue-pdf-embed";
+// import pdf from 'vue3-pdfjs'
 
 export default {
     name: "HomeView",
     components: {
         BaseSelect,
         BaseModal,
+        // VuePdfEmbed,
+        // pdf
     },
     setup() {
         let cards = ref([{ value: null, text: "(Select a card)" }]);

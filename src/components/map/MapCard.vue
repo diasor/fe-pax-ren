@@ -62,7 +62,8 @@ const loadCard = computed(() =>
     )
 );
 const imageType = computed(() =>
-    props.showCard && props.card.cardType === CARD_TYPE.VICTORY
+    props.showCard
+    && (props.card.cardType === CARD_TYPE.VICTORY || props.card.cardType === CARD_TYPE.EMPIRE)
         ? "square"
         : "rectangular"
 );

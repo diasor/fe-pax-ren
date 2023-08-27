@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar">
+    <div class="sidebar" data-testid="side-bar-container">
         <div
             class="sidebar-backdrop"
             @click="closeSidebarPanel"
@@ -7,51 +7,45 @@
         />
         <slide-in-out entry="left" exit="left" :duration="800" appear>
             <div v-if="isPanelOpen" class="sidebar-panel">
-                <label class="title">{{ title }}</label>
-                <label class="text">{{ text }}</label>
-                <div class="button" @click="closeSidebarPanel">
-                    {{ button }}
+                <label class="title" data-testid="title">{{ props.title }}</label>
+                <label class="text" data-testid="text">{{ props.text }}</label>
+                <div class="button" data-testid="button" @click="closeSidebarPanel">
+                    {{ props.button }}
                 </div>
             </div>
         </slide-in-out>
     </div>
 </template>
 
-<script>
-import { defineComponent, computed } from "vue";
+<script setup>
+import { defineProps, defineEmits, computed } from "vue";
 import { SlideInOut } from "vue3-transitions";
 import { useStore } from "vuex";
 
-export default defineComponent({
-    name: "SideBar",
-    components: { SlideInOut },
-    props: {
-        title: {
+const props = defineProps({
+    title: {
             type: String,
             default: "Side bar",
         },
-        text: {
-            type: String,
-            default: () => "Side bar",
-        },
-        button: {
-            type: String,
-            default: "Close",
-        },
+    text: {
+        type: String,
+        default: () => "Side bar",
     },
-    emits: ["closeBar"],
-    setup(_, { emit }) {
-        const store = useStore();
-        const isPanelOpen = computed(() => store.getters["board/isNavOpen"]);
-
-        const closeSidebarPanel = () => {
-            store.dispatch("board/setNavOpen", false, { root: true });
-            emit("closeBar", true);
-        };
-
-        return { isPanelOpen, closeSidebarPanel };
+    button: {
+        type: String,
+        default: "Close",
     },
 });
+
+const emit = defineEmits(["closeBar"]);
+
+const store = useStore();
+const isPanelOpen = computed(() => store.getters["board/isNavOpen"]);
+
+const closeSidebarPanel = () => {
+    store.dispatch("board/setNavOpen", false, { root: true });
+    emit("closeBar", true);
+};
 </script>
 
 <style lang="scss" scoped>
